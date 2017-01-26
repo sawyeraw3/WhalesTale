@@ -452,7 +452,8 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    UNet: 1
   cloudProjectId: 2194c949-6ea1-4a57-b00b-4be7dcb62fd0
   projectName: WhalesTale
   organizationId: sawyeraw3
