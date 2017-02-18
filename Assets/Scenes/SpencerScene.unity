@@ -108,8 +108,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 126451070}
   speed: 0.1
-  DisFromWhaleMin: 3
-  DisFromWhaleMax: 10
+  MinDisFromWhale: 3
+  MaxDisFromWhale: 10
   rotationSpeed: 0.8
 --- !u!1 &126451070 stripped
 GameObject:
@@ -139,15 +139,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.01
+      value: -22.94
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.49
+      value: 7.16
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.6
+      value: -6.6
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalRotation.x
@@ -180,7 +180,7 @@ Prefab:
     - target: {fileID: 2300002, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d6170a990d882844682bc9c50978a84e, type: 2}
+      objectReference: {fileID: 2100000, guid: 7e4382f0dc3dd434a9b78d3274abb744, type: 2}
     - target: {fileID: 400002, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.736522
@@ -269,6 +269,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 109.884
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a14835536dc11c34594359d2258818a7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
   m_IsPrefabParent: 0
@@ -281,15 +285,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.01
+      value: -24.84
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.49
+      value: 6.48
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.6
+      value: -1.14
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalRotation.x
@@ -322,7 +326,7 @@ Prefab:
     - target: {fileID: 2300002, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d6170a990d882844682bc9c50978a84e, type: 2}
+      objectReference: {fileID: 2100000, guid: 0c21f1533ca38304fb4d46a1753324aa, type: 2}
     - target: {fileID: 400002, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.736522
@@ -411,6 +415,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 109.884
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a14835536dc11c34594359d2258818a7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
   m_IsPrefabParent: 0
@@ -423,15 +431,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.01
+      value: -19.25
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.49
+      value: 5.88
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.6
+      value: -0.86
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalRotation.x
@@ -464,7 +472,7 @@ Prefab:
     - target: {fileID: 2300002, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d6170a990d882844682bc9c50978a84e, type: 2}
+      objectReference: {fileID: 2100000, guid: 1a3909404b44c214e82fdc2c76a68d30, type: 2}
     - target: {fileID: 400002, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.736522
@@ -553,6 +561,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 109.884
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e4382f0dc3dd434a9b78d3274abb744, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
   m_IsPrefabParent: 0
@@ -651,8 +663,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 126451070}
   speed: 0.1
-  DisFromWhaleMin: 3
-  DisFromWhaleMax: 10
+  MinDisFromWhale: 3
+  MaxDisFromWhale: 10
   rotationSpeed: 0.2
 --- !u!1 &476830888
 GameObject:
@@ -749,8 +761,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 126451070}
   speed: 0.1
-  DisFromWhaleMin: 3
-  DisFromWhaleMax: 10
+  MinDisFromWhale: 3
+  MaxDisFromWhale: 10
   rotationSpeed: 0.2
 --- !u!1001 &490314736
 Prefab:
@@ -802,7 +814,7 @@ Prefab:
     - target: {fileID: 2300002, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d6170a990d882844682bc9c50978a84e, type: 2}
+      objectReference: {fileID: 2100000, guid: 0c21f1533ca38304fb4d46a1753324aa, type: 2}
     - target: {fileID: 400002, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.000000089406946
@@ -871,6 +883,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 31.857002
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e4382f0dc3dd434a9b78d3274abb744, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
   m_IsPrefabParent: 0
@@ -891,8 +907,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 126451070}
   speed: 0.1
-  DisFromWhaleMin: 3
-  DisFromWhaleMax: 10
+  MinDisFromWhale: 3
+  MaxDisFromWhale: 10
   rotationSpeed: 0.8
 --- !u!1001 &648214247
 Prefab:
@@ -1110,8 +1126,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 126451070}
   speed: 0.17
-  DisFromWhaleMin: 3
-  DisFromWhaleMax: 10
+  MinDisFromWhale: 3
+  MaxDisFromWhale: 10
   rotationSpeed: 0.2
 --- !u!1 &725210227
 GameObject:
@@ -1208,8 +1224,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 126451070}
   speed: 0.1
-  DisFromWhaleMin: 3
-  DisFromWhaleMax: 10
+  MinDisFromWhale: 3
+  MaxDisFromWhale: 10
   rotationSpeed: 0.2
 --- !u!1 &727620377
 GameObject:
@@ -1306,8 +1322,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 126451070}
   speed: 0.1
-  DisFromWhaleMin: 3
-  DisFromWhaleMax: 10
+  MinDisFromWhale: 3
+  MaxDisFromWhale: 10
   rotationSpeed: 0.2
 --- !u!1 &949195590
 GameObject:
@@ -1405,15 +1421,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.01
+      value: -26.22
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.49
+      value: 7.12
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.6
+      value: -4.32
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1446,7 +1462,7 @@ Prefab:
     - target: {fileID: 2300002, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d6170a990d882844682bc9c50978a84e, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cb780c184729d14488f25ccaecc376b, type: 2}
     - target: {fileID: 400002, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.736522
@@ -1535,6 +1551,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 109.884
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a3909404b44c214e82fdc2c76a68d30, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
   m_IsPrefabParent: 0
@@ -1610,15 +1630,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.01
+      value: -17.39
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.49
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.6
+      value: -5.93
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1651,7 +1671,7 @@ Prefab:
     - target: {fileID: 2300002, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d6170a990d882844682bc9c50978a84e, type: 2}
+      objectReference: {fileID: 2100000, guid: 0c21f1533ca38304fb4d46a1753324aa, type: 2}
     - target: {fileID: 400002, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.736522
@@ -1740,6 +1760,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 109.884
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e4382f0dc3dd434a9b78d3274abb744, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
   m_IsPrefabParent: 0
@@ -1760,8 +1784,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 126451070}
   speed: 0.1
-  DisFromWhaleMin: 3
-  DisFromWhaleMax: 10
+  MinDisFromWhale: 3
+  MaxDisFromWhale: 10
   rotationSpeed: 0.8
 --- !u!1 &1432825350 stripped
 GameObject:
@@ -1780,8 +1804,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 126451070}
   speed: 0.1
-  DisFromWhaleMin: 3
-  DisFromWhaleMax: 10
+  MinDisFromWhale: 3
+  MaxDisFromWhale: 10
   rotationSpeed: 0.8
 --- !u!1001 &1711145304
 Prefab:
@@ -1792,15 +1816,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.01
+      value: -24.84
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.49
+      value: 7.81
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.6
+      value: -9.54
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1833,7 +1857,7 @@ Prefab:
     - target: {fileID: 2300002, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d6170a990d882844682bc9c50978a84e, type: 2}
+      objectReference: {fileID: 2100000, guid: 1a3909404b44c214e82fdc2c76a68d30, type: 2}
     - target: {fileID: 400002, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.736522
@@ -1922,6 +1946,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 109.884
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e4382f0dc3dd434a9b78d3274abb744, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
   m_IsPrefabParent: 0
@@ -1942,8 +1970,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 126451070}
   speed: 0.1
-  DisFromWhaleMin: 3
-  DisFromWhaleMax: 10
+  MinDisFromWhale: 3
+  MaxDisFromWhale: 10
   rotationSpeed: 0.8
 --- !u!1 &1873305723
 GameObject:
@@ -2040,8 +2068,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 126451070}
   speed: 0.1
-  DisFromWhaleMin: 3
-  DisFromWhaleMax: 10
+  MinDisFromWhale: 3
+  MaxDisFromWhale: 10
   rotationSpeed: 0.2
 --- !u!1 &1954924517 stripped
 GameObject:
@@ -2060,6 +2088,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 126451070}
   speed: 0.1
-  DisFromWhaleMin: 3
-  DisFromWhaleMax: 10
+  MinDisFromWhale: 3
+  MaxDisFromWhale: 10
   rotationSpeed: 0.8
