@@ -192,4 +192,3 @@ MonoBehaviour:
   target: {fileID: 0}
   moveSpeed: 7.5
   rotationSpeed: 5
-  centeringDistance: 5

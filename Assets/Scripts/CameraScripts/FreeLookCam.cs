@@ -43,6 +43,8 @@ namespace UnityStandardAssets.Cameras
 
         protected void Update()
         {
+			transform.position += m_Pivot.transform.forward * m_MoveSpeed * Time.deltaTime;
+
             HandleRotationMovement();
             if (m_LockCursor && Input.GetMouseButtonUp(0))
             {
