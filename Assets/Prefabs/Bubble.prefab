@@ -94,6 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bubbleSpeed: 1
   waterHeight: 5
+  maxBubbleTime: 30
 --- !u!135 &135713771966573928
 SphereCollider:
   m_ObjectHideFlags: 1
