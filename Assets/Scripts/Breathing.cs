@@ -10,6 +10,7 @@ public class Breathing : MonoBehaviour {
 	private float bubbleFrequency;
 	private float minBubbleFrequency = 1;
 	public float waterHeight;
+	public Vector3 bubbleOffset;
 	public GameObject bubblePrefab;
 	[Header("A float on the interval (0, 1]")]
 	// Closer to 0 is more bubbles
@@ -44,7 +45,7 @@ public class Breathing : MonoBehaviour {
 				if (bubbleFrequency <= 0) {
 					//spawn a bubble and reset bubbleFrequency
 					GameObject bubble = Instantiate(bubblePrefab) as GameObject;
-					bubble.transform.position = this.gameObject.transform.position + new Vector3 (-1, 1, 0);
+					bubble.transform.position = this.gameObject.transform.position + bubbleOffset;
 					bubbleFrequency = bubbleFactor * currentBreath;
 					if (bubbleFrequency < minBubbleFrequency) {
 						bubbleFrequency = minBubbleFrequency;
