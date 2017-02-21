@@ -54,6 +54,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4549587564726306}
   - component: {fileID: 114311091023969588}
+  - component: {fileID: 54082685941359174}
+  - component: {fileID: 136069927907381062}
   m_Layer: 0
   m_Name: WhaleNPC
   m_TagString: Whale
@@ -178,6 +180,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1495738554478886}
   m_Mesh: {fileID: 4300000, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
+--- !u!54 &54082685941359174
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1691092931497170}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &114311091023969588
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -189,9 +206,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2dd45c03835d584387cfada7c5bc68a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPlayer: {fileID: 1691092931497170, guid: 92f92da0293121c4e8709dbdd21e8286,
-    type: 2}
+  targetPlayer: {fileID: 0}
   speed: 0.1
   MinDisFromWhale: 3
   MaxDisFromWhale: 10
   rotationSpeed: 0.8
+--- !u!136 &136069927907381062
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1691092931497170}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.08
+  m_Height: 9.59
+  m_Direction: 2
+  m_Center: {x: -0.11, y: 0.1, z: 0}
