@@ -5,9 +5,7 @@ using UnityEngine.UI;
 
 public class Breathing : MonoBehaviour {
 
-	public Text bubbleText;
-	public Text breathText;
-	public float breathLength;
+	public float breathLength; // 60 is recommended
 	private float currentBreath;
 	private float bubbleFrequency;
 	private float minBubbleFrequency = 1;
@@ -16,7 +14,7 @@ public class Breathing : MonoBehaviour {
 	[Header("A float on the interval (0, 1]")]
 	// Closer to 0 is more bubbles
 	// Closer to 1 is less bubbles
-	public float bubbleFactor;
+	public float bubbleFactor; // 0.3 is recommended
 
 	// Use this for initialization
 	void Start () {
@@ -61,8 +59,5 @@ public class Breathing : MonoBehaviour {
 			currentBreath = breathLength;
 			bubbleFrequency = bubbleFactor * currentBreath;
 		}
-
-		bubbleText.text = "Bubble: " + bubbleFrequency;
-		breathText.text = "Breath: " + currentBreath;
 	}
 }

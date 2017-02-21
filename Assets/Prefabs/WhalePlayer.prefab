@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4549587564726306}
   - component: {fileID: 114693960809708674}
+  - component: {fileID: 114735928245971162}
   m_Layer: 0
   m_Name: WhalePlayer
   m_TagString: Untagged
@@ -192,3 +193,19 @@ MonoBehaviour:
   target: {fileID: 0}
   moveSpeed: 10
   rotationSpeed: 5
+--- !u!114 &114735928245971162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1691092931497170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4619a09b293b1046a00fcc425bad70f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breathLength: 60
+  waterHeight: 5
+  bubblePrefab: {fileID: 1877156889403794, guid: 5ba023a0e9ec3f74d9c19e55dc326385,
+    type: 2}
+  bubbleFactor: 0.3
