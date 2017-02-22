@@ -12,6 +12,7 @@ public class Breathing : MonoBehaviour {
 	public float waterHeight;
 	public Vector3 bubbleOffset;
 	public GameObject bubblePrefab;
+	public GameObject[] bubbleArray;
 	[Header("A float on the interval (0, 1]")]
 	// Closer to 0 is more bubbles
 	// Closer to 1 is less bubbles
