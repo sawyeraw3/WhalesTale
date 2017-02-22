@@ -6,13 +6,12 @@ using UnityEngine.UI;
 public class Breathing : MonoBehaviour {
 
 	public float breathLength; // 60 is recommended
-	private float currentBreath;
+	public float currentBreath;
 	private float bubbleFrequency;
 	private float minBubbleFrequency = 1;
 	public float waterHeight;
 	public Vector3 bubbleOffset;
 	public GameObject bubblePrefab;
-	public GameObject[] bubbleArray;
 	[Header("A float on the interval (0, 1]")]
 	// Closer to 0 is more bubbles
 	// Closer to 1 is less bubbles
@@ -45,8 +44,11 @@ public class Breathing : MonoBehaviour {
 				currentBreath -= Time.deltaTime;
 				if (bubbleFrequency <= 0) {
 					//spawn a bubble and reset bubbleFrequency
-					GameObject bubble = Instantiate(bubblePrefab) as GameObject;
-					bubble.transform.position = this.gameObject.transform.position + bubbleOffset;
+					int bubbleCount = Random.Range(3, 10);
+					for (int i = 0; i < bubbleCount; i++){
+						GameObject bubble = Instantiate(bubblePrefab) as GameObject;
+						bubble.transform.position = this.gameObject.transform.position + bubbleOffset;
+					}
 					bubbleFrequency = bubbleFactor * currentBreath;
 					if (bubbleFrequency < minBubbleFrequency) {
 						bubbleFrequency = minBubbleFrequency;

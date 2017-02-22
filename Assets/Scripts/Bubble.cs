@@ -10,21 +10,35 @@ public class Bubble : MonoBehaviour {
 	private float bubbleTime;
 
 	//bubble rotation
-	private float RotateSpeed = 20f;
-	private float Radius = 0.05f;
+	private float rotateSpeed = 20f;
+	private float radius = 0.05f;
 	private float angle;
+
+	//bubble variation
+	private float sMin = .2f, sMax = .7f;
 
 	// Use this for initialization
 	void Start () {
-		transform.localScale = new Vector3(.5f,.5f,.5f);
-	
+		maxBubbleTime = 10;
+
+		/* -- BUBBLE VARIATION -- */
+		//random scaling of bubble
+		float rScale = Random.Range(sMin,sMax);
+		transform.localScale = new Vector3(rScale,rScale,rScale);
+		//update bubble speed, rotation radius, and rotation speed based on size
+		//ie: big bubbles = slower, little bubbles = faster
+		bubbleSpeed = (sMax - (rScale - sMin)) * 25f;
+		radius = rScale * .25f;
+		if (radius > .1f) radius = .1f;
+		rotateSpeed = ((sMax*10f - sMin*10f) - (rScale*10f - sMin*10f)) * 10f; //speed between 1 and 20 - based on size
+		if (rotateSpeed < 2f) rotateSpeed = 2f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		angle += RotateSpeed * Time.deltaTime;
-		Vector3 offset = new Vector3(Mathf.Sin(angle),0, Mathf.Cos(angle)) * Radius;
+		angle += rotateSpeed * Time.deltaTime;
+		Vector3 offset = new Vector3(Mathf.Sin(angle),0, Mathf.Cos(angle)) * radius;
 
 		bubbleTime += Time.deltaTime;
 		gameObject.transform.position += Vector3.up * bubbleSpeed * Time.deltaTime + offset;
