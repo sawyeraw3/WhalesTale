@@ -9,9 +9,12 @@ public class GenerateInfinite : MonoBehaviour {
 	public int halfTilesX = 10;
 	public int halfTilesZ = 10;
 
+	public Material[] materials;
+
 	Vector3 startPos;
 
 	Hashtable tiles = new Hashtable();
+	int heightScale;
 
 	public class Tile {
 
@@ -32,6 +35,9 @@ public class GenerateInfinite : MonoBehaviour {
 	}
 
 	void Start() {
+
+		heightScale = plane.GetComponent<GenerateTerrain> ().heightScale;
+
 		this.gameObject.transform.position = Vector3.zero;
 		startPos = Vector3.zero;
 
@@ -46,6 +52,10 @@ public class GenerateInfinite : MonoBehaviour {
 				t.name = tilename;
 				Tile tile = new Tile(t, updateTime);
 				tiles.Add(tilename, tile);
+
+				if (materials.Length > 0) {
+					colorPlane (t);
+				}
 			}
 		}
 	}
@@ -73,6 +83,10 @@ public class GenerateInfinite : MonoBehaviour {
 						t.name = tilename;
 						Tile tile = new Tile(t, updateTime);
 						tiles.Add(tilename, tile);
+
+						if (materials.Length > 0) {
+							colorPlane (t);
+						}
 					}
 					else {
 						(tiles[tilename] as Tile).creationTime = updateTime;
@@ -95,6 +109,18 @@ public class GenerateInfinite : MonoBehaviour {
 			//copy new hastable contents to the working hashtable
 			tiles = newTerrain;
 			startPos = player.transform.position;
+		}
+	}
+
+	void colorPlane(GameObject plane) {
+		float increment = heightScale / materials.Length;
+		float medY = plane.gameObject.GetComponent<GenerateTerrain> ().medY;
+		for (float y = increment; y <= heightScale; y += increment) {
+			if (medY <= y) {
+				Renderer rend = plane.GetComponent<Renderer> ();
+				rend.material.SetColor ("_Color", materials [(int)((y / increment) - 1)].color);
+				break;
+			}
 		}
 	}
 }
