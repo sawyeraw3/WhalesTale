@@ -10,7 +10,7 @@ public class PerlinCubeTerrainGenerator : MonoBehaviour {
 	//Can use numElements when data is a "square"
 	public int mapHeight;
 	public int mapWidth;
-	float cubeSideLength;
+	float cubeScale;
 
 	Vector2 shift = new Vector2(0,0);
 	float zoom = .1f;
@@ -42,16 +42,22 @@ public class PerlinCubeTerrainGenerator : MonoBehaviour {
 		int xIn = 0;
 		int zIn = 0;
 
-		cubeSideLength = terrainCube.transform.localScale.x;
-
+		cubeScale = terrainCube.transform.localScale.x;
 
 		float[,] heightMap = setHeightArray();
 
-		for (float x = 0; x < mapWidth; x ++) {
+		float offsetX = 0 - mapWidth / 2;
+		float offsetZ = 0 - mapHeight / 2;
+
+		for (int x = 0; x < mapWidth; x ++) {
 			zIn = 0;
-			for (float z = 0; z < mapHeight; z ++) {
+			for (int z = 0; z < mapHeight; z ++) {
 				float cubeY = heightMap [xIn, zIn];
-				Vector3 pos = new Vector3 (x * cubeSideLength, cubeY, z * cubeSideLength);
+				int px = Mathf.RoundToInt (transform.position.x);
+				int pz = Mathf.RoundToInt (transform.position.z);
+				px = (px + x);
+				pz = (pz + z);
+				Vector3 pos = new Vector3 ((px * cubeScale) - offsetX, cubeY, (pz * cubeScale) - offsetZ);
 				GameObject temp = Instantiate (terrainCube, pos, Quaternion.identity);
 
 				Renderer rend = temp.GetComponent<Renderer> ();
@@ -85,7 +91,7 @@ public class PerlinCubeTerrainGenerator : MonoBehaviour {
 					mR.material = mat;
 				}*/
 
-				temp.name = /*rend.material.name + */" tCube_" + x.ToString () + "_" + cubeY.ToString () + "_" + z.ToString ();
+				temp.name = /*rend.material.name + */" tCube_" + pos.x.ToString () + "_" + cubeY.ToString () + "_" + pos.z.ToString ();
 				zIn++;
 			}
 			xIn++;
