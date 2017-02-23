@@ -5,7 +5,7 @@ public class GenerateTerrain : MonoBehaviour {
 
 	public int heightScale = 5;
 	public float detailScale = 5.0f;
-	public float medY;
+	public Material[] materials;
 	float minY = 0;
 	float maxY = 0;
 
@@ -23,11 +23,22 @@ public class GenerateTerrain : MonoBehaviour {
 			}
 		}
 
-		medY = maxY - minY;
+		if (materials.Length > 0) {
+			float increment = heightScale / materials.Length;
+			for (float y = increment; y <= heightScale; y += increment) {
+				if (maxY <= y) {
+					Renderer rend = gameObject.GetComponent<Renderer> ();
+					rend.material.SetColor ("_Color", materials [(int)((y / increment) - 1)].color);
+					break;
+				}
+			}
+		}
+
 
 		mesh.vertices = vertices;
 		mesh.RecalculateBounds();
 		mesh.RecalculateNormals();
 		this.gameObject.AddComponent<MeshCollider>();
+
 	}
 }

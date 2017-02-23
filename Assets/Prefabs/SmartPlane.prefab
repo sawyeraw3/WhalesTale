@@ -108,3 +108,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heightScale: 40
   detailScale: 10
+  materials:
+  - {fileID: 2100000, guid: cf527e7afab37694d861d0bf69d2e676, type: 2}
+  - {fileID: 2100000, guid: 1a3909404b44c214e82fdc2c76a68d30, type: 2}
+  - {fileID: 2100000, guid: 1cb780c184729d14488f25ccaecc376b, type: 2}
+  - {fileID: 2100000, guid: 0c21f1533ca38304fb4d46a1753324aa, type: 2}
+  - {fileID: 2100000, guid: 7e4382f0dc3dd434a9b78d3274abb744, type: 2}
