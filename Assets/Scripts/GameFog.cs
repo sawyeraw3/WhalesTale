@@ -9,6 +9,8 @@ public class GameFog : MonoBehaviour {
 	private Color underwaterColor;
 	private Color abovewaterColor;
 	public GameObject player;
+	public Material underwaterSkybox;
+	public Material abovewaterSkybox;
 
 	// Use this for initialization
 	void Start () {
@@ -23,11 +25,13 @@ public class GameFog : MonoBehaviour {
 
 			RenderSettings.fogColor = underwaterColor;
 			RenderSettings.fogDensity = 0.01f;
+			RenderSettings.skybox = underwaterSkybox;
 		
 		} else {
 			
 			RenderSettings.fogColor = abovewaterColor;
 			RenderSettings.fogDensity = 0.01f;
+			RenderSettings.skybox = abovewaterSkybox;
 		}
 	}
 }

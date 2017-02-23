@@ -24,14 +24,6 @@ public class Breathing : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		// For testing
-		if (Input.GetKey("up")) {
-			gameObject.transform.position += (Vector3.up / 10);
-		}
-		else if (Input.GetKey("down")) {
-			gameObject.transform.position += (Vector3.down / 10);
-		}
-
 		// underwater
 		if(this.gameObject.transform.position.y < waterHeight) {
 			if (currentBreath <= 0) {
