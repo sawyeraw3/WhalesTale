@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ede4825a77f5ec40bf8e200426b4275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 400000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 2}
   moveSpeed: 10
   rotationSpeed: 5
 --- !u!114 &114735928245971162
@@ -205,6 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   breathLength: 60
+  currentBreath: 0
   waterHeight: 5
   bubbleOffset: {x: -1, y: 1.5, z: 0}
   bubblePrefab: {fileID: 1877156889403794, guid: 5ba023a0e9ec3f74d9c19e55dc326385,
