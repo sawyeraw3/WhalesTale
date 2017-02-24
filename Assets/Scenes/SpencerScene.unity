@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44173017, g: 0.49064112, b: 0.57062215, a: 1}
+  m_IndirectSpecularColor: {r: 0.4417306, g: 0.49064195, b: 0.57062304, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -108,9 +108,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 1213531422}
   speed: 0.1
-  MinDisFromWhale: 3
-  MaxDisFromWhale: 10
+  speedMin: 0.05
+  speedMax: 3
+  MinDisFromWhale: 5
+  MaxDisFromWhale: 20
   rotationSpeed: 0.8
+  changePosTimerMax: 20
+  changePosTimerMin: 10
+  rotTimerMax: 20
+  rotTimerMin: 12
+  rotByVal: 0.79365134
 --- !u!136 &3863168
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -150,7 +157,6 @@ GameObject:
   - component: {fileID: 78342332}
   - component: {fileID: 78342331}
   - component: {fileID: 78342330}
-  - component: {fileID: 78342329}
   m_Layer: 0
   m_Name: Medium Blue (1)
   m_TagString: Untagged
@@ -158,22 +164,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &78342329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 78342328}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2dd45c03835d584387cfada7c5bc68a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetPlayer: {fileID: 0}
-  speed: 0.1
-  MinDisFromWhale: 3
-  MaxDisFromWhale: 10
-  rotationSpeed: 0.2
 --- !u!23 &78342330
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -696,15 +686,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4549587564726306, guid: 92f92da0293121c4e8709dbdd21e8286, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.97
+      value: -63.6
       objectReference: {fileID: 0}
     - target: {fileID: 4549587564726306, guid: 92f92da0293121c4e8709dbdd21e8286, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -7.42
+      value: -12.1
       objectReference: {fileID: 0}
     - target: {fileID: 4549587564726306, guid: 92f92da0293121c4e8709dbdd21e8286, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 6.46
+      value: 16.1
       objectReference: {fileID: 0}
     - target: {fileID: 4549587564726306, guid: 92f92da0293121c4e8709dbdd21e8286, type: 2}
       propertyPath: m_LocalRotation.x
@@ -955,9 +945,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 1213531422}
   speed: 0.1
-  MinDisFromWhale: 3
-  MaxDisFromWhale: 10
+  speedMin: 0.05
+  speedMax: 3
+  MinDisFromWhale: 5
+  MaxDisFromWhale: 20
   rotationSpeed: 0.8
+  changePosTimerMax: 20
+  changePosTimerMin: 10
+  rotTimerMax: 20
+  rotTimerMin: 12
+  rotByVal: 1.9689345
 --- !u!136 &540485948
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1106,6 +1103,22 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &652266288 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1276464381941364, guid: 2e59a56231ce62045814ac2d89668e43,
+    type: 2}
+  m_PrefabInternal: {fileID: 2031218808}
+--- !u!114 &652266289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 652266288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f1b8001bbb083428eb5a3ae96997de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &658191668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1952,22 +1965,6 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: 7368ec506d6243e4c9dcc1705acd0002, type: 3}
   m_PrefabInternal: {fileID: 170690024}
---- !u!114 &1343897299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1343897298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2dd45c03835d584387cfada7c5bc68a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetPlayer: {fileID: 1213531422}
-  speed: 0.1
-  MinDisFromWhale: 3
-  MaxDisFromWhale: 10
-  rotationSpeed: 0.8
 --- !u!136 &1343897300
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2025,6 +2022,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterLevel: 15.4
   player: {fileID: 1657685635}
+  underwaterSkybox: {fileID: 0}
+  abovewaterSkybox: {fileID: 0}
 --- !u!4 &1403246565
 Transform:
   m_ObjectHideFlags: 0
@@ -2055,9 +2054,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 1213531422}
   speed: 0.1
-  MinDisFromWhale: 3
-  MaxDisFromWhale: 10
+  speedMin: 0.05
+  speedMax: 3
+  MinDisFromWhale: 5
+  MaxDisFromWhale: 20
   rotationSpeed: 0.8
+  changePosTimerMax: 20
+  changePosTimerMin: 10
+  rotTimerMax: 20
+  rotTimerMin: 12
+  rotByVal: 10.036452
 --- !u!136 &1432825352
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2326,9 +2332,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 1213531422}
   speed: 0.1
-  MinDisFromWhale: 3
-  MaxDisFromWhale: 10
+  speedMin: 0.05
+  speedMax: 3
+  MinDisFromWhale: 5
+  MaxDisFromWhale: 20
   rotationSpeed: 0.8
+  changePosTimerMax: 20
+  changePosTimerMin: 10
+  rotTimerMax: 20
+  rotTimerMin: 12
+  rotByVal: 9.126369
 --- !u!136 &1737957386
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2455,9 +2468,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 1213531422}
   speed: 0.1
-  MinDisFromWhale: 3
-  MaxDisFromWhale: 10
+  speedMin: 0.05
+  speedMax: 3
+  MinDisFromWhale: 5
+  MaxDisFromWhale: 20
   rotationSpeed: 0.8
+  changePosTimerMax: 20
+  changePosTimerMin: 10
+  rotTimerMax: 20
+  rotTimerMin: 12
+  rotByVal: 5.9566436
 --- !u!136 &1954924519
 CapsuleCollider:
   m_ObjectHideFlags: 0

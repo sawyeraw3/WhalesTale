@@ -13,7 +13,7 @@ public class FishHeadMove : MonoBehaviour {
 		//dir = Vector3.forward;
 		//this.gameObject.transform.position = dir;
 
-		rNum = Random.Range (5f, 10f);
+		rNum = Random.Range (7f, 15f);
 		for (int i = 0; i < rNum; i++) {
 			spread = Random.insideUnitSphere * 15;
 			GameObject fish = Instantiate(fishPrefab) as GameObject;
@@ -26,7 +26,7 @@ public class FishHeadMove : MonoBehaviour {
 	void Update () {
 		dir = Vector3.forward;
 		transform.LookAt (dir);
-	
+
 
 	}
 }
