@@ -206,11 +206,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2dd45c03835d584387cfada7c5bc68a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPlayer: {fileID: 0}
+  targetPlayer: {fileID: 1691092931497170, guid: 92f92da0293121c4e8709dbdd21e8286,
+    type: 2}
   speed: 0.1
-  MinDisFromWhale: 3
-  MaxDisFromWhale: 10
+  MinDisFromWhale: 5
+  MaxDisFromWhale: 20
   rotationSpeed: 0.8
+  changePosTimerMax: 20
+  changePosTimerMin: 10
+  rotTimerMax: 20
+  rotTimerMin: 12
+  rotByVal: 10.106544
 --- !u!136 &136069927907381062
 CapsuleCollider:
   m_ObjectHideFlags: 1

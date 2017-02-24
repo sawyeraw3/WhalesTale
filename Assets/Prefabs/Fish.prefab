@@ -106,7 +106,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 1276464381941364, guid: 2e59a56231ce62045814ac2d89668e43,
     type: 2}
-  speed: 0.1
-  MinDisFromWhale: 3
+  speed: 0.4
+  MinDisFromWhale: 1
   MaxDisFromWhale: 10
-  rotationSpeed: 0.8
+  rotationSpeed: 1
+  changePosTimerMax: 20
+  changePosTimerMin: 10
+  rotTimerMax: 20
+  rotTimerMin: 12
+  rotByVal: 6.2339106
