@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FishHeadMove : MonoBehaviour {
+public class FishHeadSpawn : MonoBehaviour {
 
 	public Vector3 dir;
 	private float rNum;
@@ -24,8 +24,8 @@ public class FishHeadMove : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		dir = Vector3.forward;
-		transform.LookAt (dir);
+		//dir = Vector3.forward;
+		//transform.LookAt (dir);
 
 
 	}
