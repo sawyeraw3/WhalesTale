@@ -189,7 +189,7 @@ Prefab:
         type: 2}
       propertyPath: targetPlayer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1788379194}
     - target: {fileID: 1691092931497170, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2, type: 2}
       propertyPath: m_Name
       value: WhaleNPC (1)
@@ -254,7 +254,7 @@ Prefab:
         type: 2}
       propertyPath: targetPlayer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1694304221}
     - target: {fileID: 1691092931497170, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2, type: 2}
       propertyPath: m_Name
       value: WhaleNPC (2)
@@ -305,7 +305,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &916031723
 GameObject:
@@ -518,57 +518,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1364263649
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1364263651}
-  - component: {fileID: 1364263650}
-  m_Layer: 0
-  m_Name: CubeTerrain
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1364263650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1364263649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b120e86110afcc4fa9f057221bd8061, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrainCube: {fileID: 1739683720685592, guid: f213b39d2d55f834b835608ccbfa3275,
-    type: 2}
-  materials:
-  - {fileID: 2100000, guid: cf527e7afab37694d861d0bf69d2e676, type: 2}
-  - {fileID: 2100000, guid: 1a3909404b44c214e82fdc2c76a68d30, type: 2}
-  - {fileID: 2100000, guid: 1cb780c184729d14488f25ccaecc376b, type: 2}
-  - {fileID: 2100000, guid: 0c21f1533ca38304fb4d46a1753324aa, type: 2}
-  - {fileID: 2100000, guid: 7e4382f0dc3dd434a9b78d3274abb744, type: 2}
-  maxY: 15
-  mapHeight: 100
-  mapWidth: 100
---- !u!4 &1364263651
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1364263649}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1502527165
 Prefab:
   m_ObjectHideFlags: 0
@@ -616,6 +565,16 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92f92da0293121c4e8709dbdd21e8286, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1694304221 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1691092931497170, guid: 92f92da0293121c4e8709dbdd21e8286,
+    type: 2}
+  m_PrefabInternal: {fileID: 1502527165}
+--- !u!1 &1788379194 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1691092931497170, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2,
+    type: 2}
+  m_PrefabInternal: {fileID: 332526912}
 --- !u!1001 &1892443748
 Prefab:
   m_ObjectHideFlags: 0
@@ -669,7 +628,7 @@ Prefab:
         type: 2}
       propertyPath: targetPlayer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1694304221}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2, type: 2}
   m_IsPrefabParent: 0
@@ -729,7 +688,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1901910278}
-  m_LocalRotation: {x: 0.7276313, y: -0.2501558, z: 0.10661767, w: 0.6297678}
+  m_LocalRotation: {x: 0.72763133, y: -0.25015584, z: 0.10661766, w: 0.62976784}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
