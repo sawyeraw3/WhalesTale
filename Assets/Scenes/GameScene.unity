@@ -304,6 +304,7 @@ MonoBehaviour:
   planeSize: 10
   halfTilesX: 7
   halfTilesZ: 7
+  waterDepth: -60
 --- !u!4 &480082875
 Transform:
   m_ObjectHideFlags: 0
