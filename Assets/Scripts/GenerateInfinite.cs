@@ -50,7 +50,7 @@ public class GenerateInfinite : MonoBehaviour {
 				t.name = tilename;
 				Tile tile = new Tile(t, updateTime);
 				tiles.Add(tilename, tile);
-
+				t.transform.parent = gameObject.transform;
 			}
 		}
 	}
@@ -78,6 +78,7 @@ public class GenerateInfinite : MonoBehaviour {
 						t.name = tilename;
 						Tile tile = new Tile(t, updateTime);
 						tiles.Add(tilename, tile);
+						t.transform.parent = gameObject.transform;
 					}
 					else {
 						(tiles[tilename] as Tile).creationTime = updateTime;

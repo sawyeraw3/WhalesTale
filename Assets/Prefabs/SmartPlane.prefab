@@ -106,8 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7766e6d5367b631408e30fd5ca46ce3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heightScale: 40
-  detailScale: 10
+  heightScale: 20
+  detailScale: 5
   materials:
   - {fileID: 2100000, guid: cf527e7afab37694d861d0bf69d2e676, type: 2}
   - {fileID: 2100000, guid: 1a3909404b44c214e82fdc2c76a68d30, type: 2}
