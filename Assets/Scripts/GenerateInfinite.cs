@@ -86,7 +86,7 @@ public class GenerateInfinite : MonoBehaviour {
 				}
 			}
 
-			//destroy all tiles not just creater or with time updated
+			//destroy all tiles not just created or with time updated
 			//and put new tiles and tiles to be kept in a new hastable
 			Hashtable newTerrain = new Hashtable();
 			foreach (Tile tls in tiles.Values) {

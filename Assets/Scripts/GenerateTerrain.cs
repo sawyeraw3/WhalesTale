@@ -18,15 +18,13 @@ public class GenerateTerrain : MonoBehaviour {
 				(vertices[v].z + this.transform.position.z)/detailScale)*heightScale;
 			if (vertices [v].y > maxY) {
 				maxY = vertices [v].y;
-			} else if (vertices [v].y < minY) {
-				minY = vertices [v].y;
 			}
 		}
 
 		if (materials.Length > 0) {
 			float increment = heightScale / materials.Length;
 			for (float y = increment; y <= heightScale; y += increment) {
-				if (maxY <= y) {
+				if ((maxY / 4) * 3 <= y) {
 					Renderer rend = gameObject.GetComponent<Renderer> ();
 					rend.material.SetColor ("_Color", materials [(int)((y / increment) - 1)].color);
 					break;
