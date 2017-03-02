@@ -114,13 +114,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 316533538}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff37b33e78173db40b1abcf15082bb17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waterLevel: 50
   player: {fileID: 1240687308}
+  underwaterColor: {r: 0, g: 0, b: 0, a: 0}
   underwaterSkybox: {fileID: 0}
   abovewaterSkybox: {fileID: 0}
 --- !u!4 &316533540
@@ -727,7 +728,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1901910278}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 70.31, z: -0}
+  m_LocalPosition: {x: 0, y: 9.5, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
