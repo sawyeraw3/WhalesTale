@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveAndLook : MonoBehaviour {
 
 	private Transform cameraPos;
-	public float moveSpeed;
+	public float moveSpeed = 10f;
 
 	// Use this for initialization
 	void Start () {
