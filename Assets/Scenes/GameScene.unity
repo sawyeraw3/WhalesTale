@@ -304,7 +304,7 @@ MonoBehaviour:
   planeSize: 10
   halfTilesX: 7
   halfTilesZ: 7
-  waterDepth: -60
+  waterDepth: -100
 --- !u!4 &480082875
 Transform:
   m_ObjectHideFlags: 0
@@ -475,7 +475,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4868927459870908, guid: e3b1da4f16fe9744683632eed81eb8b9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 13.316639
+      value: -40.7
       objectReference: {fileID: 0}
     - target: {fileID: 4868927459870908, guid: e3b1da4f16fe9744683632eed81eb8b9, type: 2}
       propertyPath: m_LocalPosition.z
