@@ -20,8 +20,9 @@ public class WhaleMove : MonoBehaviour {
 	}
 
 	void MoveTowardsTarget() {
+		float dist = Vector3.Magnitude (transform.position - target.position);
 		transform.rotation = Quaternion.Slerp ( target.rotation, transform.rotation, Time.deltaTime * rotationSpeed);
-		float step = moveSpeed * Time.deltaTime;
+		float step = Mathf.Lerp(moveSpeed, moveSpeed*2, dist) * Time.deltaTime;
 		this.transform.position = Vector3.MoveTowards (transform.position, target.position, step);
 	}
 

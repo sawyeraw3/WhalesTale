@@ -16,4 +16,5 @@ public class MoveAndLook : MonoBehaviour {
 		transform.rotation = cameraPos.rotation;
 		transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
 	}
+		
 }
