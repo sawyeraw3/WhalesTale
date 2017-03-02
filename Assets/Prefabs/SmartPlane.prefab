@@ -93,6 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heightScale: 60
   detailScale: 45
+  seed: 4
   materials:
   - {fileID: 2100000, guid: cf527e7afab37694d861d0bf69d2e676, type: 2}
   - {fileID: 2100000, guid: 1a3909404b44c214e82fdc2c76a68d30, type: 2}

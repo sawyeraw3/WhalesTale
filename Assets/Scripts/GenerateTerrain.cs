@@ -5,17 +5,22 @@ public class GenerateTerrain : MonoBehaviour {
 
 	public int heightScale = 5;
 	public float detailScale = 5.0f;
+	//public int seed;
 	public Material[] materials;
 	float minY = 0;
 	float maxY = 0;
 
 	// Use this for initialization
 	void Start() {
+		
+	}
+
+	public void perlinMesh(int seed) {
 		Mesh mesh = this.GetComponent<MeshFilter>().mesh;
 		Vector3[] vertices = mesh.vertices;
 		for (int v = 0; v < vertices.Length; v++) {
-			vertices[v].y = Mathf.PerlinNoise((vertices[v].x + this.transform.position.x)/detailScale,
-				(vertices[v].z + this.transform.position.z)/detailScale)*heightScale;
+			vertices[v].y = Mathf.PerlinNoise( ((vertices[v].x + this.transform.position.x) / detailScale) + seed,
+				((vertices[v].z + this.transform.position.z)/detailScale) + seed ) * heightScale;
 			if (vertices [v].y > maxY) {
 				maxY = vertices [v].y;
 			}
