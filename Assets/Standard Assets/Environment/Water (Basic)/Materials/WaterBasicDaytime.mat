@@ -48,7 +48,7 @@ Material:
     - first:
         name: _Fresnel
       second:
-        m_Texture: {fileID: 2800000, guid: c27c4cd34b450824eb473922e5f71b9f, type: 3}
+        m_Texture: {fileID: 2800000, guid: b725b62cfc9d04e4886735ab2a8107d1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -226,7 +226,7 @@ Material:
       second: {r: 0, g: 0.1, b: -0.5, a: 0}
     - first:
         name: _horizonColor
-      second: {r: 0, g: 0.05882353, b: 0.6392157, a: 1}
+      second: {r: 0, g: 0.05882353, b: 0.6392157, a: 0.847}
     - first:
         name: horizonColor
       second: {r: 0.615, g: 0.796, b: 0.876, a: 1}
