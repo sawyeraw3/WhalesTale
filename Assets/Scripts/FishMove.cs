@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FishMove : MonoBehaviour {
-
-	public Vector3 direction;
+	Vector3 toTarget;
 
 	// Use this for initialization
 	void Start () {
-		direction = Vector3.forward;
-		transform.LookAt (direction);
+		
 	}
-
+	
 	// Update is called once per frame
 	void Update () {
-		direction = Vector3.forward;
-		transform.LookAt (direction);
+
+		toTarget = (gameObject.transform.position + new Vector3(0,0,1)) - transform.position;
+		transform.position += toTarget * 10f * Time.fixedDeltaTime;
 	}
 }

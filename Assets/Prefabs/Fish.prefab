@@ -88,7 +88,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1407272971059060}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -106,7 +106,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 1276464381941364, guid: 2e59a56231ce62045814ac2d89668e43,
     type: 2}
-  speed: 0.1
-  MinDisFromWhale: 3
-  MaxDisFromWhale: 10
-  rotationSpeed: 0.8
+  speed: 5
+  speedMin: 5
+  speedMax: 7
+  buffer: {x: 0, y: 0, z: 0}
+  MinDisFromWhale: 0
+  MaxDisFromWhale: 5
+  rotationSpeed: 2
+  changePosTimerMax: 3
+  changePosTimerMin: 6
+  rotTimerMax: 7
+  rotTimerMin: 2
+  rotByVal: 0

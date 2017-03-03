@@ -53,9 +53,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4549587564726306}
-  - component: {fileID: 114311091023969588}
   - component: {fileID: 54082685941359174}
   - component: {fileID: 136069927907381062}
+  - component: {fileID: 114956906401334206}
   m_Layer: 0
   m_Name: WhaleNPC
   m_TagString: Whale
@@ -195,7 +195,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114311091023969588
+--- !u!114 &114956906401334206
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -203,14 +203,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1691092931497170}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2dd45c03835d584387cfada7c5bc68a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ec9e8c8e7e7b2d488cdef122dd49c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPlayer: {fileID: 0}
+  targetPlayer: {fileID: 1626270159103830, guid: e3b1da4f16fe9744683632eed81eb8b9,
+    type: 2}
   speed: 0.1
-  MinDisFromWhale: 3
-  MaxDisFromWhale: 10
+  speedMin: 0.05
+  speedMax: 1
+  MinDisFromWhale: 5
+  MaxDisFromWhale: 20
   rotationSpeed: 0.8
+  changePosTimerMax: 20
+  changePosTimerMin: 10
+  rotTimerMax: 20
+  rotTimerMin: 12
+  rotByVal: 0
 --- !u!136 &136069927907381062
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -8,6 +8,8 @@ public class GenerateInfinite : MonoBehaviour {
 	public int planeSize = 10;
 	public int halfTilesX = 10;
 	public int halfTilesZ = 10;
+	public int waterDepth = -20;
+	int seed;
 
 	Vector3 startPos;
 
@@ -33,6 +35,7 @@ public class GenerateInfinite : MonoBehaviour {
 	}
 
 	void Start() {
+		seed = Random.Range (0, 10);
 
 		heightScale = plane.GetComponent<GenerateTerrain> ().heightScale;
 
@@ -43,14 +46,14 @@ public class GenerateInfinite : MonoBehaviour {
 
 		for (int x = -halfTilesX; x < halfTilesX; x++) {
 			for (int z = -halfTilesZ; z < halfTilesZ; z++) {
-				Vector3 pos = new Vector3((x * planeSize+startPos.x), 0, (z * planeSize+startPos.z));
+				Vector3 pos = new Vector3((x * planeSize+startPos.x), waterDepth, (z * planeSize+startPos.z));
 				GameObject t = (GameObject) Instantiate(plane, pos, Quaternion.identity);
-
+				t.GetComponent<GenerateTerrain> ().perlinMesh (seed);
 				string tilename = "Tile_" + ((int)(pos.x)).ToString() + "_" + ((int)(pos.z)).ToString();
 				t.name = tilename;
 				Tile tile = new Tile(t, updateTime);
 				tiles.Add(tilename, tile);
-
+				t.transform.parent = gameObject.transform;
 			}
 		}
 	}
@@ -70,14 +73,18 @@ public class GenerateInfinite : MonoBehaviour {
 
 			for (int x = -halfTilesX; x < halfTilesX; x++) {
 				for (int z = -halfTilesZ; z < halfTilesZ; z++) {
-					Vector3 pos = new Vector3((x * planeSize + playerX), 0, (z * planeSize + playerZ));
+					Vector3 pos = new Vector3((x * planeSize + playerX), waterDepth, (z * planeSize + playerZ));
 					string tilename = "Tile_" + ((int)(pos.x)).ToString() + "_" + ((int)(pos.z)).ToString();
 
 					if (!tiles.ContainsKey(tilename)) {
 						GameObject t = (GameObject)Instantiate(plane, pos, Quaternion.identity);
+
+						t.GetComponent<GenerateTerrain> ().perlinMesh (seed);
+
 						t.name = tilename;
 						Tile tile = new Tile(t, updateTime);
 						tiles.Add(tilename, tile);
+						t.transform.parent = gameObject.transform;
 					}
 					else {
 						(tiles[tilename] as Tile).creationTime = updateTime;
@@ -85,7 +92,7 @@ public class GenerateInfinite : MonoBehaviour {
 				}
 			}
 
-			//destroy all tiles not just creater or with time updated
+			//destroy all tiles not just created or with time updated
 			//and put new tiles and tiles to be kept in a new hastable
 			Hashtable newTerrain = new Hashtable();
 			foreach (Tile tls in tiles.Values) {
