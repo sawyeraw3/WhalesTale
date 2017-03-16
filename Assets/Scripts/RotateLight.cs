@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RotateLight : MonoBehaviour {
 
-	public float rotSpeed = .75f;
+	public float rotSpeed;
 	// Use this for initialization
 	void Start () {
 		
