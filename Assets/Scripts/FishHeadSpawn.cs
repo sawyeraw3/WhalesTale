@@ -8,25 +8,30 @@ public class FishHeadSpawn : MonoBehaviour {
 	private float rNum;
 	private Vector3 spread;
 	public GameObject fishPrefab;
+	public float fishRotSpeed;
+	public float headMoveSpeed;
+
 	// Use this for initialization
 	void Start () {
-		//dir = Vector3.forward;
-		//this.gameObject.transform.position = dir;
-
 		rNum = Random.Range (7f, 15f);
 		for (int i = 0; i < rNum; i++) {
 			spread = Random.insideUnitSphere * 15;
 			GameObject fish = Instantiate(fishPrefab) as GameObject;
 			fish.transform.parent = this.transform;
-			fish.transform.position = fish.transform.parent.position + spread;
+			fish.transform.localPosition = Vector3.zero;
+
+			GameObject fishObj = fish.GetComponentInChildren<MeshRenderer>().gameObject;
+			fishObj.transform.localPosition = spread;
 		}
 	}
 
 	// Update is called once per frame
 	void Update () {
-		//dir = Vector3.forward;
-		//transform.LookAt (dir);
+		foreach (GameObject fish in GameObject.FindGameObjectsWithTag("fishParent")) {
+			fish.transform.RotateAround (fish.transform.position, Vector3.up, Time.deltaTime * fishRotSpeed);
+		}
 
+		this.transform.position = Vector3.MoveTowards (this.transform.position, this.transform.position + Vector3.forward, headMoveSpeed);
 
 	}
 }

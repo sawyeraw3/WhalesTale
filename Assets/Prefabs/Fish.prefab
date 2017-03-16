@@ -9,46 +9,74 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1407272971059060}
+  m_RootGameObject: {fileID: 1416743458988758}
   m_IsPrefabParent: 1
---- !u!1 &1407272971059060
+--- !u!1 &1372463923146294
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4348557722780786}
-  - component: {fileID: 33096019246355522}
-  - component: {fileID: 65723424783201188}
-  - component: {fileID: 23317072277820902}
-  - component: {fileID: 114148419547013904}
+  - component: {fileID: 4770910555832568}
+  - component: {fileID: 33151235430524374}
+  - component: {fileID: 65930627823940188}
+  - component: {fileID: 23089449711933308}
   m_Layer: 0
-  m_Name: Fish
+  m_Name: FishModel
   m_TagString: Fish1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4348557722780786
+--- !u!1 &1416743458988758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4929905301619856}
+  m_Layer: 0
+  m_Name: Fish
+  m_TagString: fishParent
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4770910555832568
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1407272971059060}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4, y: 0.73, z: 7.65}
+  m_GameObject: {fileID: 1372463923146294}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+  m_Father: {fileID: 4929905301619856}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4929905301619856
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1416743458988758}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4770910555832568}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23317072277820902
+--- !u!23 &23089449711933308
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1407272971059060}
+  m_GameObject: {fileID: 1372463923146294}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -74,47 +102,22 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &33096019246355522
+--- !u!33 &33151235430524374
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1407272971059060}
+  m_GameObject: {fileID: 1372463923146294}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65723424783201188
+--- !u!65 &65930627823940188
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1407272971059060}
+  m_GameObject: {fileID: 1372463923146294}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114148419547013904
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1407272971059060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2dd45c03835d584387cfada7c5bc68a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetPlayer: {fileID: 1276464381941364, guid: 2e59a56231ce62045814ac2d89668e43,
-    type: 2}
-  speed: 5
-  speedMin: 5
-  speedMax: 7
-  buffer: {x: 0, y: 0, z: 0}
-  MinDisFromWhale: 0
-  MaxDisFromWhale: 5
-  rotationSpeed: 2
-  changePosTimerMax: 3
-  changePosTimerMin: 6
-  rotTimerMax: 7
-  rotTimerMin: 2
-  rotByVal: 0
