@@ -5,7 +5,7 @@ using UnityEngine;
 public class GravityAboveWater : MonoBehaviour {
 
 
-	public Rigidbody rb;
+	Rigidbody rb;
 	// Use this for initialization
 	void Start () {
 		rb = this.GetComponent<Rigidbody>();

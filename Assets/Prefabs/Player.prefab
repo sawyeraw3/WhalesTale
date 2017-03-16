@@ -76,8 +76,8 @@ GameObject:
   - component: {fileID: 136509405775712578}
   - component: {fileID: 54728117336697690}
   - component: {fileID: 114287884693741976}
-  - component: {fileID: 114980445986656394}
   - component: {fileID: 114137247442449738}
+  - component: {fileID: 114278502077713070}
   m_Layer: 0
   m_Name: whale
   m_TagString: Player
@@ -589,6 +589,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  defaultSpeed: 10
+  sprintSpeed: 20
 --- !u!114 &114137247442449738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -601,6 +603,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  defaultSpeed: 10
+  sprintSpeed: 20
+--- !u!114 &114278502077713070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1626270159103830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5604b2460cd24040ba4703334ab047f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!114 &114287884693741976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -665,20 +681,6 @@ MonoBehaviour:
   m_TiltMin: 45
   m_LockCursor: 0
   m_VerticalAutoReturn: 0
---- !u!114 &114980445986656394
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1626270159103830}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ede4825a77f5ec40bf8e200426b4275, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 4943055287386948}
-  moveSpeed: 5
-  rotationSpeed: 0.1
 --- !u!114 &114987322230149014
 MonoBehaviour:
   m_ObjectHideFlags: 1
