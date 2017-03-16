@@ -18,16 +18,21 @@ public class Breathing : MonoBehaviour {
 	// Closer to 0 is bubbles more often
 	// Closer to 1 is bubbles less often
 	public float bubbleFactor; // 0.3 is recommended
+	private Rigidbody rb;
+	private bool animating;
 
 	// Use this for initialization
 	void Start () {
 		currentBreath = breathLength;
+		rb = this.GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		// underwater
 		if(this.gameObject.transform.position.y < waterHeight) {
+			animating = false;
+			//rb.useGravity = false;
 			if (currentBreath <= 0) {
 				// out of breath
 			    Debug.Log ("Dead");
@@ -56,6 +61,18 @@ public class Breathing : MonoBehaviour {
 		else {
 			currentBreath = breathLength;
 			bubbleFrequency = bubbleFactor * currentBreath;
+
+			Debug.Log ("above");
+			animating = true;
+			// TODO: have whale above water animation
+			// Send upward at force
+			// add gravity
+			// splash effect where whale lands
+			// water spout? 
+
+			//rb.AddForce(new Vector3(0, 1, 1));
+			//rb.useGravity = true;	
+			//this.GetComponent<WhaleMove> ().enabled = false;
 		}
 	}
 }
