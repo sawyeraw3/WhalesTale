@@ -81,7 +81,8 @@ public class WhaleMoveInPod : MonoBehaviour {
 			transform.Rotate(new Vector3(0,0,rotateBy) * Time.fixedDeltaTime);
 
 		}
-
+		if (buffer.y > 1)
+			NewPosition ();
 		//update position
 		toTarget = (targetPlayer.transform.position + buffer) - transform.position;
 		transform.position += toTarget * speed * Time.fixedDeltaTime;
