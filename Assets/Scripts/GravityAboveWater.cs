@@ -22,7 +22,7 @@ public class GravityAboveWater : MonoBehaviour {
 		if (speed == 20f)
 			mult = 10f;
 		
-		speed = this.GetComponent<MoveAndLook> ().moveSpeed;
+		speed = this.GetComponent<WhaleControl> ().moveSpeed;
 
 		if (this.transform.position.y > 0) {
 			if (rb.useGravity != true) {
