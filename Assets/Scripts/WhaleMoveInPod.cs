@@ -81,7 +81,8 @@ public class WhaleMoveInPod : MonoBehaviour {
 			transform.Rotate(new Vector3(0,0,rotateBy) * Time.fixedDeltaTime);
 
 		}
-
+		if (buffer.y > 1)
+			NewPosition ();
 		//update position
 		toTarget = (targetPlayer.transform.position + buffer) - transform.position;
 		transform.position += toTarget * speed * Time.fixedDeltaTime;
@@ -95,7 +96,8 @@ public class WhaleMoveInPod : MonoBehaviour {
 		speed = Random.Range (speedMin, speedMax);
 		//dont pick a point inside the whale
 		while (Vector3.Distance((buffer + targetPlayer.transform.position), (targetPlayer.transform.position)) < 
-			MinDisFromWhale){
+			MinDisFromWhale && buffer.y < 0){
+			Debug.Log (buffer.y);
 			buffer = Random.insideUnitSphere * MaxDisFromWhale;
 		}
 
