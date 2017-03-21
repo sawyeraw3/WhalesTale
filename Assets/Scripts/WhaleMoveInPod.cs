@@ -95,7 +95,8 @@ public class WhaleMoveInPod : MonoBehaviour {
 		speed = Random.Range (speedMin, speedMax);
 		//dont pick a point inside the whale
 		while (Vector3.Distance((buffer + targetPlayer.transform.position), (targetPlayer.transform.position)) < 
-			MinDisFromWhale){
+			MinDisFromWhale && buffer.y < 0){
+			Debug.Log (buffer.y);
 			buffer = Random.insideUnitSphere * MaxDisFromWhale;
 		}
 
