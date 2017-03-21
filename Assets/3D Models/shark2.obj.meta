@@ -1,15 +1,17 @@
 fileFormatVersion: 2
-guid: 94d065d21d345df4d959e6d070e86cab
-timeCreated: 1489695882
+guid: 28415a32efc5a004997a5c34c67e448f
+timeCreated: 1490113182
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: hanzo_arrow_LP
+    100000: mmGroup0
+    100002: //RootNode
+    400000: mmGroup0
+    400002: //RootNode
+    2300000: mmGroup0
+    3300000: mmGroup0
+    4300000: mmGroup0
   materials:
     importMaterials: 1
     materialName: 0
