@@ -12,7 +12,7 @@ public class GravityAboveWater : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = this.GetComponent<Rigidbody>();
-		speed = this.GetComponent<MoveAndLook> ().moveSpeed;
+		speed = this.GetComponent<WhaleControl> ().moveSpeed;
 	}
 	
 	// Update is called once per frame
@@ -22,7 +22,7 @@ public class GravityAboveWater : MonoBehaviour {
 		if (speed == 20f)
 			mult = 10f;
 		
-		speed = this.GetComponent<MoveAndLook> ().moveSpeed;
+		speed = this.GetComponent<WhaleControl> ().moveSpeed;
 
 		if (this.transform.position.y > 0) {
 			if (rb.useGravity != true) {
