@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveAndLook : MonoBehaviour {
+public class WhaleController : MonoBehaviour {
 
 	private Transform cameraPos;
 	public float moveSpeed = 10f;
@@ -15,6 +15,8 @@ public class MoveAndLook : MonoBehaviour {
 	}
 
 	void Update() {
+		if (Input.GetMouseButtonDown(0))
+			
 		if (Input.GetMouseButton (0))
 			moveSpeed = sprintSpeed;
 		else
@@ -26,6 +28,8 @@ public class MoveAndLook : MonoBehaviour {
 		transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
 	}
 
+	void Echo () {
 
+	}
 		
 }
