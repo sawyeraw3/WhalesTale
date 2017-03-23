@@ -1,38 +1,10 @@
 fileFormatVersion: 2
 guid: dbc25cecba2340144a3a4793ba00ae60
-timeCreated: 1489695877
+timeCreated: 1490298281
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
-  fileIDToRecycleName:
-    100000: bend1Handle
-    100002: whale4:Cube_Cube_bottom_Cube_Cube_bottom_bottom
-    100004: whale4:Cube_Cube_bottom_Cube_Cube_bottom_bottom1
-    100006: whale4:Cube_Cube_bottom_Cube_Cube_bottom_top
-    100008: whale4:transform1
-    100010: whale4:transform2
-    100012: //RootNode
-    100014: joint1
-    100016: joint2
-    100018: joint3
-    100020: joint4
-    400000: bend1Handle
-    400002: whale4:Cube_Cube_bottom_Cube_Cube_bottom_bottom
-    400004: whale4:Cube_Cube_bottom_Cube_Cube_bottom_bottom1
-    400006: whale4:Cube_Cube_bottom_Cube_Cube_bottom_top
-    400008: whale4:transform1
-    400010: whale4:transform2
-    400012: //RootNode
-    400014: joint1
-    400016: joint2
-    400018: joint3
-    400020: joint4
-    2300000: whale4:Cube_Cube_bottom_Cube_Cube_bottom_bottom1
-    3300000: whale4:Cube_Cube_bottom_Cube_Cube_bottom_bottom1
-    4300000: whale4:Cube_Cube_bottom_Cube_Cube_bottom_bottom1
-    7400000: Take 001
-    9500000: //RootNode
-    13700000: whale4:Cube_Cube_bottom_Cube_Cube_bottom_bottom1
+  fileIDToRecycleName: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -53,55 +25,7 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Take 001
-      takeName: Take 001
-      firstFrame: 1
-      lastFrame: 120
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: joint1
-        weight: 1
-      - path: joint1/joint2
-        weight: 1
-      - path: joint1/joint2/joint3
-        weight: 1
-      - path: joint1/joint2/joint3/joint4
-        weight: 1
-      - path: whale4:Cube_Cube_bottom_Cube_Cube_bottom_bottom
-        weight: 1
-      - path: whale4:Cube_Cube_bottom_Cube_Cube_bottom_bottom/whale4:transform2
-        weight: 1
-      - path: whale4:Cube_Cube_bottom_Cube_Cube_bottom_bottom1
-        weight: 1
-      - path: whale4:Cube_Cube_bottom_Cube_Cube_bottom_top
-        weight: 1
-      - path: whale4:Cube_Cube_bottom_Cube_Cube_bottom_top/whale4:transform1
-        weight: 1
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
