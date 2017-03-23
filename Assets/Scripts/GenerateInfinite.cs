@@ -35,7 +35,7 @@ public class GenerateInfinite : MonoBehaviour {
 	}
 
 	void Start() {
-		seed = Random.Range (0, 10);
+		seed = 100;
 
 		heightScale = plane.GetComponent<GenerateTerrain> ().heightScale;
 

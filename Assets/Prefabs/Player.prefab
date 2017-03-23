@@ -636,7 +636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4619a09b293b1046a00fcc425bad70f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breathLength: 30
+  breathLength: 300
   currentBreath: 0
   waterHeight: 0
   bubbleOffset: {x: 0, y: 2, z: 0}

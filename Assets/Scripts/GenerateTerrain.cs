@@ -29,7 +29,7 @@ public class GenerateTerrain : MonoBehaviour {
 		if (materials.Length > 0) {
 			float increment = heightScale / materials.Length;
 			for (float y = increment; y <= heightScale; y += increment) {
-				if ((maxY / 4) * 3 <= y) {
+				if (/*(maxY / 4) * 3*/ maxY <= y) {
 					Renderer rend = gameObject.GetComponent<Renderer> ();
 					rend.material.SetColor ("_Color", materials [(int)((y / increment) - 1)].color);
 					break;
