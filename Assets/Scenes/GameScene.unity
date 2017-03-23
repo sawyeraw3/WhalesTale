@@ -321,7 +321,7 @@ Prefab:
         type: 2}
       propertyPath: targetPlayer
       value: 
-      objectReference: {fileID: 1494056805}
+      objectReference: {fileID: 1532187435}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2, type: 2}
   m_IsPrefabParent: 0
@@ -386,7 +386,7 @@ Prefab:
         type: 2}
       propertyPath: targetPlayer
       value: 
-      objectReference: {fileID: 1494056805}
+      objectReference: {fileID: 1807340447}
     - target: {fileID: 114956906401334206, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2,
         type: 2}
       propertyPath: speedMax
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 1976986207098424, guid: cfab61d00a8e43e44a6b888c6751c007, type: 2}
-  player: {fileID: 1494056805}
+  player: {fileID: 1807340447}
   planeSize: 10
   halfTilesX: 10
   halfTilesZ: 10
@@ -568,7 +568,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -423341385
+  randomSeed: 1272369122
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3174,7 +3174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14aa0a96a33bf5b4eabb6517aeecf426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1494056805}
+  player: {fileID: 1807340447}
 --- !u!1 &726015089 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1878868664434426, guid: e3b1da4f16fe9744683632eed81eb8b9,
@@ -3289,10 +3289,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1b2910fa7f61354d8e6a835d1711b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1494056805}
---- !u!1 &1494056805 stripped
+  player: {fileID: 1807340447}
+--- !u!1 &1532187435 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 1626270159103830, guid: e3b1da4f16fe9744683632eed81eb8b9,
+  m_PrefabParentObject: {fileID: 1497327025118350, guid: e3b1da4f16fe9744683632eed81eb8b9,
     type: 2}
   m_PrefabInternal: {fileID: 1537800934}
 --- !u!1001 &1537800934
@@ -3403,6 +3403,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1691092931497170, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2,
     type: 2}
   m_PrefabInternal: {fileID: 332526912}
+--- !u!1 &1807340447 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1032273909988412, guid: e3b1da4f16fe9744683632eed81eb8b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1537800934}
 --- !u!1001 &1892443748
 Prefab:
   m_ObjectHideFlags: 0
@@ -3460,7 +3465,7 @@ Prefab:
         type: 2}
       propertyPath: targetPlayer
       value: 
-      objectReference: {fileID: 1494056805}
+      objectReference: {fileID: 1807340447}
     - target: {fileID: 136069927907381062, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2,
         type: 2}
       propertyPath: m_IsTrigger
@@ -3557,7 +3562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ce04863cbfcfd49b634af52beac603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1494056805}
+  player: {fileID: 1807340447}
 --- !u!1001 &2015037806
 Prefab:
   m_ObjectHideFlags: 0
