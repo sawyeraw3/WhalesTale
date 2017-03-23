@@ -13,6 +13,7 @@ public class FishHeadSpawn : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		this.transform.rotation = Random.rotation;
 		rNum = Random.Range (7f, 15f);
 		for (int i = 0; i < rNum; i++) {
 			spread = Random.insideUnitSphere * 15;
@@ -23,6 +24,7 @@ public class FishHeadSpawn : MonoBehaviour {
 			GameObject fishObj = fish.GetComponentInChildren<MeshRenderer>().gameObject;
 			fishObj.transform.localPosition = spread;
 		}
+		Random.seed = System.DateTime.Now.Millisecond;
 		dir = new Vector3 (Random.Range (-1, 1), Random.Range (-1, 1), Random.Range (-1, 1));
 		while (dir.x == 0) {
 			dir.Set (Random.Range (-1, 1), dir.y, dir.z);

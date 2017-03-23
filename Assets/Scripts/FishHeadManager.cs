@@ -39,7 +39,8 @@ public class FishHeadManager : MonoBehaviour {
 		if (count < minHeads) {
 			Debug.Log ("making new");
 			GameObject head = Instantiate (fishHeadPrefab) as GameObject;
-			head.transform.position = player.transform.position;
+			head.transform.position = (player.transform.position + Random.insideUnitSphere * 100f);
+			head.transform.rotation = Random.rotation;
 			fishHeads.Add (head);
 		}
 	}
