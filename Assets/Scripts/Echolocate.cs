@@ -17,5 +17,14 @@ public class Echolocate : MonoBehaviour {
 		this.transform.localScale += new Vector3 (expandSpeed, expandSpeed, expandSpeed); 
 		if (this.transform.lossyScale.magnitude >= radius)
 			DestroyImmediate (this.gameObject);
+
+
+	}
+
+	void OnCollisionEnter(Collision col){
+		if (col.gameObject.tag == "fishhead") {
+			Debug.Log ("anus");
+		}
+
 	}
 }
