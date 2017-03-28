@@ -21,13 +21,6 @@ public class Echolocate : MonoBehaviour {
 
 	}
 
-	void OnCollisionEnter(Collision col){
-		if (col.gameObject.tag == "fishhead") {
-			Debug.Log ("anus");
-		}
-
-	}
-
 	void OnTriggerEnter(Collider c) {
 		Debug.Log (c.transform.position);
 	}
