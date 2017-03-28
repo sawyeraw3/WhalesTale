@@ -21,8 +21,10 @@ public class FishHeadSpawn : MonoBehaviour {
 			fish.transform.parent = this.transform;
 			fish.transform.localPosition = Vector3.zero;
 
-			GameObject fishObj = fish.GetComponentInChildren<MeshRenderer>().gameObject;
+			GameObject fishObj = fish.transform.FindChild("fishModel").gameObject;
+			Transform look = fish.transform.FindChild ("LookAt");
 			fishObj.transform.localPosition = spread;
+			look.transform.localPosition = spread + Vector3.forward;
 		}
 		Random.seed = System.DateTime.Now.Millisecond;
 		dir = new Vector3 (Random.Range (-1, 1), Random.Range (-1, 1), Random.Range (-1, 1));
@@ -42,8 +44,9 @@ public class FishHeadSpawn : MonoBehaviour {
 		int fishCount = 0;
 		foreach (GameObject fish in GameObject.FindGameObjectsWithTag("fishParent")) {
 			fish.transform.RotateAround (fish.transform.position, Vector3.up, Time.deltaTime * fishRotSpeed);
-			GameObject fishObj = fish.GetComponentInChildren<Transform> ().gameObject;
-			fishObj.transform.rotation = Quaternion.LookRotation (dir);
+			GameObject fishObj = fish.transform.FindChild("fishModel").gameObject;
+			Transform look = fish.transform.FindChild ("LookAt");
+			fishObj.transform.LookAt (look);
 
 			if (fish.transform.position.y > 0 || fish.transform.position.y < -100) {
 				Destroy (fish);
@@ -52,7 +55,7 @@ public class FishHeadSpawn : MonoBehaviour {
 			}
 		}
 
-		this.transform.position = Vector3.MoveTowards (this.transform.position, this.transform.position + dir, headMoveSpeed);
+		//this.transform.position = Vector3.MoveTowards (this.transform.position, this.transform.position + dir, headMoveSpeed);
 
 		if (transform.position.y > 0 || transform.position.y < -100) {
 			if (fishCount == 0)

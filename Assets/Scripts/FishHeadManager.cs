@@ -26,18 +26,18 @@ public class FishHeadManager : MonoBehaviour {
 				continue;
 			}
 
-			// if its close enough to the whale
-			if (Mathf.Abs (Vector3.Distance (player.transform.position, head.transform.position)) < minDistance) {
-				count++;
-			} else {
+			// if its far enough from the whale
+			if (Mathf.Abs (Vector3.Distance (player.transform.position, head.transform.position)) > minDistance) {
+				//Debug.Log ("detroying");
 				fishHeads.Remove (head);
 				i--;
 				Destroy (head);
 			}
 		}
 
+		count = fishHeads.Count;
+
 		if (count < minHeads) {
-			Debug.Log ("making new");
 			GameObject head = Instantiate (fishHeadPrefab) as GameObject;
 			head.transform.position = (player.transform.position + Random.insideUnitSphere * 100f);
 			head.transform.rotation = Random.rotation;

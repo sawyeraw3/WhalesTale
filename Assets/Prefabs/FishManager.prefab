@@ -34,7 +34,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1792047902432718}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -100, y: -83.89195, z: -100}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -53,6 +53,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishHeadPrefab: {fileID: 1276464381941364, guid: 2e59a56231ce62045814ac2d89668e43,
     type: 2}
-  player: {fileID: 1497327025118350, guid: e3b1da4f16fe9744683632eed81eb8b9, type: 2}
+  player: {fileID: 0}
   minDistance: 70
   minHeads: 2
