@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Echolocate : MonoBehaviour {
 
-	public float radius = 50f;
-	public float expandSpeed = 0.5f;
+	public float radius;
+	public float expandSpeed;
 
 	// Use this for initialization
 	void Start () {
