@@ -161,8 +161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a6c0e3fe9ee174588edd96fe9ac8bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 5
-  expandSpeed: 100
+  radius: 4.5
+  expandSpeed: 2.5
 --- !u!135 &135037553086483006
 SphereCollider:
   m_ObjectHideFlags: 1
