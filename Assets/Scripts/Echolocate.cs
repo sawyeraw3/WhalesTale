@@ -27,4 +27,8 @@ public class Echolocate : MonoBehaviour {
 		}
 
 	}
+
+	void OnTriggerEnter(Collider c) {
+		Debug.Log (c.transform.position);
+	}
 }
