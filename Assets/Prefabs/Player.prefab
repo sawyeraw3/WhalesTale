@@ -702,7 +702,7 @@ MonoBehaviour:
   moveSpeed: 10
   defaultSpeed: 10
   sprintSpeed: 20
-  pingSphere: {fileID: 0}
+  pingSphere: {fileID: 1557100753086228, guid: 9632d96e4ea93ef41a4b0bd1dde792b4, type: 2}
   pingDelay: 5
 --- !u!114 &114553671295848036
 MonoBehaviour:

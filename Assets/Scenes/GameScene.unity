@@ -3302,16 +3302,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114278502077713070, guid: e3b1da4f16fe9744683632eed81eb8b9,
-        type: 2}
-      propertyPath: splash.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114287884693741976, guid: e3b1da4f16fe9744683632eed81eb8b9,
-        type: 2}
-      propertyPath: sounds.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4868927459870908, guid: e3b1da4f16fe9744683632eed81eb8b9, type: 2}
       propertyPath: m_LocalPosition.x
       value: -7.169117
@@ -3344,57 +3334,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114917893581918608, guid: e3b1da4f16fe9744683632eed81eb8b9,
-        type: 2}
-      propertyPath: pingSphere
-      value: 
-      objectReference: {fileID: 1557100753086228, guid: 9632d96e4ea93ef41a4b0bd1dde792b4,
-        type: 2}
-    - target: {fileID: 114278502077713070, guid: e3b1da4f16fe9744683632eed81eb8b9,
-        type: 2}
-      propertyPath: splash.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: b9e6a430309a5e240addd659fa18650b, type: 3}
-    - target: {fileID: 114278502077713070, guid: e3b1da4f16fe9744683632eed81eb8b9,
-        type: 2}
-      propertyPath: splash.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: 3d6e78dab715fc447b3447bdd5ea176a, type: 3}
-    - target: {fileID: 114278502077713070, guid: e3b1da4f16fe9744683632eed81eb8b9,
-        type: 2}
-      propertyPath: splash.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 82c2b89b9d0caf6469153e7014645033, type: 3}
-    - target: {fileID: 114287884693741976, guid: e3b1da4f16fe9744683632eed81eb8b9,
-        type: 2}
-      propertyPath: sounds.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 05e799ec4646d8a49a88ef6ef468e0bf, type: 3}
-    - target: {fileID: 114287884693741976, guid: e3b1da4f16fe9744683632eed81eb8b9,
-        type: 2}
-      propertyPath: sounds.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: 4c52186b7d0179e4bb3e61a986a1dec0, type: 3}
-    - target: {fileID: 114287884693741976, guid: e3b1da4f16fe9744683632eed81eb8b9,
-        type: 2}
-      propertyPath: sounds.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 4c52186b7d0179e4bb3e61a986a1dec0, type: 3}
-    - target: {fileID: 114278502077713070, guid: e3b1da4f16fe9744683632eed81eb8b9,
-        type: 2}
-      propertyPath: splash.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: 1b84bfcff553bfc43bde2e348ea33b34, type: 3}
-    - target: {fileID: 114278502077713070, guid: e3b1da4f16fe9744683632eed81eb8b9,
-        type: 2}
-      propertyPath: splash.Array.data[4]
-      value: 
-      objectReference: {fileID: 8300000, guid: c6d93affd7a2eb34ca606a9e528f0152, type: 3}
-    - target: {fileID: 114278502077713070, guid: e3b1da4f16fe9744683632eed81eb8b9,
-        type: 2}
-      propertyPath: splash.Array.data[5]
-      value: 
-      objectReference: {fileID: 8300000, guid: 135dd640a4ac7524683dae07cc7da43a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3b1da4f16fe9744683632eed81eb8b9, type: 2}
   m_IsPrefabParent: 0
