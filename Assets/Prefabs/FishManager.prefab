@@ -53,6 +53,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishHeadPrefab: {fileID: 1276464381941364, guid: 2e59a56231ce62045814ac2d89668e43,
     type: 2}
-  player: {fileID: 0}
+  player: {fileID: 1497327025118350, guid: e3b1da4f16fe9744683632eed81eb8b9, type: 2}
   minDistance: 70
   minHeads: 5
