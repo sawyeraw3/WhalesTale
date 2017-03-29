@@ -6,6 +6,7 @@ public class Echolocate : MonoBehaviour {
 
 	public float radius;
 	public float expandSpeed;
+	public GameObject indicator;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,20 @@ public class Echolocate : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider c) {
-		Debug.Log (c.transform.position);
+		float dist = Vector3.Distance (this.transform.position, c.transform.position);
+		Debug.Log (dist);
+		if (dist > 20) {
+			GameObject temp = Instantiate (indicator, c.transform);
+			if(dist < 40)
+				temp.GetComponent<IndicatorExpand> ().howFar = 4;
+			else if(dist < 60)
+				temp.GetComponent<IndicatorExpand> ().howFar = 3;
+			else if(dist < 80)
+				temp.GetComponent<IndicatorExpand> ().howFar = 2;
+			else if(dist > 80)
+				temp.GetComponent<IndicatorExpand> ().howFar = 1;
+			
+		}
+		//temp.GetComponent<IndicatorExpand> ().howFar = dist;
 	}
 }

@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114751889110149804}
   - component: {fileID: 114584712371433256}
   - component: {fileID: 114553671295848036}
-  - component: {fileID: 136407414299484396}
+  - component: {fileID: 136736034213598442}
   m_Layer: 0
   m_Name: whale
   m_TagString: Player
@@ -463,6 +463,8 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
+  m_AllowMSAA: 1
+  m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
@@ -792,7 +794,7 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1878868664434426}
   m_Enabled: 1
---- !u!136 &136407414299484396
+--- !u!136 &136736034213598442
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -838,6 +840,7 @@ SkinnedMeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0

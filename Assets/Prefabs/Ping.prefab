@@ -105,6 +105,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!23 &23952190837994990
 MeshRenderer:
@@ -136,6 +137,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33026634180502398
 MeshFilter:
@@ -179,6 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 4.5
   expandSpeed: 2.5
+  indicator: {fileID: 1246155822485976, guid: 67eb8c83619fdd04e9d39410e9ec2d97, type: 2}
 --- !u!135 &135037553086483006
 SphereCollider:
   m_ObjectHideFlags: 1
