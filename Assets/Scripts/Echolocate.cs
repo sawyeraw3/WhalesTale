@@ -26,7 +26,7 @@ public class Echolocate : MonoBehaviour {
 		float dist = Vector3.Distance (this.transform.position, c.transform.position);
 		Debug.Log (dist);
 		if (dist > 25) {
-			GameObject temp = Instantiate (indicator, c.transform);
+			GameObject temp = Instantiate (indicator, c.transform.position, new Quaternion(0,0,0,0), c.transform);
 			if(dist < 50)
 				temp.GetComponent<IndicatorExpand> ().howFar = 4;
 			else if(dist < 75)
