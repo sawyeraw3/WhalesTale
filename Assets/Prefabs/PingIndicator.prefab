@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   howFar: 3
-  radius: 75
+  radius: 25
   expandSpeed: 0.5
   colors:
   - {fileID: 2100000, guid: 341e0bbb6ac95d545a7b29bc1daf65fc, type: 2}
