@@ -6,7 +6,7 @@ public class IndicatorExpand : MonoBehaviour {
 
 	public int howFar;
 	public int radius;
-	public int expandSpeed;
+	public float expandSpeed;
 	public Material[] colors;
 	// Use this for initialization
 	void Start () {
@@ -30,6 +30,7 @@ public class IndicatorExpand : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		this.transform.LookAt (GameObject.FindGameObjectWithTag ("Player").transform.position);
+		this.transform.Rotate (0, 180, 0);
 		this.transform.localScale += new Vector3 (expandSpeed, expandSpeed, expandSpeed); 
 		if (this.transform.lossyScale.magnitude >= radius)
 			DestroyImmediate (this.gameObject);
