@@ -4,20 +4,34 @@ using UnityEngine;
 
 public class FishHeadSpawn : MonoBehaviour {
 
-	public Vector3 dir;
+	private Vector3 dir;
 	private float rNum;
 	private Vector3 spread;
-	public GameObject fishPrefab;
+	public GameObject[] fishPrefabs;
 	public float fishRotSpeed;
 	public float headMoveSpeed;
+	private bool rotatingOrSchooling;
+	public float minDistance;
+	public GameObject player;
 
 	// Use this for initialization
 	void Start () {
 		this.transform.rotation = Random.rotation;
+		this.transform.position = player.transform.position + Random.insideUnitSphere * minDistance / 2;
 		rNum = Random.Range (7f, 15f);
+		int fishIndex = Random.Range (0, fishPrefabs.Length);
+
+		int pattern = Random.Range (0, 2);
+		if(pattern == 0) {
+			rotatingOrSchooling = false; //rotating
+		}
+		else {
+			rotatingOrSchooling = false; //schooling
+		}
+
 		for (int i = 0; i < rNum; i++) {
 			spread = Random.insideUnitSphere * 15;
-			GameObject fish = Instantiate(fishPrefab) as GameObject;
+			GameObject fish = Instantiate(fishPrefabs[fishIndex]) as GameObject;
 			fish.transform.parent = this.transform;
 			fish.transform.localPosition = Vector3.zero;
 
@@ -27,40 +41,47 @@ public class FishHeadSpawn : MonoBehaviour {
 			look.transform.localPosition = spread + Vector3.forward;
 		}
 		Random.seed = System.DateTime.Now.Millisecond;
-		dir = new Vector3 (Random.Range (-1, 1), Random.Range (-1, 1), Random.Range (-1, 1));
+		dir = new Vector3 (Random.value + Random.Range (-1, 1), Random.value + Random.Range (-1, 1), Random.value + Random.Range (-1, 1));
 		while (dir.x == 0) {
-			dir.Set (Random.Range (-1, 1), dir.y, dir.z);
+			dir.Set (Random.value, dir.y, dir.z);
 		}
 		while (dir.y == 0) {
-			dir.Set (dir.x, Random.Range (-1, 1), dir.z);
+			dir.Set (dir.x, Random.value, dir.z);
 		}
 		while (dir.z == 0) {
-			dir.Set (dir.x, dir.y, Random.Range (-1, 1));
+			dir.Set (dir.x, dir.y, Random.value);
 		}
 	}
 
 	// Update is called once per frame
 	void Update () {
-		int fishCount = 0;
 		foreach (GameObject fish in GameObject.FindGameObjectsWithTag("fishParent")) {
-			fish.transform.RotateAround (fish.transform.position, Vector3.up, Time.deltaTime * fishRotSpeed);
-			GameObject fishObj = fish.transform.FindChild("fishModel").gameObject;
-			Transform look = fish.transform.FindChild ("LookAt");
-			fishObj.transform.LookAt (look);
-
-			if (fish.transform.position.y > 0 || fish.transform.position.y < -100) {
-				Destroy (fish);
-			} else {
-				fishCount++;
+			GameObject fishObj = fish.transform.FindChild ("fishModel").gameObject;
+			if (rotatingOrSchooling) { //rotating
+				fish.transform.RotateAround (fish.transform.position, Vector3.up, Time.deltaTime * fishRotSpeed);
+				Transform look = fish.transform.FindChild ("LookAt");
+				fishObj.transform.LookAt (look);
+			} else { //schooling
+				fishObj.transform.rotation = Quaternion.LookRotation (dir);
 			}
 		}
 
-		//this.transform.position = Vector3.MoveTowards (this.transform.position, this.transform.position + dir, headMoveSpeed);
-
-		if (transform.position.y > 0 || transform.position.y < -100) {
-			if (fishCount == 0)
-				Destroy (this.gameObject);
+		if (!rotatingOrSchooling) { //schooling
+			this.transform.position = Vector3.MoveTowards (this.transform.position, this.transform.position + dir, headMoveSpeed);
 		}
 
+		if (Mathf.Abs (Vector3.Distance (this.transform.position, player.transform.position)) > minDistance) {
+			restart ();
+		}
+
+	}
+
+	void restart() {
+		int count = this.transform.childCount;
+		for (int i = 0; i < count; i++) {
+			GameObject fish = this.transform.GetChild (i).gameObject;
+			Destroy (fish);
+		}
+		Start ();
 	}
 }
