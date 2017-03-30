@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 82927110553380196}
   - component: {fileID: 114431610313309782}
   - component: {fileID: 114751889110149804}
-  - component: {fileID: 114584712371433256}
   - component: {fileID: 114553671295848036}
   - component: {fileID: 136736034213598442}
   m_Layer: 0
@@ -701,6 +700,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e44ef0eb08d8324b8f6b64a9b315598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 3273cfe2d2e695c46b27df94de7a3e00, type: 3}
+  - {fileID: 8300000, guid: 029371f317a6ebe4f9cc0bb8d9f43c68, type: 3}
+  - {fileID: 8300000, guid: 5a91f1349752ee244bc2e76dba7f459a, type: 3}
   moveSpeed: 10
   defaultSpeed: 10
   sprintSpeed: 20
@@ -724,19 +727,6 @@ MonoBehaviour:
   bubblePrefab: {fileID: 1877156889403794, guid: 5ba023a0e9ec3f74d9c19e55dc326385,
     type: 2}
   bubbleFactor: 0.2
---- !u!114 &114584712371433256
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1032273909988412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08353f7092ab3d04b85efad03b145775, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - {fileID: 8300000, guid: 4c52186b7d0179e4bb3e61a986a1dec0, type: 3}
 --- !u!114 &114751889110149804
 MonoBehaviour:
   m_ObjectHideFlags: 1
