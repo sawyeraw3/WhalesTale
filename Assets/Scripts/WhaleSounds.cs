@@ -14,7 +14,7 @@ public class WhaleSounds : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown (0) || GvrController.ClickButtonUp && !whale.isPlaying) {
+		if (Input.GetMouseButtonDown (0) /*|| GvrController.ClickButtonUp*/ && !whale.isPlaying) {
 			int index = Random.Range (0, sounds.Length);
 			whale.clip = sounds [index];
 			whale.Play ();

@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/3D Models/Aaron's Models/Volcano.meta
 guid: 95d544702ab9ca74c9c31d9f56353603
 folderAsset: yes
 timeCreated: 1491324784
+=======
+guid: 53392912639a27e4da197ab8aceee90f
+folderAsset: yes
+timeCreated: 1491324620
+>>>>>>> 93ffed01d833daf8d5695ad7e6b80b2e0f67b779:Assets/3D Models/Aaron's Models/Volcano.meta
 licenseType: Free
 DefaultImporter:
   userData: 

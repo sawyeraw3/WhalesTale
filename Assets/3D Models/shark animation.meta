@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/3D Models/shark animation.meta
 guid: 0cb8ce81de195b64e8a06fdc3da83e2a
 folderAsset: yes
 timeCreated: 1491324784
+=======
+guid: 68d90e595b3b3fc4fb506dff23eb2d7b
+folderAsset: yes
+timeCreated: 1491324620
+>>>>>>> 93ffed01d833daf8d5695ad7e6b80b2e0f67b779:Assets/3D Models/shark animation.meta
 licenseType: Free
 DefaultImporter:
   userData: 
