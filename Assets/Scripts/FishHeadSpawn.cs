@@ -34,6 +34,7 @@ public class FishHeadSpawn : MonoBehaviour {
 			GameObject fish = Instantiate(fishPrefabs[fishIndex]) as GameObject;
 			fish.transform.parent = this.transform;
 			fish.transform.localPosition = Vector3.zero;
+			fish.transform.localEulerAngles = Vector3.zero;
 
 			GameObject fishObj = fish.transform.FindChild("fishModel").gameObject;
 			Transform look = fish.transform.FindChild ("LookAt");
