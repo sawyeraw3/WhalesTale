@@ -23,10 +23,14 @@ public class ScrubberEvents : MonoBehaviour {
   private Slider slider;
 
   private VideoControlsManager mgr;
+#if UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR)
   GvrPointerInputModule inp;
+#endif
 
-  public VideoControlsManager ControlManager {
-    set {
+  public VideoControlsManager ControlManager
+  {
+    set
+    {
       mgr = value;
     }
   }
@@ -45,6 +49,7 @@ public class ScrubberEvents : MonoBehaviour {
   }
 
   void Update() {
+#if UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR)
     if (inp != null && inp.transform.position != Vector3.zero) {
       newPositionHandle.transform.position = new Vector3(
           inp.transform.position.x,
@@ -53,8 +58,10 @@ public class ScrubberEvents : MonoBehaviour {
     } else {
       newPositionHandle.transform.position = slider.handleRect.transform.position;
     }
+#endif
   }
 
+#if UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR)
   public void OnPointerEnter(BaseEventData data) {
     inp = data.currentInputModule as GvrPointerInputModule;
     if (inp != null && inp.transform.position != Vector3.zero) {
@@ -83,4 +90,6 @@ public class ScrubberEvents : MonoBehaviour {
       mgr.Player.CurrentPosition = p;
     }
   }
+
+#endif  // UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR)
 }

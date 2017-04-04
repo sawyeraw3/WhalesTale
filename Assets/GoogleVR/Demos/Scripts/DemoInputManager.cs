@@ -243,7 +243,6 @@ public class DemoInputManager : MonoBehaviour {
     if (!active) {
       return;
     }
-
     GvrBasePointer pointer = reticlePointer.GetComponent<GvrBasePointer>();
     if (pointer != null) {
       GvrPointerManager.Pointer = pointer;
@@ -263,7 +262,7 @@ public class DemoInputManager : MonoBehaviour {
     if (!active) {
       return;
     }
-    GvrBasePointer pointer = controllerPointer.GetComponentInChildren<GvrBasePointer>(true);
+    GvrBasePointer pointer = controllerPointer.GetComponentInChildren<GvrBasePointer>();
     if (pointer != null) {
       GvrPointerManager.Pointer = pointer;
     }

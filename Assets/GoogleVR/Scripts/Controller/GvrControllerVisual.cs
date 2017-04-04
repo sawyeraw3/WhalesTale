@@ -14,6 +14,7 @@
 
 // The controller is not available for versions of Unity without the
 // GVR native integration.
+#if UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR)
 
 using UnityEngine;
 using System.Collections;
@@ -21,7 +22,7 @@ using System.Collections;
 /// Provides visual feedback for the daydream controller.
 [RequireComponent(typeof(Renderer))]
 public class GvrControllerVisual : MonoBehaviour {
-#if UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR)
+
   /// Units are in meters.
   private static readonly Vector3 TOUCHPAD_POINT_DIMENSIONS = new Vector3(0.01f, 0.0004f, 0.01f);
   private const float TOUCHPAD_RADIUS = 0.012f;
@@ -50,26 +51,9 @@ public class GvrControllerVisual : MonoBehaviour {
     touchRenderer = touchPoint.GetComponent<Renderer>();
     materialPropertyBlock = new MaterialPropertyBlock();
     colorId = Shader.PropertyToID("_Color");
-
-    // Makes it so the touchPoint is initialized at the correct scale
-    elapsedScaleTimeSeconds = TOUCHPAD_POINT_SCALE_DURATION_SECONDS;
   }
 
-  void Start() {
-    if (GvrArmModel.Instance != null) {
-      GvrArmModel.Instance.OnArmModelUpdate += OnArmModelUpdate;
-    } else {
-      Debug.LogError("Unable to find GvrArmModel.");
-    }
-  }
-
-  void OnDestroy() {
-    if (GvrArmModel.Instance != null) {
-      GvrArmModel.Instance.OnArmModelUpdate -= OnArmModelUpdate;
-    }
-  }
-
-  private void OnArmModelUpdate() {
+  void Update() {
     // Choose the appropriate material to render based on button states.
     if (GvrController.ClickButton) {
       controllerRenderer.material = material_touchpad;
@@ -137,6 +121,6 @@ public class GvrControllerVisual : MonoBehaviour {
       touchRenderer.material = touchOpaque;
     }
   }
+}
 
 #endif  // UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR)
-}

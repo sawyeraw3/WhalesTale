@@ -115,12 +115,12 @@ public class GvrReticlePointer : GvrBasePointer {
     return kReticleDistanceMax;
   }
 
-  public override void GetPointerRadius(out float enterRadius, out float exitRadius) {
+  public override void GetPointerRadius(out float innerRadius, out float outerRadius) {
     float min_inner_angle_radians = Mathf.Deg2Rad * kReticleMinInnerAngle;
     float max_inner_angle_radians = Mathf.Deg2Rad * (kReticleMinInnerAngle + kReticleGrowthAngle);
 
-    enterRadius = 2.0f * Mathf.Tan(min_inner_angle_radians);
-    exitRadius = 2.0f * Mathf.Tan(max_inner_angle_radians);
+    innerRadius = 2.0f * Mathf.Tan(min_inner_angle_radians);
+    outerRadius = 2.0f * Mathf.Tan(max_inner_angle_radians);
   }
 
   private void CreateReticleVertices() {

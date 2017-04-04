@@ -80,8 +80,6 @@ public class GvrCompatibilityChecker {
   private static string OK_BUTTON = "OK";
   private static string REMOVE_FILES_BUTTON = "Remove Files";
 
-// Only perform compatibility check if current build platform is Android or iOS.
-#if UNITY_ANDROID || UNITY_IOS
   static GvrCompatibilityChecker() {
 // No need to run the backwards compatibility checker GVR is natively integrated into Unity.
 #if !UNITY_HAS_GOOGLEVR
@@ -94,7 +92,6 @@ public class GvrCompatibilityChecker {
     AndroidManifestCompatibilityUpdate();
 #endif  // !UNITY_HAS_GOOGLEVR
   }
-#endif  // UNITY_ANDROID || UNITY_IOS
 
   private static bool AllBackwardsCompatibilityFilesExist() {
     return !GetBackCompatFilePaths().Where(filePath => !File.Exists(filePath)).Any();

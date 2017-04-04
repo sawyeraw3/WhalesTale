@@ -16,9 +16,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+#if UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR)
 [RequireComponent(typeof(Toggle))]
 public class Tab : MonoBehaviour {
-#if UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR)
   /// The prefab to use for this tab's page.
   [Tooltip("The prefab for this tab's page.")]
   [SerializeField]
@@ -156,6 +156,5 @@ public class Tab : MonoBehaviour {
   private IUITransition FindTransition() {
     return GetComponent<IUITransition>();
   }
-
-#endif  // UNITY_HAS_GOOGLEVR &&(UNITY_ANDROID || UNITY_EDITOR
 }
+#endif  // UNITY_HAS_GOOGLEVR &&(UNITY_ANDROID || UNITY_EDITOR

@@ -14,7 +14,7 @@ public class Breathing : MonoBehaviour {
 	public float waterHeight;
 	public Vector3 bubbleOffset;
 	public GameObject bubblePrefab;
-	[Header("A float on the interval (0, 1]")]
+	[Range(0.001f, 1f)]
 	// Closer to 0 is bubbles more often
 	// Closer to 1 is bubbles less often
 	public float bubbleFactor; // 0.3 is recommended

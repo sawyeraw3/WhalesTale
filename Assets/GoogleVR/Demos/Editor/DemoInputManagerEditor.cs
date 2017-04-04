@@ -37,6 +37,7 @@ public class DemoInputManagerEditor : Editor {
 
   public override void OnInspectorGUI() {
     // Platform emulation tweaking does not apply on non-native integration versions of Unity.
+    DemoInputManager myTarget = (DemoInputManager) target;
     serializedObject.Update();
 
     EditorGUILayout.PropertyField(gvrControllerMainProp);

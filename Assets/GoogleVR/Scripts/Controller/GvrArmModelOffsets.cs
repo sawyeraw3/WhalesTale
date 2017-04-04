@@ -14,6 +14,7 @@
 
 // This script is not available for versions of Unity without the
 // GVR native integration.
+#if UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR)
 
 using UnityEngine;
 using System.Collections;
@@ -21,7 +22,7 @@ using System.Collections;
 /// This script positions and rotates the transform that it is attached to
 /// according to a joint in the arm model. See GvrArmModel.cs for details.
 public class GvrArmModelOffsets : MonoBehaviour {
-#if UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR)
+
   /// Used to draw a line between joints for debugging purposes.
   private LineRenderer lineRenderer;
 
@@ -42,21 +43,7 @@ public class GvrArmModelOffsets : MonoBehaviour {
     lineRenderer = gameObject.GetComponent<LineRenderer>();
   }
 
-  void Start() {
-    if (GvrArmModel.Instance != null) {
-      GvrArmModel.Instance.OnArmModelUpdate += OnArmModelUpdate;
-    } else {
-      Debug.LogError("Unable to find GvrArmModel.");
-    }
-  }
-
-  void OnDestroy() {
-    if (GvrArmModel.Instance != null) {
-      GvrArmModel.Instance.OnArmModelUpdate -= OnArmModelUpdate;
-    }
-  }
-
-  private void OnArmModelUpdate() {
+  void LateUpdate() {
     Vector3 jointPosition;
     Quaternion jointRotation;
 
@@ -99,6 +86,6 @@ public class GvrArmModelOffsets : MonoBehaviour {
       lineRenderer.SetPosition(1, transform.InverseTransformPoint(debugDrawTo.transform.position));
     }
   }
+}
 
 #endif  // UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_EDITOR)
-}

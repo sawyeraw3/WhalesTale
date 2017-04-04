@@ -62,7 +62,7 @@ public class GvrPointerGraphicRaycaster : GvrBasePointerRaycaster {
             }
           }
 
-          return cachedPointerEventCamera != null ? cachedPointerEventCamera : Camera.main;
+          return cachedPointerEventCamera ?? Camera.main;
         case RaycastMode.Camera:
         default:
           return Camera.main;
@@ -144,9 +144,7 @@ public class GvrPointerGraphicRaycaster : GvrBasePointerRaycaster {
         Transform trans = go.transform;
         Vector3 transForward = trans.forward;
         // http://geomalgorithms.com/a06-_intersect-2.html
-        float transDot = Vector3.Dot(transForward, trans.position - finalRay.origin);
-        float rayDot = Vector3.Dot(transForward, finalRay.direction);
-        distance = transDot / rayDot;
+        distance = (Vector3.Dot(transForward, trans.position - finalRay.origin) / Vector3.Dot(transForward, finalRay.direction));
 
         // Check to see if the go is behind the camera.
         if (distance < 0) {
@@ -157,15 +155,13 @@ public class GvrPointerGraphicRaycaster : GvrBasePointerRaycaster {
           continue;
         }
 
-        Vector3 hitPosition = finalRay.origin + (finalRay.direction * distance);
-
         RaycastResult castResult = new RaycastResult
         {
           gameObject = go,
           module = this,
           distance = distance,
-          worldPosition = hitPosition,
-          screenPosition = eventCamera.WorldToScreenPoint(hitPosition),
+          worldPosition = finalRay.origin + (finalRay.direction * distance),
+          screenPosition = eventData.position,
           index = resultAppendList.Count,
           depth = raycastResults[index].depth,
           sortingLayer = canvas.sortingLayerID,
