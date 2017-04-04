@@ -102,12 +102,14 @@ namespace UnityStandardAssets.Cameras
 
 			if (m_TurnSmoothing > 0)
 			{
-				m_Pivot.localRotation = Quaternion.Slerp(m_Pivot.localRotation, m_PivotTargetRot, m_TurnSmoothing * Time.deltaTime);
+				//m_Pivot.localRotation = Quaternion.Slerp(m_Pivot.localRotation, m_PivotTargetRot, m_TurnSmoothing * Time.deltaTime);
+				transform.localRotation = Quaternion.Slerp(m_Pivot.localRotation, m_PivotTargetRot, m_TurnSmoothing * Time.deltaTime);
 				transform.localRotation = Quaternion.Slerp(transform.localRotation, m_TransformTargetRot, m_TurnSmoothing * Time.deltaTime);
 			}
 			else
 			{
-				m_Pivot.localRotation = m_PivotTargetRot;
+				//m_Pivot.localRotation = m_PivotTargetRot;
+				transform.localRotation = m_PivotTargetRot;
 				transform.localRotation = m_TransformTargetRot;
 			}
         }
