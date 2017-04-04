@@ -35,7 +35,7 @@ public class GravityAboveWater : MonoBehaviour {
 
 				Random.seed = System.DateTime.Now.Millisecond;
 				index = Random.Range(0, splash.Length);
-				//audio.PlayOneShot(splash[index], .4f);
+				audio.PlayOneShot(splash[index], .4f);
 			}
 			
 		}

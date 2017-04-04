@@ -92,7 +92,6 @@ GameObject:
   - component: {fileID: 114950768572926158}
   - component: {fileID: 114961804787612448}
   - component: {fileID: 82963942782791566}
-  - component: {fileID: 114135725439630022}
   m_Layer: 0
   m_Name: FreeLookCameraRig
   m_TagString: Untagged
@@ -464,6 +463,8 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
+  m_AllowMSAA: 1
+  m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
@@ -591,7 +592,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1409394172206018}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -689,19 +690,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114135725439630022
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1409394172206018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 691ef405321c26547a7bfb474554a004, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  underwater: {fileID: 8300000, guid: 479268bf94807834e8541a8400a645ed, type: 3}
-  whale: {fileID: 0}
 --- !u!114 &114431610313309782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -760,7 +748,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5604b2460cd24040ba4703334ab047f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  splash: []
+  splash:
+  - {fileID: 8300000, guid: b9e6a430309a5e240addd659fa18650b, type: 3}
+  - {fileID: 8300000, guid: 82c2b89b9d0caf6469153e7014645033, type: 3}
+  - {fileID: 8300000, guid: 3d6e78dab715fc447b3447bdd5ea176a, type: 3}
+  - {fileID: 8300000, guid: 1b84bfcff553bfc43bde2e348ea33b34, type: 3}
+  - {fileID: 8300000, guid: c6d93affd7a2eb34ca606a9e528f0152, type: 3}
+  - {fileID: 8300000, guid: 135dd640a4ac7524683dae07cc7da43a, type: 3}
 --- !u!114 &114950768572926158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -852,6 +846,7 @@ SkinnedMeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
