@@ -64,7 +64,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d094d43dba7cf34e897f35911cdb3cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dir: {x: 0, y: 0, z: 0}
-  fishPrefab: {fileID: 1416743458988758, guid: 21a09be2ce7daea46908e357f036ef8d, type: 2}
-  fishRotSpeed: 25
+  fishPrefabs:
+  - {fileID: 1416743458988758, guid: 21a09be2ce7daea46908e357f036ef8d, type: 2}
+  - {fileID: 1416743458988758, guid: b90217e75d9498e43bc065491f19c6ca, type: 2}
+  - {fileID: 1416743458988758, guid: 21ae23edda2a391448c7a549f28fccfc, type: 2}
+  - {fileID: 1416743458988758, guid: 8a8fce806d2562e4b964956384dcc245, type: 2}
+  - {fileID: 1416743458988758, guid: b1a127f52304a1643b2507e3985cd07e, type: 2}
+  fishRotSpeed: 8
   headMoveSpeed: 0.1
+  minDistance: 150
+  player: {fileID: 0}

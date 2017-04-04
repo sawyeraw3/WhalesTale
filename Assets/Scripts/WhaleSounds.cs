@@ -19,5 +19,6 @@ public class WhaleSounds : MonoBehaviour {
 			whale.clip = sounds [index];
 			whale.Play ();
 		}
+
 	}
 }
