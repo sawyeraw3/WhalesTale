@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 114950768572926158}
   - component: {fileID: 114961804787612448}
   - component: {fileID: 82963942782791566}
+  - component: {fileID: 114005436722907612}
   m_Layer: 0
   m_Name: FreeLookCameraRig
   m_TagString: Untagged
@@ -591,7 +592,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1409394172206018}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -689,6 +690,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114005436722907612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1409394172206018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691ef405321c26547a7bfb474554a004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  underwater: {fileID: 8300000, guid: 479268bf94807834e8541a8400a645ed, type: 3}
+  whale: {fileID: 1032273909988412}
 --- !u!114 &114431610313309782
 MonoBehaviour:
   m_ObjectHideFlags: 1

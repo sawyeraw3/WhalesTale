@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4305694651506968}
   m_Layer: 0
-  m_Name: New Prefab
+  m_Name: Coral_plant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,7 +50,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1713812397219670}
   m_LocalRotation: {x: -0, y: -0.61002266, z: -0, w: 0.792384}
-  m_LocalPosition: {x: -13.192, y: -40.783, z: 7.1447}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.6290907, y: 1.6290915, z: 2.3629363}
   m_Children:
   - {fileID: 4472211578121292}
