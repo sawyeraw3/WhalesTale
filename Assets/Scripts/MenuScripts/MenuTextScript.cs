@@ -69,7 +69,6 @@ public class MenuTextScript : MonoBehaviour {
 	IEnumerator WaitContinueText()
 	{
 		yield return new WaitForSeconds (7);
-		Debug.Log ("fiddle my didle");
 		continueTextOn = true;
 	}
 
