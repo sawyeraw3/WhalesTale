@@ -71,6 +71,6 @@ MonoBehaviour:
   - {fileID: 1416743458988758, guid: 8a8fce806d2562e4b964956384dcc245, type: 2}
   - {fileID: 1416743458988758, guid: b1a127f52304a1643b2507e3985cd07e, type: 2}
   fishRotSpeed: 8
-  headMoveSpeed: 0.1
+  headMoveSpeed: 1
   minDistance: 150
   player: {fileID: 0}

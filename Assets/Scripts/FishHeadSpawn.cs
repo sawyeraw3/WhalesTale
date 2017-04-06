@@ -13,11 +13,20 @@ public class FishHeadSpawn : MonoBehaviour {
 	private bool rotatingOrSchooling;
 	public float minDistance;
 	public GameObject player;
+	private bool started = false;
 
 	// Use this for initialization
 	void Start () {
-		this.transform.rotation = Random.rotation;
-		this.transform.position = player.transform.position + Random.insideUnitSphere * minDistance / 2;
+		this.headMoveSpeed = 1 + Random.value * 2;
+		this.transform.eulerAngles = Vector3.zero;
+		this.transform.position = player.transform.position;
+		if (started) {
+			this.transform.position += Random.insideUnitSphere * minDistance / 2;
+			if (this.transform.position.y > -15) {
+				this.transform.position = new Vector3 (this.transform.position.x, -15, this.transform.position.z);
+			}
+		}
+		started = true;
 		rNum = Random.Range (7f, 15f);
 		int fishIndex = Random.Range (0, fishPrefabs.Length);
 
@@ -63,12 +72,14 @@ public class FishHeadSpawn : MonoBehaviour {
 				Transform look = fish.transform.FindChild ("LookAt");
 				fishObj.transform.LookAt (look);
 			} else { //schooling
-				fishObj.transform.rotation = Quaternion.LookRotation (dir);
+				Transform look = fish.transform.FindChild ("LookAt");
+				look.localPosition = fishObj.transform.localPosition + dir * headMoveSpeed;
+				fishObj.transform.LookAt (look);
 			}
 		}
 
 		if (!rotatingOrSchooling) { //schooling
-			this.transform.position = Vector3.MoveTowards (this.transform.position, this.transform.position + dir, headMoveSpeed);
+			this.transform.position += dir * Time.deltaTime * headMoveSpeed;
 		}
 
 		if (Mathf.Abs (Vector3.Distance (this.transform.position, player.transform.position)) > minDistance) {
