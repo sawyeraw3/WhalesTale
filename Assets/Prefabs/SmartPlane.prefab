@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114696711162966174}
   m_Layer: 0
   m_Name: SmartPlane
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,6 +72,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33598260247251826
 MeshFilter:
@@ -93,7 +94,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heightScale: 60
   detailScale: 45
-  seed: 4
   materials:
   - {fileID: 2100000, guid: cf527e7afab37694d861d0bf69d2e676, type: 2}
   - {fileID: 2100000, guid: 1a3909404b44c214e82fdc2c76a68d30, type: 2}
