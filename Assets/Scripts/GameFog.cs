@@ -10,7 +10,6 @@ public class GameFog : MonoBehaviour {
 	private Color abovewaterColor;
 	public GameObject player;
 	private Color underwaterColor;
-	private bool underwater = false;
 	public Material underwaterSkybox;
 	public Material abovewaterSkybox;
 

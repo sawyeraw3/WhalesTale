@@ -9,13 +9,13 @@ public class GravityAboveWater : MonoBehaviour {
 	private float speed;
 	private float mult;
 	public AudioClip[] splash;
-	AudioSource audio;
+	AudioSource audSource;
 	private int index;
 	// Use this for initialization
 	void Start () {
 		rb = this.GetComponent<Rigidbody>();
 		speed = this.GetComponent<WhaleControl> ().moveSpeed;
-		audio = GetComponent<AudioSource>();
+		audSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -35,7 +35,7 @@ public class GravityAboveWater : MonoBehaviour {
 
 				Random.seed = System.DateTime.Now.Millisecond;
 				index = Random.Range(0, splash.Length);
-				audio.PlayOneShot(splash[index], .4f);
+				audSource.PlayOneShot(splash[index], .4f);
 			}
 			
 		}
@@ -44,7 +44,7 @@ public class GravityAboveWater : MonoBehaviour {
 				rb.useGravity = false;
 				Random.seed = System.DateTime.Now.Millisecond;
 				index = Random.Range(0, splash.Length);
-				audio.PlayOneShot(splash[index], .4f);
+				audSource.PlayOneShot(splash[index], .4f);
 			}
 		}
 
