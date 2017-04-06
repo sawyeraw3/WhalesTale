@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 175741cfa69620a4abebbac28afbae71
+timeCreated: 1491457219
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: destain
+  fontNames:
+  - destain
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

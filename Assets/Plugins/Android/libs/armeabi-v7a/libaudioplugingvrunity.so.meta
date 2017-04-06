@@ -6,19 +6,10 @@ PluginImporter:
   serializedVersion: 1
   iconMap: {}
   executionOrder: {}
-  isPreloaded: 1
-  isOverridable: 0
+  isPreloaded: 0
   platformData:
-    Android:
+    Any:
       enabled: 1
-      settings:
-        CPU: ARMv7
-    Editor:
-      enabled: 0
-      settings:
-        DefaultValueInitialized: true
-    data:
-      enabled: 0
       settings: {}
   userData: 
   assetBundleName: 

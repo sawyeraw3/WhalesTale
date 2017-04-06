@@ -15,6 +15,7 @@ public class FishHeadManager : MonoBehaviour {
 		fishHeads = new List<GameObject> ();
 		for(int i = 0; i < minHeads; i++) {
 			GameObject head = Instantiate (fishHeadPrefab) as GameObject;
+			head.GetComponent<FishHeadSpawn> ().player = player;
 			head.transform.position = player.transform.position;
 			fishHeads.Add (head);
 		}
@@ -36,6 +37,7 @@ public class FishHeadManager : MonoBehaviour {
 				Destroy (head);
 
 				GameObject newHead = Instantiate (fishHeadPrefab) as GameObject;
+				newHead.GetComponent<FishHeadSpawn> ().player = player;
 				newHead.transform.position = player.transform.position + Random.insideUnitSphere * minDistance / 2;
 				fishHeads.Add (newHead);
 			}
