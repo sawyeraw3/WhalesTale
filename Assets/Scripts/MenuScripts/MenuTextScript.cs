@@ -10,25 +10,34 @@ public class MenuTextScript : MonoBehaviour {
 	private Animator textAnim;
 	private Animator imageAnim;
 	private Text loadText;
+	private Text continueText;
+	public bool continueTextOn = false;
 	private bool loadScene = false;
+	private float startTime;
 	// Use this for initialization
 	void Start () {
+		startTime = Time.time;
 		clickCount = 0;
 		textAnim = GameObject.Find ("Text").GetComponent<Animator> ();
 		imageAnim = GameObject.Find ("Image").GetComponent<Animator> ();
 		loadText = GameObject.Find ("LoadText").GetComponent<Text>();
+		continueText = GameObject.Find ("ContinueText").GetComponent<Text>();
+		StartCoroutine (WaitContinueText());
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown (0) || GvrController.ClickButtonUp)
+		if (Input.GetMouseButtonDown (0) || GvrController.ClickButtonUp) {
 			clickCount++;
+			continueTextOn = false;
+			if(!(clickCount >= 2))
+				StartCoroutine (WaitContinueText ());	}
 
 		if (clickCount == 1) {
 			textAnim.SetTrigger ("TextFadeOut");
 			imageAnim.SetTrigger ("ImageFadeIn");
 		}
-		if (clickCount >= 2 && loadScene == false) {
+		if (clickCount >= 2 && !loadScene) {
 			imageAnim.SetTrigger ("ImageFadeOut");
 			if (imageAnim.GetCurrentAnimatorStateInfo (0).normalizedTime > 1 && imageAnim.GetCurrentAnimatorStateInfo (0).IsName("FadeOut") && !imageAnim.IsInTransition (0)) {
 				loadScene = true;
@@ -41,13 +50,27 @@ public class MenuTextScript : MonoBehaviour {
 			}
 		}
 
-		if (loadScene == true) {
-
-			// ...then pulse the transparency of the loading text to let the player know that the computer is still working.
-			loadText.color = new Color(loadText.color.r, loadText.color.g, loadText.color.b, Mathf.PingPong(Time.time, 1));
+		if (continueTextOn) {
+			continueText.color = new Color (loadText.color.r, loadText.color.g, loadText.color.b, Mathf.PingPong (Time.time - startTime, 1));
+		} else{
+			continueText.color = new Color (loadText.color.r, loadText.color.g, loadText.color.b, 0);
 
 		}
 
+		if (loadScene == true) {
+
+			// ...then pulse the transparency of the loading text to let the player know that the computer is still working.
+			loadText.color = new Color(loadText.color.r, loadText.color.g, loadText.color.b, Mathf.PingPong(Time.time - startTime, 1));
+
+		}
+
+	}
+
+	IEnumerator WaitContinueText()
+	{
+		yield return new WaitForSeconds (7);
+		Debug.Log ("fiddle my didle");
+		continueTextOn = true;
 	}
 
 	IEnumerator LoadNewScene() {
