@@ -15,6 +15,11 @@ public class backgroundSounds : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (whale.transform.position.y > 0)
+			sound.volume = 0;
+		else
+			sound.volume = .35f;
+		
 		if (whale.transform.position.y < 0 && sound.isPlaying == false) {
 			sound.loop = true;
 			sound.clip = underwater;

@@ -91,6 +91,8 @@ GameObject:
   - component: {fileID: 114950768572926158}
   - component: {fileID: 114961804787612448}
   - component: {fileID: 82963942782791566}
+  - component: {fileID: 114005436722907612}
+  - component: {fileID: 95587851242956168}
   m_Layer: 0
   m_Name: FreeLookCameraRig
   m_TagString: Untagged
@@ -106,6 +108,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4868927459870908}
+  - component: {fileID: 114892651972208994}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -393,7 +396,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1032273909988412}
-  m_LocalRotation: {x: -0, y: -0.5748101, z: -0, w: 0.8182869}
+  m_LocalRotation: {x: -0, y: -0.024236873, z: -0, w: 0.9997063}
   m_LocalPosition: {x: -0.44299126, y: -0.7, z: -0.1590097}
   m_LocalScale: {x: 50, y: 57.575832, z: 50}
   m_Children:
@@ -403,7 +406,7 @@ Transform:
   - {fileID: 4778116227652694}
   m_Father: {fileID: 4868927459870908}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -70.173004, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -2.778, z: 0}
 --- !u!4 &4942749789300914
 Transform:
   m_ObjectHideFlags: 1
@@ -591,7 +594,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1409394172206018}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -689,13 +692,43 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95587851242956168
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1409394172206018}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f05e4a71f1fa95b49a4c5ad96e97c912, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114005436722907612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1409394172206018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691ef405321c26547a7bfb474554a004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  underwater: {fileID: 8300000, guid: 479268bf94807834e8541a8400a645ed, type: 3}
+  whale: {fileID: 1032273909988412}
 --- !u!114 &114431610313309782
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1032273909988412}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e44ef0eb08d8324b8f6b64a9b315598, type: 3}
   m_Name: 
@@ -745,13 +778,24 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1b84bfcff553bfc43bde2e348ea33b34, type: 3}
   - {fileID: 8300000, guid: c6d93affd7a2eb34ca606a9e528f0152, type: 3}
   - {fileID: 8300000, guid: 135dd640a4ac7524683dae07cc7da43a, type: 3}
+--- !u!114 &114892651972208994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1497327025118350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9d0dcb92ed11a84b846154f4d507b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114950768572926158
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1409394172206018}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94b04ec3bda6b7747aa53936ef3b0ae2, type: 3}
   m_Name: 
@@ -768,7 +812,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1409394172206018}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e44af8091779fcb40801d5b284353dbe, type: 3}
   m_Name: 
