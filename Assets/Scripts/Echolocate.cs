@@ -28,18 +28,20 @@ public class Echolocate : MonoBehaviour {
 	void OnTriggerEnter(Collider c) {
 		float dist = Vector3.Distance (this.transform.position, c.transform.position);
 		Debug.Log (dist);
-		if (dist > 30) {
-			GameObject temp = Instantiate (indicator, c.transform.position, new Quaternion(0,0,0,0), c.transform);
-			if(dist < 80)
+		if (dist > 55) {
+			GameObject temp = Instantiate (indicator);
+			temp.transform.position = c.transform.position;
+			if(c.transform.parent)
+				temp.transform.position = c.transform.parent.position;
+			if(dist < 110)
 				temp.GetComponent<IndicatorExpand> ().howFar = 4;
-			else if(dist < 140)
+			else if(dist < 150)
 				temp.GetComponent<IndicatorExpand> ().howFar = 3;
-			else if(dist < 190)
+			else if(dist < 200)
 				temp.GetComponent<IndicatorExpand> ().howFar = 2;
-			else if(dist > 190)
+			else if(dist > 250)
 				temp.GetComponent<IndicatorExpand> ().howFar = 1;
 			
 		}
-		//temp.GetComponent<IndicatorExpand> ().howFar = dist;
 	}
 }
