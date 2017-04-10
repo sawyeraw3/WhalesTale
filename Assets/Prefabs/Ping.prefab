@@ -179,8 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a6c0e3fe9ee174588edd96fe9ac8bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
-  expandSpeed: 50
+  radius: 5
+  expandSpeed: 100
   indicator: {fileID: 1246155822485976, guid: 67eb8c83619fdd04e9d39410e9ec2d97, type: 2}
   playerLoc: {fileID: 0}
 --- !u!135 &135801064394433598
