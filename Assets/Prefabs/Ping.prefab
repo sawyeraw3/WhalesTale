@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 33567299221755026}
   - component: {fileID: 23952190837994990}
   - component: {fileID: 114584522962840158}
-  - component: {fileID: 135037553086483006}
   - component: {fileID: 54859288873168534}
+  - component: {fileID: 135801064394433598}
   m_Layer: 1
   m_Name: Ping
   m_TagString: ping
@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1557100753086228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 162.08295, y: -14.615112, z: 4.7569466}
+  m_LocalPosition: {x: -263.25684, y: 132.89964, z: -315.95032}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4235804318341098}
@@ -179,10 +179,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a6c0e3fe9ee174588edd96fe9ac8bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 4.5
-  expandSpeed: 2.5
+  radius: 3
+  expandSpeed: 50
   indicator: {fileID: 1246155822485976, guid: 67eb8c83619fdd04e9d39410e9ec2d97, type: 2}
---- !u!135 &135037553086483006
+  playerLoc: {fileID: 0}
+--- !u!135 &135801064394433598
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

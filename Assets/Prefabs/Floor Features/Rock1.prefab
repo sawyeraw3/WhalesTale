@@ -21,7 +21,8 @@ GameObject:
   - component: {fileID: 4974039084748426}
   - component: {fileID: 33090801543619278}
   - component: {fileID: 23678537411262454}
-  m_Layer: 0
+  - component: {fileID: 64371932825795708}
+  m_Layer: 8
   m_Name: Rock1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +38,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4700059350612224}
   - component: {fileID: 114901208939092824}
-  m_Layer: 0
+  - component: {fileID: 114203569273289794}
+  m_Layer: 8
   m_Name: Rock1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,6 +112,31 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671361263518108}
   m_Mesh: {fileID: 4300000, guid: de0742e0cdb0e7143903e696dd6fb817, type: 3}
+--- !u!64 &64371932825795708
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1671361263518108}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: de0742e0cdb0e7143903e696dd6fb817, type: 3}
+--- !u!114 &114203569273289794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1822388872351000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b442f9c01b2b24ea3f81530d61c95c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114901208939092824
 MonoBehaviour:
   m_ObjectHideFlags: 1
