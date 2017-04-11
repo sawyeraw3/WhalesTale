@@ -105,7 +105,7 @@ public class FishHeadSpawn : MonoBehaviour {
 				Transform look = fish.transform.FindChild ("LookAt");
 				look.localPosition = fishObj.transform.localPosition * 2;
 				fishObj.transform.LookAt (look);
-				fishObj.transform.position = Vector3.MoveTowards (fishObj.transform.position, look.position, headMoveSpeed/7.5f);
+				fishObj.transform.position = Vector3.MoveTowards (fishObj.transform.position, look.position, headMoveSpeed/6f);
 			}
 		}
 
