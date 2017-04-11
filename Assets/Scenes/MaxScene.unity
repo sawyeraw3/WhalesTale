@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.57063156, g: 0.5988106, b: 0.68788475, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -445,6 +445,7 @@ MonoBehaviour:
   halfTilesX: 10
   halfTilesZ: 10
   waterDepth: -100
+  floorObjects: []
 --- !u!4 &480082875
 Transform:
   m_ObjectHideFlags: 0
@@ -586,7 +587,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -563243633
+  randomSeed: -2114426952
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3641,11 +3642,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114202738536662056, guid: 2e59a56231ce62045814ac2d89668e43,
-        type: 2}
-      propertyPath: fishPrefabs.Array.size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4068892489542582, guid: 2e59a56231ce62045814ac2d89668e43, type: 2}
       propertyPath: m_LocalPosition.x
       value: -7.169117
@@ -3683,29 +3679,6 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1397799792}
-    - target: {fileID: 114202738536662056, guid: 2e59a56231ce62045814ac2d89668e43,
-        type: 2}
-      propertyPath: fishPrefabs.Array.data[3]
-      value: 
-      objectReference: {fileID: 1416743458988758, guid: b1a127f52304a1643b2507e3985cd07e,
-        type: 2}
-    - target: {fileID: 114202738536662056, guid: 2e59a56231ce62045814ac2d89668e43,
-        type: 2}
-      propertyPath: fishPrefabs.Array.data[4]
-      value: 
-      objectReference: {fileID: 1416743458988758, guid: b90217e75d9498e43bc065491f19c6ca,
-        type: 2}
-    - target: {fileID: 114202738536662056, guid: 2e59a56231ce62045814ac2d89668e43,
-        type: 2}
-      propertyPath: fishPrefabs.Array.data[1]
-      value: 
-      objectReference: {fileID: 1416743458988758, guid: 8a8fce806d2562e4b964956384dcc245,
-        type: 2}
-    - target: {fileID: 114202738536662056, guid: 2e59a56231ce62045814ac2d89668e43,
-        type: 2}
-      propertyPath: headMoveSpeed
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e59a56231ce62045814ac2d89668e43, type: 2}
   m_IsPrefabParent: 0
@@ -3957,6 +3930,11 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114892651972208994, guid: e3b1da4f16fe9744683632eed81eb8b9,
+        type: 2}
+      propertyPath: debugging
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3b1da4f16fe9744683632eed81eb8b9, type: 2}

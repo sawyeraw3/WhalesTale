@@ -6,13 +6,15 @@ public class RenderWhenNear : MonoBehaviour {
 
 	private bool isEnabled = false;
 	private Transform playerLoc;
+	public float distance = 110f;
+
 	// Use this for initialization
 	void Start () {
 		playerLoc = GameObject.FindGameObjectWithTag ("Player").transform;
 	}
 	
 	void FixedUpdate() {
-		if (Vector3.Distance (this.transform.position, playerLoc.position) < 90)
+		if (Vector3.Distance (this.transform.position, playerLoc.position) < distance)
 			isEnabled = true;
 		else
 			isEnabled = false;
@@ -20,8 +22,19 @@ public class RenderWhenNear : MonoBehaviour {
 
 	void Update () {
 		if (isEnabled) {
-			this.GetComponentInChildren<Renderer> ().enabled = true;
+			toggleRenderer (true);
 		} else
-			this.GetComponentInChildren<Renderer> ().enabled = false;
+			toggleRenderer (false);
+	}
+
+	void toggleRenderer(bool enable) {
+		Renderer render = this.GetComponent<Renderer> ();
+		if (render) {
+			render.enabled = enable;
+		}
+
+		foreach (Renderer r in this.GetComponentsInChildren<Renderer>()) {
+			r.enabled = enable;
+		}
 	}
 }
