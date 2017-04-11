@@ -14,16 +14,20 @@ public class FishHeadSpawn : MonoBehaviour {
 	public float minDistance;
 	public GameObject player;
 	private bool started = false;
+	private bool scanning = false;
 
 	// Use this for initialization
 	void Start () {
+		scanning = false;
 		this.headMoveSpeed = 1 + Random.value * 2;
 		this.transform.eulerAngles = Vector3.zero;
 		this.transform.position = player.transform.position;
 		if (started) {
-			this.transform.position += Random.insideUnitSphere * minDistance / 2;
-			if (this.transform.position.y > -15) {
-				this.transform.position = new Vector3 (this.transform.position.x, -15, this.transform.position.z);
+			this.transform.position += Random.insideUnitSphere * minDistance * .75f;
+			if (this.transform.position.y > -16) {
+				this.transform.position = new Vector3 (this.transform.position.x, -16, this.transform.position.z);
+			} else if (this.transform.position.y < -75) {
+				this.transform.position = new Vector3 (this.transform.position.x, -84, this.transform.position.z);
 			}
 		}
 		started = true;
@@ -38,9 +42,14 @@ public class FishHeadSpawn : MonoBehaviour {
 			rotatingOrSchooling = false; //schooling
 		}
 
+		bool reduced = false;
 		for (int i = 0; i < rNum; i++) {
-			spread = Random.insideUnitSphere * 15;
+			spread = Random.insideUnitSphere * 7.5f;
 			GameObject fish = Instantiate(fishPrefabs[fishIndex]) as GameObject;
+			if (fish.name.Contains ("Shark") && !reduced) {
+				rNum /= 4;
+				reduced = true;
+			}
 			fish.transform.parent = this.transform;
 			fish.transform.localPosition = Vector3.zero;
 			fish.transform.localEulerAngles = Vector3.zero;
@@ -61,6 +70,12 @@ public class FishHeadSpawn : MonoBehaviour {
 		while (dir.z == 0) {
 			dir.Set (dir.x, dir.y, Random.value);
 		}
+		StartCoroutine (waitForMovement ());
+	}
+
+	IEnumerator waitForMovement() {
+		yield return new WaitForSeconds (2.0f);
+		scanning = true;
 	}
 
 	// Update is called once per frame
@@ -82,8 +97,12 @@ public class FishHeadSpawn : MonoBehaviour {
 			this.transform.position += dir * Time.deltaTime * headMoveSpeed;
 		}
 
-		if (Mathf.Abs (Vector3.Distance (this.transform.position, player.transform.position)) > minDistance) {
+		if (scanning && Mathf.Abs (Vector3.Distance (this.transform.position, player.transform.position)) > minDistance) {
 			restart ();
+		}
+
+		if ((dir.y > 0 && this.transform.position.y > -20) || (dir.y < 0 && this.transform.position.y < -75)) {
+			dir = new Vector3 (dir.x, -dir.y, dir.z);
 		}
 
 	}

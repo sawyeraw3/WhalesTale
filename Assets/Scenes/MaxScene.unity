@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.57063156, g: 0.5988106, b: 0.68788475, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -445,6 +445,7 @@ MonoBehaviour:
   halfTilesX: 10
   halfTilesZ: 10
   waterDepth: -100
+  floorObjects: []
 --- !u!4 &480082875
 Transform:
   m_ObjectHideFlags: 0
@@ -586,7 +587,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -563243633
+  randomSeed: -2114426952
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3757,6 +3758,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1397799792}
+--- !u!1 &1484501560 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1276464381941364, guid: 2e59a56231ce62045814ac2d89668e43,
+    type: 2}
+  m_PrefabInternal: {fileID: 1228781766}
+--- !u!114 &1484501561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1484501560}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b442f9c01b2b24ea3f81530d61c95c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 110
 --- !u!1 &1788379194 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1691092931497170, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2,
@@ -3957,6 +3975,11 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114892651972208994, guid: e3b1da4f16fe9744683632eed81eb8b9,
+        type: 2}
+      propertyPath: debugging
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3b1da4f16fe9744683632eed81eb8b9, type: 2}
