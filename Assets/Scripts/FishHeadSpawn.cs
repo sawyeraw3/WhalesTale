@@ -15,10 +15,12 @@ public class FishHeadSpawn : MonoBehaviour {
 	public GameObject player;
 	private bool started = false;
 	private bool scanning = false;
+	private bool flee = false;
 
 	// Use this for initialization
 	void Start () {
 		scanning = false;
+		flee = false;
 		this.headMoveSpeed = 1 + Random.value * 2;
 		this.transform.eulerAngles = Vector3.zero;
 		this.transform.position = player.transform.position;
@@ -29,6 +31,8 @@ public class FishHeadSpawn : MonoBehaviour {
 			} else if (this.transform.position.y < -75) {
 				this.transform.position = new Vector3 (this.transform.position.x, -84, this.transform.position.z);
 			}
+		} else {
+			this.transform.position += Vector3.forward * minDistance / 4;
 		}
 		started = true;
 		rNum = Random.Range (7f, 15f);
@@ -44,7 +48,7 @@ public class FishHeadSpawn : MonoBehaviour {
 
 		bool reduced = false;
 		for (int i = 0; i < rNum; i++) {
-			spread = Random.insideUnitSphere * 7.5f;
+			spread = Random.insideUnitSphere * Random.Range(4, 8);
 			GameObject fish = Instantiate(fishPrefabs[fishIndex]) as GameObject;
 			if (fish.name.Contains ("Shark") && !reduced) {
 				rNum /= 4;
@@ -78,6 +82,11 @@ public class FishHeadSpawn : MonoBehaviour {
 		scanning = true;
 	}
 
+	IEnumerator waitAndRestart() {
+		yield return new WaitForSeconds (5.0f);
+		restart ();
+	}
+
 	// Update is called once per frame
 	void Update () {
 		foreach (GameObject fish in GameObject.FindGameObjectsWithTag("fishParent")) {
@@ -91,11 +100,19 @@ public class FishHeadSpawn : MonoBehaviour {
 				look.localPosition = fishObj.transform.localPosition + dir * headMoveSpeed;
 				fishObj.transform.LookAt (look);
 			}
+
+			if (flee) {
+				Transform look = fish.transform.FindChild ("LookAt");
+				look.localPosition = fishObj.transform.localPosition * 2;
+				fishObj.transform.LookAt (look);
+				fishObj.transform.position = Vector3.MoveTowards (fishObj.transform.position, look.position, headMoveSpeed/7.5f);
+			}
 		}
 
-		if (!rotatingOrSchooling) { //schooling
+		if (!rotatingOrSchooling && !flee) { //schooling
 			this.transform.position += dir * Time.deltaTime * headMoveSpeed;
 		}
+			
 
 		if (scanning && Mathf.Abs (Vector3.Distance (this.transform.position, player.transform.position)) > minDistance) {
 			restart ();
@@ -114,5 +131,12 @@ public class FishHeadSpawn : MonoBehaviour {
 			Destroy (fish);
 		}
 		Start ();
+	}
+
+	void OnTriggerEnter(Collider other) {
+		if (other.name == "whale") {
+			flee = true;
+			StartCoroutine (waitAndRestart ());
+		}
 	}
 }

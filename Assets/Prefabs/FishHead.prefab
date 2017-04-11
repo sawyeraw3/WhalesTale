@@ -48,10 +48,10 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1276464381941364}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114202738536662056
 MonoBehaviour:
@@ -66,10 +66,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fishPrefabs:
   - {fileID: 1416743458988758, guid: 21a09be2ce7daea46908e357f036ef8d, type: 2}
-  - {fileID: 1416743458988758, guid: b90217e75d9498e43bc065491f19c6ca, type: 2}
-  - {fileID: 1416743458988758, guid: 21ae23edda2a391448c7a549f28fccfc, type: 2}
   - {fileID: 1416743458988758, guid: 8a8fce806d2562e4b964956384dcc245, type: 2}
+  - {fileID: 1416743458988758, guid: 21ae23edda2a391448c7a549f28fccfc, type: 2}
   - {fileID: 1416743458988758, guid: b1a127f52304a1643b2507e3985cd07e, type: 2}
+  - {fileID: 1416743458988758, guid: b90217e75d9498e43bc065491f19c6ca, type: 2}
   fishRotSpeed: 8
   headMoveSpeed: 1
   minDistance: 150
