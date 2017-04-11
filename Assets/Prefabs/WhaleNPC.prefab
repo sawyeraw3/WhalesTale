@@ -168,8 +168,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1691092931497170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.949286, y: -28.368, z: 3.915718}
-  m_LocalScale: {x: 47.859886, y: 65.92313, z: 81.0419}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 63.75519, y: 89.321884, z: 97.79044}
   m_Children:
   - {fileID: 4441491719301022}
   - {fileID: 4930584150344246}
@@ -232,10 +232,10 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c0d2d81e2f8204f438005a1eec91e3ed, type: 2}
+  - {fileID: 2100000, guid: 62681bc34c50a604599b69eb46fab1dd, type: 2}
   - {fileID: 2100000, guid: 50ea7619d25517c4f86da7f495a51af5, type: 2}
-  - {fileID: 2100000, guid: c81dc8847b7af7440b4fffb22d314e78, type: 2}
-  - {fileID: 2100000, guid: f2ec13f792a7d5f4e93b7554eabe4dfb, type: 2}
+  - {fileID: 2100000, guid: f2bb2c13a48f6984a8484ae771f9b43b, type: 2}
+  - {fileID: 2100000, guid: b512245ba32ce74439b35a9ff6d70239, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -260,7 +260,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1667478822777012}
-  m_Mesh: {fileID: 4300000, guid: 83ba430a6030923409d58b86a334f3e7, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 15178950e01b65a4b8ae819752d1a265, type: 3}
 --- !u!54 &54082685941359174
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -284,7 +284,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1691092931497170}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 83ba430a6030923409d58b86a334f3e7, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 15178950e01b65a4b8ae819752d1a265, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fc32e5682af804bab0eb901fbec1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1497327025118350, guid: e3b1da4f16fe9744683632eed81eb8b9, type: 2}
   rotSpeed: 0
   moveSpeed: 0
   randWait: 0
