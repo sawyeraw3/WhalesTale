@@ -11,6 +11,23 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1822388872351000}
   m_IsPrefabParent: 1
+--- !u!1 &1785235923281482
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4655394419951080}
+  - component: {fileID: 33888459265064084}
+  - component: {fileID: 23034965138803590}
+  m_Layer: 0
+  m_Name: Rock3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1822388872351000
 GameObject:
   m_ObjectHideFlags: 0
@@ -19,8 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4700059350612224}
-  - component: {fileID: 33704868268347458}
-  - component: {fileID: 23905224178569436}
+  - component: {fileID: 114924422203287780}
   m_Layer: 0
   m_Name: Rock3
   m_TagString: Untagged
@@ -28,25 +44,39 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4655394419951080
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1785235923281482}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.78019625, z: 1.5935969}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4700059350612224}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4700059350612224
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1822388872351000}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -52.106506, y: 126.99, z: -40.62}
   m_LocalScale: {x: 5.9358344, y: 5.935838, z: 5.935838}
-  m_Children: []
+  m_Children:
+  - {fileID: 4655394419951080}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23905224178569436
+--- !u!23 &23034965138803590
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1822388872351000}
+  m_GameObject: {fileID: 1785235923281482}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -73,10 +103,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33704868268347458
+--- !u!33 &33888459265064084
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1822388872351000}
+  m_GameObject: {fileID: 1785235923281482}
   m_Mesh: {fileID: 4300008, guid: de0742e0cdb0e7143903e696dd6fb817, type: 3}
+--- !u!114 &114924422203287780
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1822388872351000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7e6dd8edadcd542a625d6453e5fff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

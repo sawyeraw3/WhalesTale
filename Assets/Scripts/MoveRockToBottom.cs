@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveToBottom : MonoBehaviour {
+public class MoveRockToBottom : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		this.GetComponentInChildren<Renderer> ().enabled = false;
 		StartCoroutine (cast());
 
 	}
@@ -18,7 +18,7 @@ public class MoveToBottom : MonoBehaviour {
 
 
 	IEnumerator cast(){
-		yield return new WaitForSeconds (.5f);
+		yield return new WaitForSeconds (.01f);
 		Random.seed = System.DateTime.Now.Millisecond;
 		transform.rotation = Random.rotation;
 		RaycastHit hit;
@@ -26,7 +26,9 @@ public class MoveToBottom : MonoBehaviour {
 		if (Physics.Raycast (ray, out hit, Mathf.Infinity)) {
 			if (hit.collider.tag == "floor") {
 				this.transform.position = hit.point;
+
 			}
 		}
+		this.GetComponentInChildren<Renderer> ().enabled = true;
 	}
 }

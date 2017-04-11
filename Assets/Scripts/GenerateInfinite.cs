@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GenerateInfinite : MonoBehaviour {
 
@@ -9,7 +10,11 @@ public class GenerateInfinite : MonoBehaviour {
 	public int halfTilesX = 10;
 	public int halfTilesZ = 10;
 	public int waterDepth = -20;
-	public GameObject[] floorObjects;
+	[Range(0,1)]
+	public float smallObjectsChance = 0.3f;
+	public GameObject[] smallPrefabs;
+	public GameObject[] bigPrefabs;
+
 	int seed;
 
 	Vector3 startPos;
@@ -52,6 +57,8 @@ public class GenerateInfinite : MonoBehaviour {
 				GameObject t = (GameObject) Instantiate(plane, pos, Quaternion.identity);
 				t.GetComponent<GenerateTerrain> ().perlinMesh (seed);
 
+				SpawnSmallObjects (t);
+
 				string tilename = "Tile_" + ((int)(pos.x)).ToString() + "_" + ((int)(pos.z)).ToString();
 				t.name = tilename;
 
@@ -85,6 +92,8 @@ public class GenerateInfinite : MonoBehaviour {
 
 						t.GetComponent<GenerateTerrain> ().perlinMesh (seed);
 
+						SpawnSmallObjects (t);
+
 						t.name = tilename;
 						Tile tile = new Tile(t, updateTime);
 						tiles.Add(tilename, tile);
@@ -114,5 +123,29 @@ public class GenerateInfinite : MonoBehaviour {
 		}
 	}
 
+	void SpawnSmallObjects(GameObject tile)
+	{
+		Mesh mesh = tile.GetComponent<MeshFilter>().mesh;
+		Vector3[] vertices = mesh.vertices;
+		Vector3 minV = vertices [0];
+		Vector3 maxV = vertices [vertices.Length - 1];
+		
+		float objectHere = Random.value;
 
+		if(objectHere < smallObjectsChance) {
+			int findSpot = Random.Range (0, vertices.Length);
+			Vector3 randSpot = vertices [findSpot];
+			int randObj = Random.Range (0, smallPrefabs.Length);
+			Vector3 spawnPos = tile.transform.position;
+			spawnPos.y = 0;
+			Instantiate (smallPrefabs [randObj], spawnPos, new Quaternion(0,0,0,0), tile.transform);
+		}
+
+	}
+
+	void SpawnBigObjects(GameObject tile)
+	{
+		Mesh mesh = this.GetComponent<MeshFilter>().mesh;
+		Vector3[] vertices = mesh.vertices;
+	}
 }

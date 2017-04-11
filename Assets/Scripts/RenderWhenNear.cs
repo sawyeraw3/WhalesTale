@@ -12,7 +12,7 @@ public class RenderWhenNear : MonoBehaviour {
 	}
 	
 	void FixedUpdate() {
-		if (Vector3.Distance (this.transform.position, playerLoc.position) < 110)
+		if (Vector3.Distance (this.transform.position, playerLoc.position) < 90)
 			isEnabled = true;
 		else
 			isEnabled = false;
