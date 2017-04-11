@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4359646004914278}
   - component: {fileID: 33286810935289486}
   - component: {fileID: 23746421325823350}
+  - component: {fileID: 64872565286489108}
   m_Layer: 0
   m_Name: Rock2
   m_TagString: Untagged
@@ -36,7 +37,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4700059350612224}
-  - component: {fileID: 114648012938561606}
+  - component: {fileID: 114374941704749250}
   m_Layer: 0
   m_Name: Rock2
   m_TagString: Untagged
@@ -64,8 +65,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1822388872351000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -59.1, y: 126.31, z: -19.63}
-  m_LocalScale: {x: 8.098554, y: 8.098551, z: 8.098551}
+  m_LocalPosition: {x: -20, y: 0, z: -10}
+  m_LocalScale: {x: 6.2530255, y: 6.253023, z: 6.253023}
   m_Children:
   - {fileID: 4359646004914278}
   m_Father: {fileID: 0}
@@ -110,7 +111,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1165884730480530}
   m_Mesh: {fileID: 4300002, guid: de0742e0cdb0e7143903e696dd6fb817, type: 3}
---- !u!114 &114648012938561606
+--- !u!64 &64872565286489108
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1165884730480530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300002, guid: de0742e0cdb0e7143903e696dd6fb817, type: 3}
+--- !u!114 &114374941704749250
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -118,6 +133,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1822388872351000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf7e6dd8edadcd542a625d6453e5fff1, type: 3}
+  m_Script: {fileID: 11500000, guid: 108377c131ac3da41a4a07a398c13e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRock: 1
+  normalize: 0

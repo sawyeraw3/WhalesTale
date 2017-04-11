@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4655394419951080}
   - component: {fileID: 33888459265064084}
   - component: {fileID: 23034965138803590}
+  - component: {fileID: 64592419550038190}
   m_Layer: 0
   m_Name: Rock3
   m_TagString: Untagged
@@ -36,7 +37,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4700059350612224}
-  - component: {fileID: 114924422203287780}
+  - component: {fileID: 114226125466770676}
   m_Layer: 0
   m_Name: Rock3
   m_TagString: Untagged
@@ -64,8 +65,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1822388872351000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -52.106506, y: 126.99, z: -40.62}
-  m_LocalScale: {x: 5.9358344, y: 5.935838, z: 5.935838}
+  m_LocalPosition: {x: -20, y: 0, z: -20}
+  m_LocalScale: {x: 4.7240806, y: 4.7240815, z: 4.7240815}
   m_Children:
   - {fileID: 4655394419951080}
   m_Father: {fileID: 0}
@@ -110,7 +111,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1785235923281482}
   m_Mesh: {fileID: 4300008, guid: de0742e0cdb0e7143903e696dd6fb817, type: 3}
---- !u!114 &114924422203287780
+--- !u!64 &64592419550038190
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1785235923281482}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300008, guid: de0742e0cdb0e7143903e696dd6fb817, type: 3}
+--- !u!114 &114226125466770676
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -118,6 +133,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1822388872351000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf7e6dd8edadcd542a625d6453e5fff1, type: 3}
+  m_Script: {fileID: 11500000, guid: 108377c131ac3da41a4a07a398c13e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRock: 1
+  normalize: 0

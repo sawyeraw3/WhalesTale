@@ -10,6 +10,7 @@ public class GenerateInfinite : MonoBehaviour {
 	public int halfTilesX = 10;
 	public int halfTilesZ = 10;
 	public int waterDepth = -20;
+	float maxSmallSize = 3;
 	[Range(0,1)]
 	public float smallObjectsChance = 0.3f;
 	public GameObject[] smallPrefabs;
@@ -136,9 +137,11 @@ public class GenerateInfinite : MonoBehaviour {
 			int findSpot = Random.Range (0, vertices.Length);
 			Vector3 randSpot = vertices [findSpot];
 			int randObj = Random.Range (0, smallPrefabs.Length);
+			float randSize = Random.Range (0.25f, maxSmallSize);
 			Vector3 spawnPos = tile.transform.position;
 			spawnPos.y = 0;
-			Instantiate (smallPrefabs [randObj], spawnPos, new Quaternion(0,0,0,0), tile.transform);
+			GameObject temp = Instantiate (smallPrefabs [randObj], spawnPos, new Quaternion(0,0,0,0), tile.transform);
+			temp.transform.localScale *= randSize;
 		}
 
 	}

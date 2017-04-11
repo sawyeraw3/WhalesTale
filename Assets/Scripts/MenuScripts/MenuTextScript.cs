@@ -28,10 +28,12 @@ public class MenuTextScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown (0) || GvrController.ClickButtonUp) {
+			StopCoroutine (WaitContinueText ());
 			clickCount++;
 			continueTextOn = false;
-			if(!(clickCount >= 2))
-				StartCoroutine (WaitContinueText ());	}
+			if(clickCount < 2)
+				StartCoroutine (WaitContinueText ());	
+		}
 
 		if (clickCount == 1) {
 			textAnim.SetTrigger ("TextFadeOut");
