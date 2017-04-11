@@ -7,8 +7,8 @@ public class GenerateTerrain : MonoBehaviour {
 	public float detailScale = 5.0f;
 	//public int seed;
 	public Material[] materials;
-	float minY = 0;
-	float maxY = 0;
+	public Vector3 minV = Vector3.zero;
+	public Vector3 maxV = Vector3.zero;
 
 	// Use this for initialization
 	void Start() {
@@ -21,15 +21,18 @@ public class GenerateTerrain : MonoBehaviour {
 		for (int v = 0; v < vertices.Length; v++) {
 			vertices[v].y = Mathf.PerlinNoise( ((vertices[v].x + this.transform.position.x) / detailScale) + seed,
 				((vertices[v].z + this.transform.position.z)/detailScale) + seed ) * heightScale;
-			if (vertices [v].y > maxY) {
-				maxY = vertices [v].y;
+			if (vertices [v].y > maxV.y) {
+				maxV = vertices [v];
+			}
+			if (vertices [v].y < minV.y) {
+				minV = vertices [v];
 			}
 		}
 
 		if (materials.Length > 0) {
 			float increment = heightScale / materials.Length;
 			for (float y = increment; y <= heightScale; y += increment) {
-				if (/*(maxY / 4) * 3*/ maxY <= y) {
+				if (/*(maxY / 4) * 3*/ maxV.y <= y) {
 					Renderer rend = gameObject.GetComponent<Renderer> ();
 					rend.material.SetColor ("_Color", materials [(int)((y / increment) - 1)].color);
 					break;

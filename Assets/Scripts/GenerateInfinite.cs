@@ -9,6 +9,7 @@ public class GenerateInfinite : MonoBehaviour {
 	public int halfTilesX = 10;
 	public int halfTilesZ = 10;
 	public int waterDepth = -20;
+	public GameObject[] floorObjects;
 	int seed;
 
 	Vector3 startPos;
@@ -47,10 +48,13 @@ public class GenerateInfinite : MonoBehaviour {
 		for (int x = -halfTilesX; x < halfTilesX; x++) {
 			for (int z = -halfTilesZ; z < halfTilesZ; z++) {
 				Vector3 pos = new Vector3((x * planeSize+startPos.x), waterDepth, (z * planeSize+startPos.z));
+
 				GameObject t = (GameObject) Instantiate(plane, pos, Quaternion.identity);
 				t.GetComponent<GenerateTerrain> ().perlinMesh (seed);
+
 				string tilename = "Tile_" + ((int)(pos.x)).ToString() + "_" + ((int)(pos.z)).ToString();
 				t.name = tilename;
+
 				Tile tile = new Tile(t, updateTime);
 				tiles.Add(tilename, tile);
 				t.transform.parent = gameObject.transform;
