@@ -27,13 +27,14 @@ public class WhaleProximity : MonoBehaviour {
 		if (Vector3.Distance(transform.position, player.transform.position) < followRange){
 			GameObject podNum = GameObject.Find("GameManager");
 			WhalesInPod script = podNum.GetComponent<WhalesInPod>();
-			script.podCount += 1;
 
 			WhaleAI aScript = this.gameObject.GetComponent<WhaleAI>();
 			aScript.enabled = true;
 			if (justFound == false){
 				audSource.PlayOneShot(call);
 				justFound = true;
+				script.podCount += 1;
+
 			}
 
 		}
@@ -42,11 +43,13 @@ public class WhaleProximity : MonoBehaviour {
 		if (Vector3.Distance(transform.position, player.transform.position) > killRange){
 			GameObject podNum = GameObject.Find("GameManager");
 			WhalesInPod script = podNum.GetComponent<WhalesInPod>();
-			script.podCount -= 1;
 
 			WhaleAI aScript = this.gameObject.GetComponent<WhaleAI>();
 			aScript.enabled = false;
-			justFound = false;
+			if (justFound == true){
+				justFound = false;
+				script.podCount -= 1;
+			}
 		}
 
 	}
