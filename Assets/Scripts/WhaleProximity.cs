@@ -14,8 +14,12 @@ public class WhaleProximity : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		followRange = 15f;
-		killRange = 30f;
+
+		GameObject p = GameObject.Find("whale");
+		player = p;
+
+		followRange = 20f;
+		killRange =150f;
 		audSource = GetComponent<AudioSource>();
 		justFound = false;
 

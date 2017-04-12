@@ -13,6 +13,9 @@ public class WhaleAI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		GameObject p = GameObject.Find("whale");
+		player = p;
+
 		newRandWait();
 		MaxDisFromWhale = 10f;//replace with number of whales in pod
 		buffer = Random.insideUnitSphere * MaxDisFromWhale;
