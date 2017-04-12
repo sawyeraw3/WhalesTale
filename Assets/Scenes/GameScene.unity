@@ -218,15 +218,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114884469442800278, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1807340447}
     - target: {fileID: 114739909140140518, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2,
         type: 2}
       propertyPath: player
       value: 
       objectReference: {fileID: 1807340447}
-    - target: {fileID: 1691092931497170, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2, type: 2}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2, type: 2}
   m_IsPrefabParent: 0
@@ -293,6 +294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 316533540}
   - component: {fileID: 316533539}
+  - component: {fileID: 316533541}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -328,6 +330,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &316533541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 316533538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533653e6653b28548981f817d950f7d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  podCount: 0
 --- !u!1001 &325982710
 Prefab:
   m_ObjectHideFlags: 0
@@ -564,7 +578,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1990783043
+  randomSeed: -750795655
   InitialModule:
     serializedVersion: 3
     enabled: 1
