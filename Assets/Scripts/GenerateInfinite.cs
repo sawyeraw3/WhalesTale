@@ -9,12 +9,13 @@ public class GenerateInfinite : MonoBehaviour {
 	public int planeSize = 10;
 	public int halfTilesX = 10;
 	public int halfTilesZ = 10;
-	public int waterDepth = -20;
+	public int waterDepth = 100;
 	float maxSmallSize = 3;
 	[Range(0,1)]
 	public float smallObjectsChance = 0.3f;
 	public GameObject[] smallPrefabs;
 	public GameObject[] bigPrefabs;
+	public GameObject testObj;
 
 	int seed;
 
@@ -26,6 +27,8 @@ public class GenerateInfinite : MonoBehaviour {
 	public class Tile {
 
 		public GameObject theTile;
+		public GameObject theObj;
+
 		public float creationTime;
 
 		public Tile() {
@@ -39,6 +42,13 @@ public class GenerateInfinite : MonoBehaviour {
 			theTile = t;
 			creationTime = ct;
 		}
+
+		public Tile(GameObject t, GameObject o, float ct) {
+			theTile = t;
+			theObj = o;
+			creationTime = ct;
+		}
+
 	}
 
 	void Start() {
@@ -53,19 +63,25 @@ public class GenerateInfinite : MonoBehaviour {
 
 		for (int x = -halfTilesX; x < halfTilesX; x++) {
 			for (int z = -halfTilesZ; z < halfTilesZ; z++) {
-				Vector3 pos = new Vector3((x * planeSize+startPos.x), waterDepth, (z * planeSize+startPos.z));
+				Vector3 pos = new Vector3((x * planeSize+startPos.x), -1*waterDepth, (z * planeSize+startPos.z));
+				GameObject t = (GameObject)Instantiate(plane, pos, Quaternion.identity);
+				GenerateTerrain gt = t.GetComponent<GenerateTerrain> ();
+				gt.perlinMesh (seed);
 
-				GameObject t = (GameObject) Instantiate(plane, pos, Quaternion.identity);
-				t.GetComponent<GenerateTerrain> ().perlinMesh (seed);
+				Vector3 objPos = pos + gt.objV;
+				GameObject o = (GameObject)Instantiate(testObj, objPos, Quaternion.identity);
 
 				SpawnSmallObjects (t);
 
 				string tilename = "Tile_" + ((int)(pos.x)).ToString() + "_" + ((int)(pos.z)).ToString();
 				t.name = tilename;
+				o.name = tilename;
 
-				Tile tile = new Tile(t, updateTime);
+				Tile tile = new Tile(t, o, updateTime);
 				tiles.Add(tilename, tile);
+
 				t.transform.parent = gameObject.transform;
+				o.transform.parent = gameObject.transform;
 			}
 		}
 	}
@@ -85,20 +101,25 @@ public class GenerateInfinite : MonoBehaviour {
 
 			for (int x = -halfTilesX; x < halfTilesX; x++) {
 				for (int z = -halfTilesZ; z < halfTilesZ; z++) {
-					Vector3 pos = new Vector3((x * planeSize + playerX), waterDepth, (z * planeSize + playerZ));
+					Vector3 pos = new Vector3((x * planeSize + playerX), -1*waterDepth, (z * planeSize + playerZ));
 					string tilename = "Tile_" + ((int)(pos.x)).ToString() + "_" + ((int)(pos.z)).ToString();
 
 					if (!tiles.ContainsKey(tilename)) {
 						GameObject t = (GameObject)Instantiate(plane, pos, Quaternion.identity);
+						GenerateTerrain gt = t.GetComponent<GenerateTerrain> ();
+						gt.perlinMesh (seed);
 
-						t.GetComponent<GenerateTerrain> ().perlinMesh (seed);
+						Vector3 objPos = pos + gt.objV;
+						GameObject o = (GameObject)Instantiate(testObj, objPos, Quaternion.identity);
 
 						SpawnSmallObjects (t);
 
 						t.name = tilename;
-						Tile tile = new Tile(t, updateTime);
+						o.name = tilename;
+						Tile tile = new Tile(t, o, updateTime);
 						tiles.Add(tilename, tile);
 						t.transform.parent = gameObject.transform;
+						o.transform.parent = gameObject.transform;
 					}
 					else {
 						(tiles[tilename] as Tile).creationTime = updateTime;
@@ -112,6 +133,7 @@ public class GenerateInfinite : MonoBehaviour {
 			foreach (Tile tls in tiles.Values) {
 				if (tls.creationTime != updateTime) {
 					Destroy(tls.theTile);
+					Destroy(tls.theObj);
 				}
 				else {
 					newTerrain.Add(tls.theTile.name, tls);
