@@ -21,7 +21,7 @@ public class WhaleProximity : MonoBehaviour {
 		player = p;
 		roam = true;
 		followRange = 20f;
-		killRange =150f;
+		killRange =140f;
 		audSource = GetComponent<AudioSource>();
 		justFound = false;
 		moveSpeed = Random.Range (10, 13);
