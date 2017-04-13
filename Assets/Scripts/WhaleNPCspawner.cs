@@ -25,7 +25,7 @@ public class WhaleNPCspawner : MonoBehaviour {
 	IEnumerator spawn(){
 		while (true) {
 			Random.seed = System.DateTime.Now.Millisecond;
-			yield return new WaitForSeconds (Random.Range(5f,10f));
+			yield return new WaitForSeconds (Random.Range(100f,300f));
 			GameObject whale = Instantiate(whaleNPC) as GameObject;
 			whale.transform.position = new Vector3(player.transform.position.x + 120f * mult[Random.Range(0, mult.Length)], 
 														Random.Range(-35f, -10f), 
