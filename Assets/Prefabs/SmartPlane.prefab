@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33598260247251826}
   - component: {fileID: 23893158806457062}
   - component: {fileID: 114696711162966174}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SmartPlane
   m_TagString: floor
   m_Icon: {fileID: 0}
@@ -100,3 +100,5 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 1cb780c184729d14488f25ccaecc376b, type: 2}
   - {fileID: 2100000, guid: 0c21f1533ca38304fb4d46a1753324aa, type: 2}
   - {fileID: 2100000, guid: 7e4382f0dc3dd434a9b78d3274abb744, type: 2}
+  minV: {x: 0, y: 0, z: 0}
+  maxV: {x: 0, y: 0, z: 0}

@@ -401,7 +401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 480082875}
   - component: {fileID: 480082874}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OceanFloor
   m_TagString: floor
   m_Icon: {fileID: 0}
@@ -425,7 +425,7 @@ MonoBehaviour:
   halfTilesX: 10
   halfTilesZ: 10
   waterDepth: -100
-  smallObjectsChance: 0.12
+  smallObjectsChance: 0.5
   smallPrefabs:
   - {fileID: 1822388872351000, guid: c5ed7c67b54ca4643ba2ff5b7ea7e8e0, type: 2}
   - {fileID: 1822388872351000, guid: 315e6d73e937aab41a3d251582799ff2, type: 2}

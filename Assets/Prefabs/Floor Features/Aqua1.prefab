@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4020486110522412}
-  - component: {fileID: 114267684341133218}
+  - component: {fileID: 114585973766531476}
   m_Layer: 0
   m_Name: Aqua1
   m_TagString: Untagged
@@ -52,7 +52,7 @@ Transform:
   m_GameObject: {fileID: 1029530458304850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.060589075, y: 0.060589094, z: 0.060589094}
   m_Children:
   - {fileID: 4703834505969540}
   m_Father: {fileID: 0}
@@ -110,7 +110,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1515830351736216}
   m_Mesh: {fileID: 4300000, guid: a406b2ac49b71d844a4c3cbedfcbe547, type: 3}
---- !u!114 &114267684341133218
+--- !u!114 &114585973766531476
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -118,6 +118,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1029530458304850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 108377c131ac3da41a4a07a398c13e33, type: 3}
+  m_Script: {fileID: 11500000, guid: fc42b345aaa979747965579e30bb0d6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRock: 0
+  normalize: 0

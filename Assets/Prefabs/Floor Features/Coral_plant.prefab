@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4305694651506968}
-  - component: {fileID: 114225038091697080}
+  - component: {fileID: 114267511671523048}
   m_Layer: 0
   m_Name: Coral_plant
   m_TagString: Untagged
@@ -52,7 +52,7 @@ Transform:
   m_GameObject: {fileID: 1713812397219670}
   m_LocalRotation: {x: -0, y: -0.61002266, z: -0, w: 0.792384}
   m_LocalPosition: {x: -4.451473, y: -56.79, z: 190.4624}
-  m_LocalScale: {x: 3.2516935, y: 3.2516937, z: 4.71646}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4472211578121292}
   m_Father: {fileID: 0}
@@ -110,7 +110,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1880771127100370}
   m_Mesh: {fileID: 4300000, guid: c44448835b46fa8469f6afa19558e4c1, type: 3}
---- !u!114 &114225038091697080
+--- !u!114 &114267511671523048
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1713812397219670}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 108377c131ac3da41a4a07a398c13e33, type: 3}
+  m_Script: {fileID: 11500000, guid: fc42b345aaa979747965579e30bb0d6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isRock: 0

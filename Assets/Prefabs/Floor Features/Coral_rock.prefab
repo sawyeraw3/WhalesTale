@@ -37,7 +37,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4194674871138538}
-  - component: {fileID: 114633650011837872}
+  - component: {fileID: 114143689273222244}
   m_Layer: 0
   m_Name: Coral_rock
   m_TagString: Untagged
@@ -53,7 +53,7 @@ Transform:
   m_GameObject: {fileID: 1978464204850116}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.3164363, y: 37.45, z: 105.45}
-  m_LocalScale: {x: 5.906913, y: 5.9069138, z: 5.9069138}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4773994667527622}
   m_Father: {fileID: 0}
@@ -125,7 +125,7 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d70b9de9d24d6874cb7b5bbbdf34fce8, type: 3}
---- !u!114 &114633650011837872
+--- !u!114 &114143689273222244
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1978464204850116}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 108377c131ac3da41a4a07a398c13e33, type: 3}
+  m_Script: {fileID: 11500000, guid: fc42b345aaa979747965579e30bb0d6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isRock: 0

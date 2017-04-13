@@ -37,7 +37,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4700059350612224}
-  - component: {fileID: 114226125466770676}
+  - component: {fileID: 114185972803438818}
   m_Layer: 0
   m_Name: Rock3
   m_TagString: Untagged
@@ -66,7 +66,7 @@ Transform:
   m_GameObject: {fileID: 1822388872351000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -20, y: 0, z: -20}
-  m_LocalScale: {x: 4.7240806, y: 4.7240815, z: 4.7240815}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4655394419951080}
   m_Father: {fileID: 0}
@@ -125,7 +125,7 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300008, guid: de0742e0cdb0e7143903e696dd6fb817, type: 3}
---- !u!114 &114226125466770676
+--- !u!114 &114185972803438818
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1822388872351000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 108377c131ac3da41a4a07a398c13e33, type: 3}
+  m_Script: {fileID: 11500000, guid: fc42b345aaa979747965579e30bb0d6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isRock: 1

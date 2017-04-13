@@ -138,9 +138,13 @@ public class GenerateInfinite : MonoBehaviour {
 			Vector3 randSpot = vertices [findSpot];
 			int randObj = Random.Range (0, smallPrefabs.Length);
 			float randSize = Random.Range (0.25f, maxSmallSize);
+			int chooseVertice = Random.Range (0, vertices.Length);
+			Vector3 meshPos = vertices [chooseVertice];
 			Vector3 spawnPos = tile.transform.position;
-			spawnPos.y = 0;
+
 			GameObject temp = Instantiate (smallPrefabs [randObj], spawnPos, new Quaternion(0,0,0,0), tile.transform);
+			temp.transform.localPosition = meshPos;
+
 			temp.transform.localScale *= randSize;
 		}
 
