@@ -445,7 +445,10 @@ MonoBehaviour:
   halfTilesX: 10
   halfTilesZ: 10
   waterDepth: -100
-  floorObjects: []
+  smallObjectsChance: 0.3
+  smallPrefabs: []
+  bigPrefabs: []
+  testObj: {fileID: 1054244610578426, guid: c1bc409f964b70d4486311720af6a542, type: 2}
 --- !u!4 &480082875
 Transform:
   m_ObjectHideFlags: 0
@@ -587,7 +590,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -2114426952
+  randomSeed: -1121690445
   InitialModule:
     serializedVersion: 3
     enabled: 1

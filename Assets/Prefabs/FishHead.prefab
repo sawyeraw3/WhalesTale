@@ -60,7 +60,7 @@ MonoBehaviour:
   - {fileID: 1416743458988758, guid: b90217e75d9498e43bc065491f19c6ca, type: 2}
   fishRotSpeed: 8
   headMoveSpeed: 1
-  minDistance: 150
+  minDistance: 250
   player: {fileID: 0}
 --- !u!135 &135644372701869830
 SphereCollider:

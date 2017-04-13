@@ -16,11 +16,14 @@ public class FishHeadSpawn : MonoBehaviour {
 	private bool started = false;
 	private bool scanning = false;
 	private bool flee = false;
+	private bool returning = false;
+	private bool shark = false;
 
 	// Use this for initialization
 	void Start () {
 		scanning = false;
 		flee = false;
+		returning = false;
 		this.headMoveSpeed = 1 + Random.value * 2;
 		this.transform.eulerAngles = Vector3.zero;
 		this.transform.position = player.transform.position;
@@ -28,8 +31,8 @@ public class FishHeadSpawn : MonoBehaviour {
 			this.transform.position += Random.insideUnitSphere * minDistance * .75f;
 			if (this.transform.position.y > -16) {
 				this.transform.position = new Vector3 (this.transform.position.x, -16, this.transform.position.z);
-			} else if (this.transform.position.y < -75) {
-				this.transform.position = new Vector3 (this.transform.position.x, -84, this.transform.position.z);
+			} else if (this.transform.position.y < -60) {
+				this.transform.position = new Vector3 (this.transform.position.x, -60, this.transform.position.z);
 			}
 		} else {
 			this.transform.position += Vector3.forward * minDistance / 4;
@@ -53,6 +56,7 @@ public class FishHeadSpawn : MonoBehaviour {
 			if (fish.name.Contains ("Shark") && !reduced) {
 				rNum /= 4;
 				reduced = true;
+				shark = true;
 			}
 			fish.transform.parent = this.transform;
 			fish.transform.localPosition = Vector3.zero;
@@ -83,12 +87,26 @@ public class FishHeadSpawn : MonoBehaviour {
 	}
 
 	IEnumerator waitAndRestart() {
-		yield return new WaitForSeconds (5.0f);
+		yield return new WaitForSeconds (6.0f);
 		restart ();
+		/*returning = true;
+		foreach (GameObject fish in GameObject.FindGameObjectsWithTag("fishParent")) {
+			GameObject fishObj = fish.transform.FindChild ("fishModel").gameObject;
+			Vector3 target = Random.insideUnitSphere * Random.Range (4, 8);
+			Transform look = fish.transform.FindChild ("LookAt");
+			look.position = this.transform.position + target;
+			fishObj.transform.LookAt (look);
+			while(!Vector3.Equals (fishObj.transform.position, look.transform.position)) {
+				fishObj.transform.position = Vector3.MoveTowards (fishObj.transform.position, look.position, headMoveSpeed / 6f);
+			}
+			returning = false;
+			flee = false;
+		}*/
 	}
 
 	// Update is called once per frame
 	void Update () {
+		bool returned = true;
 		foreach (GameObject fish in GameObject.FindGameObjectsWithTag("fishParent")) {
 			GameObject fishObj = fish.transform.FindChild ("fishModel").gameObject;
 			if (rotatingOrSchooling) { //rotating
@@ -103,14 +121,14 @@ public class FishHeadSpawn : MonoBehaviour {
 
 			if (flee) {
 				Transform look = fish.transform.FindChild ("LookAt");
-				look.localPosition = fishObj.transform.localPosition * 2;
+				look.localPosition = new Vector3(fishObj.transform.localPosition.x * 2, fishObj.transform.localPosition.y, fish.transform.localPosition.z * 2);
 				fishObj.transform.LookAt (look);
-				fishObj.transform.position = Vector3.MoveTowards (fishObj.transform.position, look.position, headMoveSpeed/6f);
+				fishObj.transform.position = Vector3.MoveTowards (fishObj.transform.position, look.position, headMoveSpeed/(shark ? 2.5f : 3.5f));
 			}
 		}
 
 		if (!rotatingOrSchooling && !flee) { //schooling
-			this.transform.position += dir * Time.deltaTime * headMoveSpeed;
+			this.transform.position += dir * Time.deltaTime * headMoveSpeed * (shark ? 1.5f : 1f);
 		}
 			
 
