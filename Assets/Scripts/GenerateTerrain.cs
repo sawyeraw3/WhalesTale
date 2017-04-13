@@ -9,7 +9,6 @@ public class GenerateTerrain : MonoBehaviour {
 	public Material[] materials;
 	public Vector3 minV = Vector3.zero;
 	public Vector3 maxV = Vector3.zero;
-	public Vector3 objV = Vector3.zero;
 
 	// Use this for initialization
 	void Start() {
@@ -19,7 +18,6 @@ public class GenerateTerrain : MonoBehaviour {
 	public void perlinMesh(int seed) {
 		Mesh mesh = this.GetComponent<MeshFilter>().mesh;
 		Vector3[] vertices = mesh.vertices;
-		int ranV = Random.Range (0, vertices.Length - 1);
 		for (int v = 0; v < vertices.Length; v++) {
 			vertices[v].y = Mathf.PerlinNoise( ((vertices[v].x + this.transform.position.x) / detailScale) + seed,
 				((vertices[v].z + this.transform.position.z)/detailScale) + seed ) * heightScale;
@@ -28,9 +26,6 @@ public class GenerateTerrain : MonoBehaviour {
 			}
 			if (vertices [v].y < minV.y) {
 				minV = vertices [v];
-			}
-			if (v == ranV) {
-				objV = vertices [v];
 			}
 		}
 
@@ -45,9 +40,11 @@ public class GenerateTerrain : MonoBehaviour {
 			}
 		}
 
+
 		mesh.vertices = vertices;
 		mesh.RecalculateBounds();
 		mesh.RecalculateNormals();
 		this.gameObject.AddComponent<MeshCollider>();
+
 	}
 }
