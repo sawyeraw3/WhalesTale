@@ -526,7 +526,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1188857456
+  randomSeed: 221148677
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3794,7 +3794,7 @@ Prefab:
     - target: {fileID: 114892651972208994, guid: e3b1da4f16fe9744683632eed81eb8b9,
         type: 2}
       propertyPath: debugging
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4949994042714292, guid: e3b1da4f16fe9744683632eed81eb8b9, type: 2}
       propertyPath: m_RootOrder
@@ -3804,9 +3804,47 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114961804787612448, guid: e3b1da4f16fe9744683632eed81eb8b9,
+        type: 2}
+      propertyPath: m_AutoTargetPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961804787612448, guid: e3b1da4f16fe9744683632eed81eb8b9,
+        type: 2}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 1214224714}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3b1da4f16fe9744683632eed81eb8b9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1214224713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1214224714}
+  m_Layer: 0
+  m_Name: Focus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1214224714
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1214224713}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1807340455}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1293184550
 Prefab:
   m_ObjectHideFlags: 0
@@ -3942,6 +3980,11 @@ Prefab:
 --- !u!1 &1807340447 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1032273909988412, guid: e3b1da4f16fe9744683632eed81eb8b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1061623886}
+--- !u!4 &1807340455 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4904794809063870, guid: e3b1da4f16fe9744683632eed81eb8b9,
     type: 2}
   m_PrefabInternal: {fileID: 1061623886}
 --- !u!1 &1901910278
