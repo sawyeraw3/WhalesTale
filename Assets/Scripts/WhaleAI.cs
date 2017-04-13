@@ -15,9 +15,11 @@ public class WhaleAI : MonoBehaviour {
 	void Start () {
 		GameObject p = GameObject.Find("whale");
 		player = p;
+		GameObject podNum = GameObject.Find ("GameManager");
+		WhalesInPod script = podNum.GetComponent<WhalesInPod> ();
 
 		newRandWait();
-		MaxDisFromWhale = 10f;//replace with number of whales in pod
+		MaxDisFromWhale = 12 + (script.podCount * 3f);//replace with number of whales in pod
 		buffer = Random.insideUnitSphere * MaxDisFromWhale;
 		StartCoroutine (newPos());
 		rotSpeed = .5f;
@@ -30,6 +32,10 @@ public class WhaleAI : MonoBehaviour {
 			Quaternion.LookRotation (player.transform.position + buffer - transform.position), 
 			rotSpeed * Time.fixedDeltaTime);
 		transform.Translate (Vector3.forward * moveSpeed * Time.fixedDeltaTime);
+
+		if (transform.position.y > -7) {
+			transform.position = new Vector3 (transform.position.x, -7, transform.position.z);
+		}
 	}
 
 	IEnumerator newPos(){

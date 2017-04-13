@@ -405,8 +405,10 @@ MonoBehaviour:
   player: {fileID: 0}
   followRange: 0
   killRange: 0
+  moveSpeed: 0
   call: {fileID: 8300000, guid: 1b3d250904475924ba85a8245efc4a7e, type: 3}
   justFound: 0
+  roam: 0
 --- !u!136 &136069927907381062
 CapsuleCollider:
   m_ObjectHideFlags: 1
