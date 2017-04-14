@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RenderWhenNear : MonoBehaviour {
+public class EnableWhenNear : MonoBehaviour {
 
 	private bool isEnabled = false;
 	private Transform playerLoc;
 	public float distance = 110f;
+	public float destroyDistance = 350f;
 
 	// Use this for initialization
 	void Start () {
@@ -16,25 +17,25 @@ public class RenderWhenNear : MonoBehaviour {
 	void FixedUpdate() {
 		if (Vector3.Distance (this.transform.position, playerLoc.position) < distance)
 			isEnabled = true;
-		else
+		else if (Vector3.Distance (this.transform.position, playerLoc.position) > destroyDistance)
+			Destroy (this.gameObject);
+		else {
 			isEnabled = false;
+		}
 	}
 
 	void Update () {
-		if (isEnabled) {
-			toggleRenderer (true);
-		} else
-			toggleRenderer (false);
+		toggleRenderer ();
 	}
 
-	void toggleRenderer(bool enable) {
+	void toggleRenderer() {
 		Renderer render = this.GetComponent<Renderer> ();
 		if (render) {
-			render.enabled = enable;
-		}
+			render.enabled = isEnabled;
+		}	
 
 		foreach (Renderer r in this.GetComponentsInChildren<Renderer>()) {
-			r.enabled = enable;
+			r.enabled = isEnabled;
 		}
 	}
 }

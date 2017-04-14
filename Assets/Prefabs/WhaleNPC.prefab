@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 114739909140140518}
   - component: {fileID: 114884469442800278}
   - component: {fileID: 82959801520865378}
+  - component: {fileID: 114471967884402766}
   m_Layer: 8
   m_Name: WhaleNPC
   m_TagString: Untagged
@@ -375,6 +376,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114471967884402766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1691092931497170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f57e4fb583cdc1f4b87d0dd4553e264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 110
+  destroyDistance: 450
 --- !u!114 &114739909140140518
 MonoBehaviour:
   m_ObjectHideFlags: 1

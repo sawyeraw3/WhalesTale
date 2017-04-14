@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4068892489542582}
   - component: {fileID: 114202738536662056}
   - component: {fileID: 135644372701869830}
+  - component: {fileID: 114496051116214898}
   m_Layer: 8
   m_Name: FishHead
   m_TagString: Untagged
@@ -35,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1276464381941364}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.169117, y: -40.7, z: 2.9737597}
+  m_LocalPosition: {x: -7.169117, y: -24.6, z: -39.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -60,8 +61,21 @@ MonoBehaviour:
   - {fileID: 1416743458988758, guid: b90217e75d9498e43bc065491f19c6ca, type: 2}
   fishRotSpeed: 8
   headMoveSpeed: 1
-  minDistance: 250
+  minDistance: 300
   player: {fileID: 0}
+--- !u!114 &114496051116214898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1276464381941364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f57e4fb583cdc1f4b87d0dd4553e264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 110
+  destroyDistance: 350
 --- !u!135 &135644372701869830
 SphereCollider:
   m_ObjectHideFlags: 1

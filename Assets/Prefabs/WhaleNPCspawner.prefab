@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4964629360839510}
-  - component: {fileID: 114594407187939160}
+  - component: {fileID: 114067109430320806}
   m_Layer: 0
   m_Name: WhaleNPCspawner
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114594407187939160
+--- !u!114 &114067109430320806
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -48,8 +48,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1632302161597192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 602ac8dfc93c14a4e9889c3d33d10366, type: 3}
+  m_Script: {fileID: 11500000, guid: abd18bd13976c1f44b06fa4c0e9b1fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   whaleNPC: {fileID: 1691092931497170, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2, type: 2}
+  fishHead: {fileID: 1276464381941364, guid: 2e59a56231ce62045814ac2d89668e43, type: 2}
+  whaleSpawnDelay: 60
+  fishSpawnDelay: 5

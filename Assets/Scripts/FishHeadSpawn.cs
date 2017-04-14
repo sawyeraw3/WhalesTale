@@ -26,17 +26,17 @@ public class FishHeadSpawn : MonoBehaviour {
 		returning = false;
 		this.headMoveSpeed = 1 + Random.value * 2;
 		this.transform.eulerAngles = Vector3.zero;
-		this.transform.position = player.transform.position;
+		/*this.transform.position = player.transform.position;
 		if (started) {
 			this.transform.position += Random.insideUnitSphere * minDistance * .75f;
-			if (this.transform.position.y > -16) {
-				this.transform.position = new Vector3 (this.transform.position.x, -16, this.transform.position.z);
-			} else if (this.transform.position.y < -60) {
-				this.transform.position = new Vector3 (this.transform.position.x, -60, this.transform.position.z);
+			if (this.transform.position.y > -15) {
+				this.transform.position = new Vector3 (this.transform.position.x, -15, this.transform.position.z);
+			} else if (this.transform.position.y < -35) {
+				this.transform.position = new Vector3 (this.transform.position.x, -35, this.transform.position.z);
 			}
 		} else {
 			this.transform.position += Vector3.forward * minDistance / 4;
-		}
+		}*/
 		started = true;
 		rNum = Random.Range (7f, 15f);
 		int fishIndex = Random.Range (0, fishPrefabs.Length);
@@ -107,23 +107,23 @@ public class FishHeadSpawn : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		bool returned = true;
-		foreach (GameObject fish in GameObject.FindGameObjectsWithTag("fishParent")) {
-			GameObject fishObj = fish.transform.FindChild ("fishModel").gameObject;
+		foreach (Transform child in transform) {
+			GameObject fishObj = child.FindChild ("fishModel").gameObject;
 			if (rotatingOrSchooling) { //rotating
-				fish.transform.RotateAround (fish.transform.position, Vector3.up, Time.deltaTime * fishRotSpeed);
-				Transform look = fish.transform.FindChild ("LookAt");
+				child.RotateAround (child.position, Vector3.up, Time.deltaTime * fishRotSpeed);
+				Transform look = child.FindChild ("LookAt");
 				fishObj.transform.LookAt (look);
 			} else { //schooling
-				Transform look = fish.transform.FindChild ("LookAt");
+				Transform look = child.FindChild ("LookAt");
 				look.localPosition = fishObj.transform.localPosition + dir * headMoveSpeed;
 				fishObj.transform.LookAt (look);
 			}
 
 			if (flee) {
-				Transform look = fish.transform.FindChild ("LookAt");
-				look.localPosition = new Vector3(fishObj.transform.localPosition.x * 2, fishObj.transform.localPosition.y, fish.transform.localPosition.z * 2);
+				Transform look = child.FindChild ("LookAt");
+				look.localPosition = new Vector3(fishObj.transform.localPosition.x * 2, fishObj.transform.localPosition.y, fishObj.transform.localPosition.z * 2);
 				fishObj.transform.LookAt (look);
-				fishObj.transform.position = Vector3.MoveTowards (fishObj.transform.position, look.position, headMoveSpeed/(shark ? 2.5f : 3.5f));
+				fishObj.transform.position = Vector3.MoveTowards (fishObj.transform.position, look.position, headMoveSpeed / (shark ? 4f : 5f));
 			}
 		}
 
@@ -132,11 +132,11 @@ public class FishHeadSpawn : MonoBehaviour {
 		}
 			
 
-		if (scanning && Mathf.Abs (Vector3.Distance (this.transform.position, player.transform.position)) > minDistance) {
+		/*if (scanning && Mathf.Abs (Vector3.Distance (this.transform.position, player.transform.position)) > minDistance) {
 			restart ();
-		}
+		}*/
 
-		if ((dir.y > 0 && this.transform.position.y > -20) || (dir.y < 0 && this.transform.position.y < -75)) {
+		if ((dir.y > 0 && this.transform.position.y > -15) || (dir.y < 0 && this.transform.position.y < -35)) {
 			dir = new Vector3 (dir.x, -dir.y, dir.z);
 		}
 
@@ -148,7 +148,7 @@ public class FishHeadSpawn : MonoBehaviour {
 			GameObject fish = this.transform.GetChild (i).gameObject;
 			Destroy (fish);
 		}
-		Start ();
+		//Start ();
 	}
 
 	void OnTriggerEnter(Collider other) {
@@ -156,5 +156,6 @@ public class FishHeadSpawn : MonoBehaviour {
 			flee = true;
 			StartCoroutine (waitAndRestart ());
 		}
+
 	}
 }
