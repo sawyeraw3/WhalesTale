@@ -21,10 +21,10 @@ public class WhaleProximity : MonoBehaviour {
 		player = p;
 		roam = true;
 		followRange = 20f;
-		killRange = 150f;
+		killRange = 180f;
 		audSource = GetComponent<AudioSource>();
 		justFound = false;
-		moveSpeed = Random.Range (10, 13);
+		moveSpeed = Random.Range (10, 15);
 
 
 		transform.LookAt (player.transform);

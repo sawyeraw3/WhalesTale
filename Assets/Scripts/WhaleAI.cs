@@ -44,7 +44,7 @@ public class WhaleAI : MonoBehaviour {
 			yield return new WaitForSeconds (randWait);
 			Random.seed = System.DateTime.Now.Millisecond;
 			//min and max move speed
-			moveSpeed = Random.Range (10, 13);
+			moveSpeed = Random.Range (10, 15);
 			buffer = Random.insideUnitSphere * MaxDisFromWhale;
 
 		}
