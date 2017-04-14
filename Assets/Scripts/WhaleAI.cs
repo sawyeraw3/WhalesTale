@@ -19,7 +19,7 @@ public class WhaleAI : MonoBehaviour {
 		WhalesInPod script = podNum.GetComponent<WhalesInPod> ();
 
 		newRandWait();
-		MaxDisFromWhale = 12 + (script.podCount * 3f);//replace with number of whales in pod
+		MaxDisFromWhale = 12 + (script.podCount * 5f);//replace with number of whales in pod
 		buffer = Random.insideUnitSphere * MaxDisFromWhale;
 		StartCoroutine (newPos());
 		rotSpeed = .5f;
