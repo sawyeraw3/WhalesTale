@@ -7,7 +7,7 @@ public class NPCSpawner : MonoBehaviour {
 	public GameObject player;
 	public GameObject whaleNPC;
 	public GameObject fishHead;
-	public float whaleSpawnDelay = 60f;
+	public float whaleSpawnDelay = 25f;
 	public float fishSpawnDelay = 10f;
 	private float timer1 = 0;
 	private float timer2 = 0;
