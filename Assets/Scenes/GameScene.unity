@@ -327,7 +327,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 498412, guid: 970dd4b9371394fb4890965f608d46fd, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 177758, guid: 970dd4b9371394fb4890965f608d46fd, type: 2}
       propertyPath: m_IsActive
@@ -437,6 +437,7 @@ MonoBehaviour:
   - {fileID: 1659545924924350, guid: dc89c67b77db95d4ab15a9d740eeccd4, type: 2}
   - {fileID: 1036240148663014, guid: 8cdcf715aaddc0c409544ccd5e0d1579, type: 2}
   - {fileID: 1181068253448742, guid: e243c1416095c4344a2dbfa9a19f253e, type: 2}
+  - {fileID: 1133249798822416, guid: acef688eb4af7004dab05516db761ef4, type: 2}
   bigPrefabs: []
 --- !u!4 &480082875
 Transform:
@@ -3595,7 +3596,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4068892489542582, guid: 2e59a56231ce62045814ac2d89668e43, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114202738536662056, guid: 2e59a56231ce62045814ac2d89668e43,
         type: 2}
