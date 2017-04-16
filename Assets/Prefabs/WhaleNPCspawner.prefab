@@ -54,5 +54,5 @@ MonoBehaviour:
   player: {fileID: 0}
   whaleNPC: {fileID: 1691092931497170, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2, type: 2}
   fishHead: {fileID: 1276464381941364, guid: 2e59a56231ce62045814ac2d89668e43, type: 2}
-  whaleSpawnDelay: 60
+  whaleSpawnDelay: 25
   fishSpawnDelay: 5
