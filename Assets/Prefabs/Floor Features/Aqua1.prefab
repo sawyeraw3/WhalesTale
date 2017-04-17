@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4020486110522412}
   - component: {fileID: 114585973766531476}
-  - component: {fileID: 114666443326808954}
   m_Layer: 0
   m_Name: Aqua1
   m_TagString: Untagged
@@ -38,6 +37,7 @@ GameObject:
   - component: {fileID: 4703834505969540}
   - component: {fileID: 33312254942299284}
   - component: {fileID: 23452213696000346}
+  - component: {fileID: 114135049784156310}
   m_Layer: 0
   m_Name: aqua10
   m_TagString: Untagged
@@ -111,6 +111,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1515830351736216}
   m_Mesh: {fileID: 4300000, guid: a406b2ac49b71d844a4c3cbedfcbe547, type: 3}
+--- !u!114 &114135049784156310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1515830351736216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03b62f5714ab4249aea9e526d6c73d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: 7e4382f0dc3dd434a9b78d3274abb744, type: 2}
+  - {fileID: 2100000, guid: 1cb780c184729d14488f25ccaecc376b, type: 2}
+  - {fileID: 2100000, guid: 1a3909404b44c214e82fdc2c76a68d30, type: 2}
+  - {fileID: 2100000, guid: 0c21f1533ca38304fb4d46a1753324aa, type: 2}
 --- !u!114 &114585973766531476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,19 +140,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isRock: 0
   normalize: 0
---- !u!114 &114666443326808954
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1029530458304850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f03b62f5714ab4249aea9e526d6c73d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  materials:
-  - {fileID: 2100000, guid: 7e4382f0dc3dd434a9b78d3274abb744, type: 2}
-  - {fileID: 2100000, guid: 1cb780c184729d14488f25ccaecc376b, type: 2}
-  - {fileID: 2100000, guid: 1a3909404b44c214e82fdc2c76a68d30, type: 2}
-  - {fileID: 2100000, guid: 0c21f1533ca38304fb4d46a1753324aa, type: 2}

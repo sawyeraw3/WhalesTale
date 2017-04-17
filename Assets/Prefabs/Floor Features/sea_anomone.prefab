@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4641012992206508}
   - component: {fileID: 33631007449512166}
   - component: {fileID: 23863603501787446}
+  - component: {fileID: 114190338241440164}
   m_Layer: 0
   m_Name: pCylinder1
   m_TagString: Untagged
@@ -36,7 +37,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4918814869797228}
-  - component: {fileID: 95388742876202008}
   - component: {fileID: 114631897612750070}
   m_Layer: 0
   m_Name: sea_anomone
@@ -140,23 +140,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1036026090802200}
   m_Mesh: {fileID: 4300000, guid: 1518d01d3a151f54c8f7f084e80fd4b3, type: 3}
---- !u!95 &95388742876202008
-Animator:
-  serializedVersion: 3
+--- !u!114 &114190338241440164
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1181068253448742}
+  m_GameObject: {fileID: 1036026090802200}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 1518d01d3a151f54c8f7f084e80fd4b3, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03b62f5714ab4249aea9e526d6c73d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: 7e4382f0dc3dd434a9b78d3274abb744, type: 2}
+  - {fileID: 2100000, guid: 1cb780c184729d14488f25ccaecc376b, type: 2}
+  - {fileID: 2100000, guid: 1a3909404b44c214e82fdc2c76a68d30, type: 2}
+  - {fileID: 2100000, guid: 0c21f1533ca38304fb4d46a1753324aa, type: 2}
 --- !u!114 &114631897612750070
 MonoBehaviour:
   m_ObjectHideFlags: 1
