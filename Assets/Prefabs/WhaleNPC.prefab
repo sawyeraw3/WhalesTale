@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 114471967884402766}
   m_Layer: 8
   m_Name: WhaleNPC
-  m_TagString: Untagged
+  m_TagString: Whale
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,8 +170,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1691092931497170}
-  m_LocalRotation: {x: -0, y: -0.034176465, z: -0, w: 0.9994158}
-  m_LocalPosition: {x: -28.899635, y: -29.340652, z: 66.75645}
+  m_LocalRotation: {x: -0, y: 0.9998197, z: -0, w: -0.018990317}
+  m_LocalPosition: {x: -0.3, y: -36.41, z: 296.7}
   m_LocalScale: {x: 77.35053, y: 98.60055, z: 123.244705}
   m_Children:
   - {fileID: 4441491719301022}
