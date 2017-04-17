@@ -4219,7 +4219,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4643929736287234, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -93.9
       objectReference: {fileID: 0}
     - target: {fileID: 4643929736287234, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4227,23 +4227,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4643929736287234, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -137.4
       objectReference: {fileID: 0}
     - target: {fileID: 4643929736287234, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4643929736287234, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.21170798
       objectReference: {fileID: 0}
     - target: {fileID: 4643929736287234, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4643929736287234, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.977333
       objectReference: {fileID: 0}
     - target: {fileID: 4643929736287234, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
       propertyPath: m_RootOrder
@@ -4254,24 +4254,11 @@ Prefab:
       propertyPath: whale
       value: 
       objectReference: {fileID: 1807340447}
-    - target: {fileID: 4720787255156610, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -8.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720787255156610, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720787255156610, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720787255156610, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
+    - target: {fileID: 4643929736287234, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 24.445002
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114068494434679858, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1335056906
@@ -4560,6 +4547,17 @@ Prefab:
     - target: {fileID: 1632302161597192, guid: e598f0bd09aa22745aed9f8a5d2ddd96, type: 2}
       propertyPath: m_Name
       value: NPCspawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 114067109430320806, guid: e598f0bd09aa22745aed9f8a5d2ddd96,
+        type: 2}
+      propertyPath: boat
+      value: 
+      objectReference: {fileID: 1637165580178752, guid: 9d3a0effb5510aa45858d6a91ea77b71,
+        type: 2}
+    - target: {fileID: 114067109430320806, guid: e598f0bd09aa22745aed9f8a5d2ddd96,
+        type: 2}
+      propertyPath: boatSpawnDelay
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e598f0bd09aa22745aed9f8a5d2ddd96, type: 2}

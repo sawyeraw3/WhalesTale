@@ -7,10 +7,13 @@ public class NPCSpawner : MonoBehaviour {
 	public GameObject player;
 	public GameObject whaleNPC;
 	public GameObject fishHead;
+	public GameObject boat;
+	public float boatSpawnDelay = 15f;
 	public float whaleSpawnDelay = 25f;
 	public float fishSpawnDelay = 10f;
 	private float timer1 = 0;
 	private float timer2 = 0;
+	private float timer3 = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +25,7 @@ public class NPCSpawner : MonoBehaviour {
 	void Update () {
 		timer1 += Time.deltaTime;
 		timer2 += Time.deltaTime;
+		timer3 += Time.deltaTime;
 
 		if (timer1 >= whaleSpawnDelay) {
 			spawnWhale ();
@@ -30,6 +34,10 @@ public class NPCSpawner : MonoBehaviour {
 		if (timer2 >= fishSpawnDelay) {
 			spawnFish ();
 			timer2 = 0;
+		}
+		if (timer3 >= boatSpawnDelay) {
+			spawnBoat ();
+			timer3 = 0;
 		}
 	}
 
@@ -44,6 +52,16 @@ public class NPCSpawner : MonoBehaviour {
 		}
 	}
 
+	void spawnBoat(){
+		int[] mult = { -1, 1 };
+		Random.seed = System.DateTime.Now.Millisecond;
+		GameObject b = Instantiate (boat) as GameObject;
+		b.transform.LookAt(player.transform);
+		Vector3 v = b.transform.rotation.eulerAngles;
+		b.transform.rotation = Quaternion.Euler (0, v.y, v.z);
+		b.transform.position = new Vector3 (player.transform.position.x + Random.Range (250, 351) * mult [Random.Range (0, 2)], 0, 
+				player.transform.position.z + Random.Range (250, 351) * mult [Random.Range (0, 2)]);
+	}
 	void spawnFish(){
 		int[] mult = { -1, 1 };
 		Random.seed = System.DateTime.Now.Millisecond;
