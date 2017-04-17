@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 5
-  expandSpeed: 100
+  expandSpeed: 120
   indicator: {fileID: 1246155822485976, guid: 67eb8c83619fdd04e9d39410e9ec2d97, type: 2}
   playerLoc: {fileID: 0}
 --- !u!135 &135801064394433598
