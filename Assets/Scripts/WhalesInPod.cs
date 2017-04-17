@@ -5,7 +5,7 @@ using UnityEngine;
 public class WhalesInPod : MonoBehaviour {
 
 	public int podCount;
-	private GameObject followPoint;
+	private GameObject followPoint;	
 	private Transform playerPos;
 	private Animator camAnim;
 	private GameObject gameCamera;
@@ -58,7 +58,7 @@ public class WhalesInPod : MonoBehaviour {
 			case 9:
 				
 			default: 
-				followPoint.transform.localPosition = new Vector3 (0, 0, -1f);
+				followPoint.transform.localPosition = new Vector3 (0, 0, -0.5f);
 				break;
 			}
 		}

@@ -18,17 +18,26 @@ public class WhaleAI : MonoBehaviour {
 		GameObject podNum = GameObject.Find ("GameManager");
 		WhalesInPod script = podNum.GetComponent<WhalesInPod> ();
 
+
+		Random.seed = System.DateTime.Now.Millisecond;
 		//newRandWait();
-		minDisFromWhale = (script.podCount * 2f);//replace with number of whales in pod
+		minDisFromWhale = (script.podCount * 3f);//replace with number of whales in pod
 		Vector3 toScale = new Vector3(minDisFromWhale,minDisFromWhale,0);
 		buffer = Random.insideUnitSphere; 
 		buffer.Scale (toScale);
-		Debug.Log (buffer);
-		//StartCoroutine (newPos());
+		StartCoroutine (newPos());
 	}
 	
 	// Update is called once per frame
 	void LateUpdate () {
+		Vector3 toScale = new Vector3(minDisFromWhale,minDisFromWhale,0);
+		GameObject[] whales = GameObject.FindGameObjectsWithTag ("Whale");
+		foreach (GameObject w in whales) {
+			if (Vector3.Distance (player.position + buffer, w.transform.position) < 10) {
+				buffer = Random.insideUnitSphere; 
+				buffer.Scale (toScale);
+			}
+		}
 		if (Vector3.Distance (this.transform.position, player.position + buffer) > 8) {
 			moveSpeed = 20f;
 			transform.rotation = Quaternion.Slerp (transform.rotation, 
@@ -54,7 +63,6 @@ public class WhaleAI : MonoBehaviour {
 			Random.seed = System.DateTime.Now.Millisecond;
 			Vector3 toScale = new Vector3(minDisFromWhale,minDisFromWhale,0);	
 			buffer = Random.insideUnitSphere; 
-			buffer += new Vector3 (1, 1, 1);
 			buffer.Scale (toScale);
 
 		}
