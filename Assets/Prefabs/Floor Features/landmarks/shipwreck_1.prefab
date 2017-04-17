@@ -24,8 +24,9 @@ GameObject:
   - component: {fileID: 95111143936864510}
   - component: {fileID: 54249721216718474}
   - component: {fileID: 64671002216902378}
-  - component: {fileID: 114685276232629562}
-  m_Layer: 0
+  - component: {fileID: 114288160505546684}
+  - component: {fileID: 114495089207772070}
+  m_Layer: 8
   m_Name: shipwreck_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,9 +39,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1198137266187160}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6990688, y: 1.6990688, z: 1.6990688}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -41.933346, y: -18.740002, z: -64.95628}
+  m_LocalScale: {x: 2.9273012, y: 2.9272995, z: 2.9272997}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -58,7 +59,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1a3909404b44c214e82fdc2c76a68d30, type: 2}
+  - {fileID: 2100000, guid: 4dd95fc9361c589468323cbc4aae836a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -130,7 +131,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114685276232629562
+--- !u!114 &114288160505546684
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -138,11 +139,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1198137266187160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f03b62f5714ab4249aea9e526d6c73d8, type: 3}
+  m_Script: {fileID: 11500000, guid: fc42b345aaa979747965579e30bb0d6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materials:
-  - {fileID: 2100000, guid: 7e4382f0dc3dd434a9b78d3274abb744, type: 2}
-  - {fileID: 2100000, guid: 1cb780c184729d14488f25ccaecc376b, type: 2}
-  - {fileID: 2100000, guid: 1a3909404b44c214e82fdc2c76a68d30, type: 2}
-  - {fileID: 2100000, guid: 0c21f1533ca38304fb4d46a1753324aa, type: 2}
+  isRock: 1
+  normalize: 0
+  moveToBottom: 1
+--- !u!114 &114495089207772070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198137266187160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f57e4fb583cdc1f4b87d0dd4553e264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 110
+  destroyDistance: 350
+  destroy: 0

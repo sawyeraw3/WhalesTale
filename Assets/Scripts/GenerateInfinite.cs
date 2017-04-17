@@ -14,7 +14,6 @@ public class GenerateInfinite : MonoBehaviour {
 	[Range(0,1)]
 	public float smallObjectsChance = 0.3f;
 	public GameObject[] smallPrefabs;
-	public GameObject[] bigPrefabs;
 
 	int seed;
 
@@ -149,10 +148,5 @@ public class GenerateInfinite : MonoBehaviour {
 		}
 
 	}
-
-	void SpawnBigObjects(GameObject tile)
-	{
-		Mesh mesh = this.GetComponent<MeshFilter>().mesh;
-		Vector3[] vertices = mesh.vertices;
-	}
+		
 }

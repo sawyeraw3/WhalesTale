@@ -54,5 +54,15 @@ MonoBehaviour:
   player: {fileID: 0}
   whaleNPC: {fileID: 1691092931497170, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2, type: 2}
   fishHead: {fileID: 1276464381941364, guid: 2e59a56231ce62045814ac2d89668e43, type: 2}
+  whaleChance: 0.75
+  landmarkDistance: 200
   whaleSpawnDelay: 25
   fishSpawnDelay: 5
+  landmarks:
+  - {fileID: 1324336179189000, guid: 9ec121d66dca2d64aa30adc364c84ba7, type: 2}
+  - {fileID: 1803640528263042, guid: f72714d486d688c488f585529a25732c, type: 2}
+  - {fileID: 1272748838684106, guid: c9c848767681e8941a5b08d44fa7a765, type: 2}
+  - {fileID: 1099824624132308, guid: 38f273b528c12234aa504b14563c34f0, type: 2}
+  - {fileID: 1393866054709240, guid: 76b11d32182cae440b4fdaea2242999d, type: 2}
+  - {fileID: 1198137266187160, guid: dfd7d9b92a783ee47b8e600fa1186452, type: 2}
+  spawnLM: 0

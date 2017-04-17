@@ -8,6 +8,7 @@ public class EnableWhenNear : MonoBehaviour {
 	private Transform playerLoc;
 	public float distance = 110f;
 	public float destroyDistance = 350f;
+	public bool destroy = true;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +18,7 @@ public class EnableWhenNear : MonoBehaviour {
 	void FixedUpdate() {
 		if (Vector3.Distance (this.transform.position, playerLoc.position) < distance)
 			isEnabled = true;
-		else if (Vector3.Distance (this.transform.position, playerLoc.position) > destroyDistance)
+		else if (Vector3.Distance (this.transform.position, playerLoc.position) > destroyDistance && destroy)
 			Destroy (this.gameObject);
 		else {
 			isEnabled = false;
