@@ -73,7 +73,6 @@ public class WhaleAI : MonoBehaviour {
 		buffer = Random.insideUnitSphere; 
 		buffer.z = Mathf.Abs (buffer.z);
 		Vector3.Scale (buffer, toScale);
-		Debug.Log (buffer);
 	}
 
 	void newRandWait(){

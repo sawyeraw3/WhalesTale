@@ -25,7 +25,6 @@ public class RotatePrefab : MonoBehaviour {
 			RaycastHit hit;
 			Ray ray = new Ray (startPos, Vector3.down);
 			if (Physics.Raycast (ray, out hit, 150, myLayerMask)) {
-				Debug.Log (hit.collider.name);
 				if (hit.collider.tag == "floor") {
 					this.transform.position = hit.point;
 					moved = true;
