@@ -544,6 +544,7 @@ MonoBehaviour:
   - {fileID: 1069131552259258, guid: f52f78a937f686342a37abd6c6196143, type: 2}
   - {fileID: 1661177754024994, guid: 024246a9cc83c9c45a759fb78ff5a0b1, type: 2}
   - {fileID: 1038125418930794, guid: 5c291467f2993744a9c450d42d1e3221, type: 2}
+  - {fileID: 1581971126486254, guid: ab2faadfee1b19a40b24bacbd9b3d8cf, type: 2}
   bigPrefabs: []
 --- !u!4 &480082875
 Transform:
@@ -4107,7 +4108,7 @@ Prefab:
     - target: {fileID: 114892651972208994, guid: e3b1da4f16fe9744683632eed81eb8b9,
         type: 2}
       propertyPath: debugging
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 137031672278247470, guid: e3b1da4f16fe9744683632eed81eb8b9,
         type: 2}
