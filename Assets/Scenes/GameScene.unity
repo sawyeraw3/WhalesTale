@@ -449,6 +449,7 @@ MonoBehaviour:
   - {fileID: 1882661859599128, guid: 58b8cf8b8148ed6408d0d8b08aabf996, type: 2}
   - {fileID: 1416388617767020, guid: 8ea5b93627afc874184ace7010a2150b, type: 2}
   - {fileID: 1282471160056050, guid: 2f8328377b7a6c64fa653006856ae848, type: 2}
+  - {fileID: 1069131552259258, guid: f52f78a937f686342a37abd6c6196143, type: 2}
   bigPrefabs: []
 --- !u!4 &480082875
 Transform:

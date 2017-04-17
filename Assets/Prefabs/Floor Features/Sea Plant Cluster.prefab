@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4827647710170972}
   - component: {fileID: 114464541139762496}
+  - component: {fileID: 114806317911619688}
   m_Layer: 0
   m_Name: Sea Plant Cluster
   m_TagString: Untagged
@@ -37,7 +38,6 @@ GameObject:
   - component: {fileID: 4603144636861380}
   - component: {fileID: 33457790327288026}
   - component: {fileID: 23370272429921018}
-  - component: {fileID: 114155767480158714}
   m_Layer: 0
   m_Name: sea plant cluster bottom
   m_TagString: Untagged
@@ -56,7 +56,6 @@ GameObject:
   - component: {fileID: 33431860484141592}
   - component: {fileID: 23220309767178694}
   - component: {fileID: 54667768184902438}
-  - component: {fileID: 114611356257701534}
   - component: {fileID: 136386908869763196}
   m_Layer: 0
   m_Name: sea plant cluster arms
@@ -199,24 +198,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114155767480158714
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1115088402610338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f03b62f5714ab4249aea9e526d6c73d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  materials:
-  - {fileID: 2100000, guid: 7e4382f0dc3dd434a9b78d3274abb744, type: 2}
-  - {fileID: 2100000, guid: 1cb780c184729d14488f25ccaecc376b, type: 2}
-  - {fileID: 2100000, guid: 1a3909404b44c214e82fdc2c76a68d30, type: 2}
-  - {fileID: 2100000, guid: 0c21f1533ca38304fb4d46a1753324aa, type: 2}
-  - {fileID: 2100000, guid: a14835536dc11c34594359d2258818a7, type: 2}
-  - {fileID: 2100000, guid: cf527e7afab37694d861d0bf69d2e676, type: 2}
 --- !u!114 &114464541139762496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -230,23 +211,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isRock: 0
   normalize: 1
---- !u!114 &114611356257701534
+--- !u!114 &114806317911619688
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1670073510952512}
+  m_GameObject: {fileID: 1024103637875814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f03b62f5714ab4249aea9e526d6c73d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 244c8c3072df52943969481afc2ab1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 2100000, guid: a14835536dc11c34594359d2258818a7, type: 2}
   - {fileID: 2100000, guid: 7e4382f0dc3dd434a9b78d3274abb744, type: 2}
   - {fileID: 2100000, guid: 1cb780c184729d14488f25ccaecc376b, type: 2}
   - {fileID: 2100000, guid: 1a3909404b44c214e82fdc2c76a68d30, type: 2}
   - {fileID: 2100000, guid: 0c21f1533ca38304fb4d46a1753324aa, type: 2}
-  - {fileID: 2100000, guid: a14835536dc11c34594359d2258818a7, type: 2}
 --- !u!136 &136386908869763196
 CapsuleCollider:
   m_ObjectHideFlags: 1

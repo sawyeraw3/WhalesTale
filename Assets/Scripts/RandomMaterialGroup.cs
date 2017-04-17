@@ -13,6 +13,7 @@ public class RandomMaterialGroup : MonoBehaviour {
 
 		for (int i = 0; i < this.transform.childCount ; i++){
 			child = this.gameObject.transform.GetChild(i).gameObject;
+			Random.seed = System.DateTime.Now.Millisecond;
 
 			if (materials.Count == 0){
 				materials = new List<Material>(backup);
