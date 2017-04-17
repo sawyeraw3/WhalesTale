@@ -443,6 +443,12 @@ MonoBehaviour:
   - {fileID: 1048420272614504, guid: 0d1cf132f3af5fa47b2ea9dc575316a9, type: 2}
   - {fileID: 1660254257392124, guid: 0f56e064163a45d469ac7a16f5c5f4ad, type: 2}
   - {fileID: 1024103637875814, guid: 3f29f92067162fc4da1e017b1930d1e1, type: 2}
+  - {fileID: 1610493910756500, guid: e338906938f798b4b9d90eb57efedecb, type: 2}
+  - {fileID: 1688653019033282, guid: 8ab7dc653822e1647893195d451f332b, type: 2}
+  - {fileID: 1984950837275478, guid: 546b095d697bf2d48bd820b4e88b34f0, type: 2}
+  - {fileID: 1882661859599128, guid: 58b8cf8b8148ed6408d0d8b08aabf996, type: 2}
+  - {fileID: 1416388617767020, guid: 8ea5b93627afc874184ace7010a2150b, type: 2}
+  - {fileID: 1282471160056050, guid: 2f8328377b7a6c64fa653006856ae848, type: 2}
   bigPrefabs: []
 --- !u!4 &480082875
 Transform:
@@ -3960,7 +3966,7 @@ Prefab:
     - target: {fileID: 114892651972208994, guid: e3b1da4f16fe9744683632eed81eb8b9,
         type: 2}
       propertyPath: debugging
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3b1da4f16fe9744683632eed81eb8b9, type: 2}

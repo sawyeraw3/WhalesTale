@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 95789319874177632}
   - component: {fileID: 64630444644761860}
   - component: {fileID: 54932322947337430}
+  - component: {fileID: 114594993151840686}
   m_Layer: 0
   m_Name: ship_reduced
   m_TagString: Untagged
@@ -129,3 +130,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114594993151840686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1272748838684106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03b62f5714ab4249aea9e526d6c73d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: 7e4382f0dc3dd434a9b78d3274abb744, type: 2}
+  - {fileID: 2100000, guid: 1cb780c184729d14488f25ccaecc376b, type: 2}
+  - {fileID: 2100000, guid: 1a3909404b44c214e82fdc2c76a68d30, type: 2}
+  - {fileID: 2100000, guid: 0c21f1533ca38304fb4d46a1753324aa, type: 2}
