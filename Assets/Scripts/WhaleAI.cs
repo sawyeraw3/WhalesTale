@@ -22,8 +22,6 @@ public class WhaleAI : MonoBehaviour {
 		MaxDisFromWhale = 12 + (script.podCount * 5f);//replace with number of whales in pod
 		buffer = Random.insideUnitSphere * MaxDisFromWhale;
 		StartCoroutine (newPos());
-		rotSpeed = .5f;
-		moveSpeed = 10f;
 	}
 	
 	// Update is called once per frame
