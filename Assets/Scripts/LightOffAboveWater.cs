@@ -8,7 +8,7 @@ public class LightOffAboveWater : MonoBehaviour {
 	private Light l;
 	// Use this for initialization
 	void Start () {
-		player = GameObject.Find("whale");
+		player = GameObject.Find("FreeLookCameraRig");
 		l = this.gameObject.GetComponent<Light>();
 
 	}

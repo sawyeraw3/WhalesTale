@@ -7,8 +7,7 @@ public class BoatMovement : MonoBehaviour {
 	public GameObject whale;
 	public GameObject boat;
 	public float boatSpeed = .1f;
-	public float maxDistance = 110f;
-	private int forward = 1;
+	public float maxDistance = 200f;
 
 	// Use this for initialization
 	void Start () {
@@ -17,10 +16,9 @@ public class BoatMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Vector3.Distance (whale.transform.position, boat.transform.position) > maxDistance) {
-			boat.transform.Rotate (Vector3.up * 180);
-			forward *= -1;
+			Destroy(this.gameObject);
 		}
-		this.transform.Translate (Vector3.back * forward * boatSpeed);
-	
+		this.transform.Translate (Vector3.forward  * boatSpeed);
+
 	}
 }
