@@ -29,8 +29,7 @@ public class WhaleAI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-		if (Vector3.Distance (this.transform.position, player.position + buffer) > 6) {
-			Debug.Log ("lost");
+		if (Vector3.Distance (this.transform.position, player.position + buffer) > 8) {
 			moveSpeed = 20f;
 			transform.rotation = Quaternion.Slerp (transform.rotation, 
 				Quaternion.LookRotation (player.position + buffer - transform.position), 
