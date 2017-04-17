@@ -4557,7 +4557,7 @@ Prefab:
     - target: {fileID: 114067109430320806, guid: e598f0bd09aa22745aed9f8a5d2ddd96,
         type: 2}
       propertyPath: boatSpawnDelay
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e598f0bd09aa22745aed9f8a5d2ddd96, type: 2}
