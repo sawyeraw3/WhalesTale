@@ -438,6 +438,7 @@ MonoBehaviour:
   - {fileID: 1036240148663014, guid: 8cdcf715aaddc0c409544ccd5e0d1579, type: 2}
   - {fileID: 1181068253448742, guid: e243c1416095c4344a2dbfa9a19f253e, type: 2}
   - {fileID: 1133249798822416, guid: acef688eb4af7004dab05516db761ef4, type: 2}
+  - {fileID: 1438838662040730, guid: ff9e5e3544c5d68469c323b20fad6ba5, type: 2}
   bigPrefabs: []
 --- !u!4 &480082875
 Transform:
@@ -3955,7 +3956,7 @@ Prefab:
     - target: {fileID: 114892651972208994, guid: e3b1da4f16fe9744683632eed81eb8b9,
         type: 2}
       propertyPath: debugging
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3b1da4f16fe9744683632eed81eb8b9, type: 2}
