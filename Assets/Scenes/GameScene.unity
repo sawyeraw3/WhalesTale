@@ -4254,10 +4254,6 @@ Prefab:
       propertyPath: whale
       value: 
       objectReference: {fileID: 1807340447}
-    - target: {fileID: 4643929736287234, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 24.445002
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
   m_IsPrefabParent: 0
