@@ -7,10 +7,12 @@ public class BoatMovement : MonoBehaviour {
 	public GameObject whale;
 	public GameObject boat;
 	public float boatSpeed = .1f;
-	public float maxDistance = 200f;
+	public float maxDistance = 500f;
 
 	// Use this for initialization
 	void Start () {
+		whale = GameObject.Find("whale");
+	
 	}
 	
 	// Update is called once per frame
