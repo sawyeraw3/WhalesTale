@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WhaleAI : MonoBehaviour {
 
-	public GameObject player;
+	public Transform player;
 	public float rotSpeed;
 	public float moveSpeed;
 	public float randWait;
@@ -14,21 +14,31 @@ public class WhaleAI : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		GameObject p = GameObject.Find("whale");
-		player = p;
+		player = p.transform;
 		GameObject podNum = GameObject.Find ("GameManager");
 		WhalesInPod script = podNum.GetComponent<WhalesInPod> ();
 
-		newRandWait();
+		//newRandWait();
 		MaxDisFromWhale = 12 + (script.podCount * 5f);//replace with number of whales in pod
 		buffer = Random.insideUnitSphere * MaxDisFromWhale;
-		StartCoroutine (newPos());
+		Debug.Log (buffer);
+		//StartCoroutine (newPos());
 	}
 	
 	// Update is called once per frame
 	void LateUpdate () {
-		transform.rotation = Quaternion.Slerp (transform.rotation, 
-			Quaternion.LookRotation (player.transform.position + buffer - transform.position), 
-			rotSpeed * Time.fixedDeltaTime);
+		if (Vector3.Distance (this.transform.localPosition, buffer) > 10) {
+			moveSpeed = 20f;
+			transform.rotation = Quaternion.Slerp (transform.rotation, 
+				Quaternion.LookRotation (player.position + buffer - transform.position), 
+				rotSpeed * Time.fixedDeltaTime);
+		}
+		else {
+			Debug.Log ("arrive");
+			transform.rotation = player.rotation;
+			moveSpeed = 10f;
+		}
+
 		transform.Translate (Vector3.forward * moveSpeed * Time.fixedDeltaTime);
 
 		if (transform.position.y > -7) {
@@ -42,7 +52,7 @@ public class WhaleAI : MonoBehaviour {
 			yield return new WaitForSeconds (randWait);
 			Random.seed = System.DateTime.Now.Millisecond;
 			//min and max move speed
-			moveSpeed = Random.Range (10, 15);
+			moveSpeed = 20f;
 			buffer = Random.insideUnitSphere * MaxDisFromWhale;
 
 		}

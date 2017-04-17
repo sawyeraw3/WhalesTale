@@ -27,7 +27,6 @@ public class Echolocate : MonoBehaviour {
 
 	void OnTriggerEnter(Collider c) {
 		float dist = Vector3.Distance (this.transform.position, c.transform.position);
-		Debug.Log (dist);
 		if (dist > 40) {
 			GameObject temp = Instantiate (indicator);
 			temp.transform.position = c.transform.position;

@@ -8,9 +8,14 @@ public class IndicatorExpand : MonoBehaviour {
 	public int radius;
 	public float expandSpeed;
 	public Material[] colors;
+	private Transform player;
 	// Use this for initialization
 	void Start () {
-		Debug.Log ("HELLO WORLD");
+		player = GameObject.FindGameObjectWithTag ("Player").transform;
+	}
+
+	// Update is called once per frame
+	void Update () {
 		switch (howFar) {
 		case 1:
 			this.GetComponent<Renderer> ().material = colors [0];
@@ -24,15 +29,23 @@ public class IndicatorExpand : MonoBehaviour {
 		case 4: 
 			this.GetComponent<Renderer> ().material = colors [3];
 			break;
+		default:
+			this.GetComponent<Renderer> ().enabled = false;
+			break;
 		}
-	}
-
-	// Update is called once per frame
-	void Update () {
-		this.transform.LookAt (GameObject.FindGameObjectWithTag ("Player").transform.position);
+		float dist = Vector3.Distance (this.transform.position, player.position);
+		this.transform.LookAt (player.position);
 		this.transform.Rotate (0, 180, 0);
 		this.transform.localScale += new Vector3 (expandSpeed, expandSpeed, expandSpeed); 
-		if (this.transform.lossyScale.magnitude >= radius)
+		if (this.transform.lossyScale.magnitude >= radius || dist < 30)
 			DestroyImmediate (this.gameObject);
+		else if(dist < 110)
+			howFar = 4;
+		else if(dist < 150)
+			howFar = 3;
+		else if(dist < 200)
+			howFar = 2;
+		else if(dist > 250)
+			howFar = 1;
 	}
 }
