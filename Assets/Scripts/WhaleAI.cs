@@ -8,34 +8,36 @@ public class WhaleAI : MonoBehaviour {
 	public float rotSpeed;
 	public float moveSpeed;
 	public float randWait;
-	public float MaxDisFromWhale;
+	public float minDisFromWhale = 10f;
 	Vector3 buffer;
 
 	// Use this for initialization
 	void Start () {
-		GameObject p = GameObject.Find("whale");
+		GameObject p = GameObject.FindGameObjectWithTag("Player");
 		player = p.transform;
 		GameObject podNum = GameObject.Find ("GameManager");
 		WhalesInPod script = podNum.GetComponent<WhalesInPod> ();
 
 		//newRandWait();
-		MaxDisFromWhale = 12 + (script.podCount * 5f);//replace with number of whales in pod
-		buffer = Random.insideUnitSphere * MaxDisFromWhale;
+		minDisFromWhale = (script.podCount * 2f);//replace with number of whales in pod
+		Vector3 toScale = new Vector3(minDisFromWhale,minDisFromWhale,0);
+		buffer = Random.insideUnitSphere; 
+		buffer.Scale (toScale);
 		Debug.Log (buffer);
 		//StartCoroutine (newPos());
 	}
 	
 	// Update is called once per frame
 	void LateUpdate () {
-		if (Vector3.Distance (this.transform.localPosition, buffer) > 10) {
+		if (Vector3.Distance (this.transform.position, player.position + buffer) > 6) {
+			Debug.Log ("lost");
 			moveSpeed = 20f;
 			transform.rotation = Quaternion.Slerp (transform.rotation, 
 				Quaternion.LookRotation (player.position + buffer - transform.position), 
 				rotSpeed * Time.fixedDeltaTime);
 		}
 		else {
-			Debug.Log ("arrive");
-			transform.rotation = player.rotation;
+			transform.rotation = Quaternion.Slerp (transform.rotation, player.rotation, rotSpeed * Time.fixedDeltaTime);
 			moveSpeed = 10f;
 		}
 
@@ -51,9 +53,10 @@ public class WhaleAI : MonoBehaviour {
 			newRandWait ();
 			yield return new WaitForSeconds (randWait);
 			Random.seed = System.DateTime.Now.Millisecond;
-			//min and max move speed
-			moveSpeed = 20f;
-			buffer = Random.insideUnitSphere * MaxDisFromWhale;
+			Vector3 toScale = new Vector3(minDisFromWhale,minDisFromWhale,0);	
+			buffer = Random.insideUnitSphere; 
+			buffer += new Vector3 (1, 1, 1);
+			buffer.Scale (toScale);
 
 		}
 

@@ -5,7 +5,8 @@ using UnityEngine;
 public class WhaleProximity : MonoBehaviour {
 
 	public GameObject player;
-	public float followRange, killRange;
+	public float followRange = 20f;
+	public float killRange = 200f;
 	public float moveSpeed;
 
 	//for playing found sound
@@ -20,8 +21,6 @@ public class WhaleProximity : MonoBehaviour {
 		GameObject p = GameObject.Find("whale");
 		player = p;
 		roam = true;
-		followRange = 20f;
-		killRange = 200f;
 		audSource = GetComponent<AudioSource>();
 		justFound = false;
 		moveSpeed = Random.Range (7, 10);

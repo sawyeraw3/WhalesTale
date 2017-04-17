@@ -32,14 +32,6 @@ public class Echolocate : MonoBehaviour {
 			temp.transform.position = c.transform.position;
 			if(c.transform.parent)
 				temp.transform.position = c.transform.parent.position;
-			if(dist < 110)
-				temp.GetComponent<IndicatorExpand> ().howFar = 4;
-			else if(dist < 150)
-				temp.GetComponent<IndicatorExpand> ().howFar = 3;
-			else if(dist < 200)
-				temp.GetComponent<IndicatorExpand> ().howFar = 2;
-			else if(dist > 250)
-				temp.GetComponent<IndicatorExpand> ().howFar = 1;
 			
 		}
 	}

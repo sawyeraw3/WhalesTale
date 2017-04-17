@@ -65,6 +65,7 @@ public class FishHeadSpawn : MonoBehaviour {
 			GameObject fishObj = fish.transform.FindChild("fishModel").gameObject;
 			Transform look = fish.transform.FindChild ("LookAt");
 			fishObj.transform.localPosition = spread;
+			
 			look.transform.localPosition = spread + Vector3.forward;
 		}
 		Random.seed = System.DateTime.Now.Millisecond;
