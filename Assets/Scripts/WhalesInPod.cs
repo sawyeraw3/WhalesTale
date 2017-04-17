@@ -7,11 +7,19 @@ public class WhalesInPod : MonoBehaviour {
 	public int podCount;
 	private GameObject followPoint;
 	private Transform playerPos;
+	private Animator camAnim;
+	private GameObject gameCamera;
+
+
 	// Use this for initialization
 	void Start () {
 		podCount = 0;
 		followPoint = GameObject.Find ("Focus");
 		playerPos = GameObject.FindGameObjectWithTag ("Player").transform;
+		gameCamera = GameObject.Find ("FreeLookCameraRig");
+		camAnim = gameCamera.GetComponent<Animator> ();
+
+
 	}
 	
 	// Update is called once per frame
@@ -47,6 +55,8 @@ public class WhalesInPod : MonoBehaviour {
 			case 8: 
 				followPoint.transform.localPosition = new Vector3 (0, 0, -0.4f);
 				break;
+			case 9:
+				
 			default: 
 				followPoint.transform.localPosition = new Vector3 (0, 0, -1f);
 				break;
