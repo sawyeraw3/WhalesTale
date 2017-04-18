@@ -31,33 +31,26 @@ public class WhalesInPod : MonoBehaviour {
 		if (cameraRising && gameCamera.transform.position.y < 8.5f) {
 			gameCamera.transform.Translate (Vector3.up * Time.deltaTime * 5);
 		}
-		if (player.transform.position.y > 0)
+		if (player.transform.position.y > 0 || GvrController.ClickButton || Input.GetMouseButton(0))
 			followPoint.transform.localPosition = Vector3.zero;
-		else {
+		else if (GvrController.AppButton || Input.GetMouseButton(1)) {
+			followPoint.transform.localPosition = new Vector3 (0, 0, -0.2f);
+		} else {
 			switch (podCount) {
 			case 0:
 				followPoint.transform.localPosition = Vector3.zero;
 				break;
 			case 1: 
-				followPoint.transform.localPosition = new Vector3 (0, 0, -0.05f);
-				break;
-			case 2: 
 				followPoint.transform.localPosition = new Vector3 (0, 0, -0.1f);
 				break;
-			case 3: 
-				followPoint.transform.localPosition = new Vector3 (0, 0, -0.15f);
-				break;
-			case 4: 
+			case 2: 
 				followPoint.transform.localPosition = new Vector3 (0, 0, -0.2f);
 				break;
-			case 5: 
-				followPoint.transform.localPosition = new Vector3 (0, 0, -0.25f);
-				break;
-			case 6: 
+			case 3: 
 				followPoint.transform.localPosition = new Vector3 (0, 0, -0.3f);
 				break;
-			case 7: 
-				followPoint.transform.localPosition = new Vector3 (0, 0, -0.35f);
+			case 4: 
+				followPoint.transform.localPosition = new Vector3 (0, 0, -0.4f);
 				break;
 			default: 
 				EndGame ();
