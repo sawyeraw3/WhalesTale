@@ -15,19 +15,27 @@ public class IndicatorExpand : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		switch (howFar) {
 		case 1:
 			this.GetComponent<Renderer> ().material = colors [0];
+			radius = 20;
+			expandSpeed = 0.125f;
 			break;
 		case 2:
 			this.GetComponent<Renderer> ().material = colors [1];
+			radius = 30;
+			expandSpeed = 0.15f;
 			break;
 		case 3:
 			this.GetComponent<Renderer> ().material = colors [2];
+			radius = 40;
+			expandSpeed = 0.175f;
 			break;
 		case 4: 
 			this.GetComponent<Renderer> ().material = colors [3];
+			radius = 50;
+			expandSpeed = 0.2f;
 			break;
 		default:
 			this.GetComponent<Renderer> ().enabled = false;

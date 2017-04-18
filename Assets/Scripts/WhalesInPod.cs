@@ -23,7 +23,7 @@ public class WhalesInPod : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (playerPos.position.y > 0)
 			followPoint.transform.localPosition = Vector3.zero;
 		else {

@@ -106,7 +106,7 @@ public class FishHeadSpawn : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		bool returned = true;
 		foreach (Transform child in transform) {
 			GameObject fishObj = child.FindChild ("fishModel").gameObject;

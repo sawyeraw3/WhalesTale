@@ -10,7 +10,7 @@ public class OceanFollowPlayer : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void LateUpdate () {
+	void FixedUpdate () {
 		transform.position = new Vector3 (player.transform.position.x, 0, player.transform.position.z);
 	}
 }

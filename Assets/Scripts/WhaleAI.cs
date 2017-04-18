@@ -28,6 +28,10 @@ public class WhaleAI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
+		
+	}
+
+	void FixedUpdate() {
 		if (Vector3.Distance (this.transform.position, player.position + buffer) > 10) {
 			moveSpeed = 15f;
 			transform.rotation = Quaternion.Slerp (transform.rotation, 
@@ -44,12 +48,6 @@ public class WhaleAI : MonoBehaviour {
 		if (transform.position.y > -7) {
 			transform.position = new Vector3 (transform.position.x, -7, transform.position.z);
 		}
-	}
-
-	void FixedUpdate() {
-		/*if (Vector3.Distance (player.position + buffer, player.position) < 10f) {
-			setBuffer ();
-		}*/
 		GameObject[] whales = GameObject.FindGameObjectsWithTag ("Whale");
 		foreach (GameObject w in whales) {
 			if (Vector3.Distance (player.position + buffer, w.transform.position) < 5f) {

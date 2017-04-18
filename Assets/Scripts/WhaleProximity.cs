@@ -37,7 +37,7 @@ public class WhaleProximity : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (roam) {
 
 			transform.Translate (Vector3.forward * moveSpeed * Time.fixedDeltaTime);

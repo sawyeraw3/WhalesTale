@@ -19,7 +19,7 @@ public class GravityAboveWater : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (speed == 10f)
 			mult = 15f;
 		if (speed == 20f)

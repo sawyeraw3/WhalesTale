@@ -10,7 +10,7 @@ public class ParticleFollowPlayer : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (player.transform.position.y + 10 > 0)
 			transform.position = new Vector3 (player.transform.position.x, -1, player.transform.position.z);
 		else

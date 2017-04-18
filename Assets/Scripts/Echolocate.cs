@@ -16,7 +16,7 @@ public class Echolocate : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		this.transform.position = playerLoc.position;
 		this.transform.localScale += new Vector3 (expandSpeed, expandSpeed, expandSpeed); 
 		if (this.transform.lossyScale.magnitude >= radius)

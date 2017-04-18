@@ -11,7 +11,7 @@ public class RotateLight : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		this.transform.Rotate (0, 0, Time.deltaTime * rotSpeed);
 	}
 }

@@ -10,7 +10,7 @@ public class LightFollowPlayer : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		transform.position = new Vector3 (player.transform.position.x + 10f, 0, player.transform.position.z + 10f);
 		transform.RotateAround (player.transform.position, Vector3.up, 10f * Time.deltaTime);
 	}

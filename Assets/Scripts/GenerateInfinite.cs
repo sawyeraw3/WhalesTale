@@ -69,7 +69,7 @@ public class GenerateInfinite : MonoBehaviour {
 		}
 	}
 
-	void Update() {
+	void FixedUpdate() {
 
 		//determine how far the player has moved since last terrain update
 		int xMove = (int)(player.transform.position.x - startPos.x);

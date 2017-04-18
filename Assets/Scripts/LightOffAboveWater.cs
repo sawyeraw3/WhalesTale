@@ -14,7 +14,7 @@ public class LightOffAboveWater : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (player.transform.position.y > 0){
 			l.enabled = false;
 		} 

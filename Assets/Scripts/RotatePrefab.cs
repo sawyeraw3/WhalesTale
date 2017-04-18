@@ -17,7 +17,7 @@ public class RotatePrefab : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (moveToBottom && !moved) {
 			Vector3 startPos = transform.position;
 			startPos.y += 50;
