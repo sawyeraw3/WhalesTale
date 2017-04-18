@@ -56,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1818787045550606}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75729287, z: -4.631355}
+  m_LocalPosition: {x: 0, y: -3.59, z: -4.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4560050554591200}
@@ -69,8 +69,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1324336179189000}
   m_LocalRotation: {x: 1.110223e-16, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 371.26556, y: -51.414574, z: 1170.0087}
-  m_LocalScale: {x: 4.8157415, y: 6.094065, z: 4.8157387}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4.8157415, y: 4.9041963, z: 4.8157387}
   m_Children:
   - {fileID: 4512757236094784}
   m_Father: {fileID: 0}
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f57e4fb583cdc1f4b87d0dd4553e264d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 90
+  distance: 110
   destroyDistance: 1000
 --- !u!114 &114610688721313834
 MonoBehaviour:
@@ -202,5 +202,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRock: 0
-  normalize: 1
+  normalize: 0
   moveToBottom: 1
