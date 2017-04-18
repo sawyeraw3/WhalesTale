@@ -113,8 +113,16 @@ public class FishHeadSpawn : MonoBehaviour {
 			if (rotatingOrSchooling) { //rotating
 				child.RotateAround (child.position, Vector3.up, Time.deltaTime * fishRotSpeed);
 				Transform look = child.FindChild ("LookAt");
+				look.localPosition = fishObj.transform.localPosition + dir * headMoveSpeed;
 				fishObj.transform.LookAt (look);
-			} else { //schooling
+			} else if (returning) {
+				Transform look = child.FindChild ("LookAt");
+				fishObj.transform.LookAt (look);
+				fishObj.transform.position = Vector3.MoveTowards (fishObj.transform.position, look.position, headMoveSpeed / (shark ? 4f : 5f));
+				if (Vector3.Distance (fishObj.transform.position, this.transform.position) < 3)
+					returning = false;
+			}
+			else { //schooling
 				Transform look = child.FindChild ("LookAt");
 				look.localPosition = fishObj.transform.localPosition + dir * headMoveSpeed;
 				fishObj.transform.LookAt (look);
@@ -122,7 +130,7 @@ public class FishHeadSpawn : MonoBehaviour {
 
 			if (flee) {
 				Transform look = child.FindChild ("LookAt");
-				look.localPosition = new Vector3(fishObj.transform.localPosition.x * 2, fishObj.transform.localPosition.y, fishObj.transform.localPosition.z * 2);
+				look.localPosition = new Vector3(fishObj.transform.localPosition.x * 2f, fishObj.transform.localPosition.y, fishObj.transform.localPosition.z * 2f);
 				fishObj.transform.LookAt (look);
 				fishObj.transform.position = Vector3.MoveTowards (fishObj.transform.position, look.position, headMoveSpeed / (shark ? 4f : 5f));
 			}
@@ -155,7 +163,21 @@ public class FishHeadSpawn : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if (other.name == "whale") {
 			flee = true;
-			StartCoroutine (waitAndRestart ());
+			//StartCoroutine (waitAndRestart ());
+		}
+
+	}
+	void OnTriggerExit(Collider other) {
+		if (other.name == "whale") {
+			flee = false;
+			foreach (Transform child in transform) {
+				GameObject fishObj = child.FindChild ("fishModel").gameObject;
+				Transform look = child.FindChild ("LookAt");
+				look.localPosition = Random.insideUnitCircle * Random.Range (4, 8);
+				fishObj.transform.LookAt (look);
+				returning = true;
+			}
+			//StartCoroutine (waitAndRestart ());
 		}
 
 	}

@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4809784995727334}
   - component: {fileID: 114698553235620382}
+  - component: {fileID: 114186169495494098}
   m_Layer: 0
   m_Name: Rock Arc
   m_TagString: Untagged
@@ -356,6 +357,19 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300006, guid: de0742e0cdb0e7143903e696dd6fb817, type: 3}
+--- !u!114 &114186169495494098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1031095423476096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f57e4fb583cdc1f4b87d0dd4553e264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 110
+  destroyDistance: 350
 --- !u!114 &114655938969382962
 MonoBehaviour:
   m_ObjectHideFlags: 1
