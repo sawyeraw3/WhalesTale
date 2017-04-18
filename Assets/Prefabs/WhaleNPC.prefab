@@ -171,7 +171,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1691092931497170}
   m_LocalRotation: {x: -0, y: 0.9998197, z: -0, w: -0.018990317}
-  m_LocalPosition: {x: -0.3, y: -36.41, z: 296.7}
+  m_LocalPosition: {x: -0.3, y: -42.370495, z: 296.7}
   m_LocalScale: {x: 77.35053, y: 98.60055, z: 123.244705}
   m_Children:
   - {fileID: 4441491719301022}
@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 110
-  destroyDistance: 450
+  destroyDistance: 600
 --- !u!114 &114739909140140518
 MonoBehaviour:
   m_ObjectHideFlags: 1

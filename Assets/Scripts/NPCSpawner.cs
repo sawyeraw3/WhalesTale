@@ -55,7 +55,7 @@ public class NPCSpawner : MonoBehaviour {
 			GameObject whale = Instantiate (whaleNPC) as GameObject;
 			Vector3 pos = Vector3.Scale (player.transform.forward, new Vector3 (150, 150, 150));
 			Vector3 rand = Vector3.Scale(player.transform.forward, new Vector3 (Random.Range (150, 351), 0, Random.Range (150, 351)));
-			Vector3 result = pos + rand;
+			Vector3 result = player.transform.position + pos + rand;
 			result.y = Random.Range (-35, -15);
 			whale.transform.position = result;
 		}
@@ -76,7 +76,7 @@ public class NPCSpawner : MonoBehaviour {
 		GameObject fish = Instantiate (fishHead) as GameObject;
 		Vector3 pos =  Vector3.Scale (player.transform.forward, new Vector3 (150, 150, 150));
 		Vector3 rand = Vector3.Scale(player.transform.forward, new Vector3 (Random.Range (150, 351), 0, Random.Range (150, 351)));
-		Vector3 result = pos + rand;
+		Vector3 result = player.transform.position + pos + rand;
 		result.y = Random.Range (-35, -15);
 		fish.transform.position = result;
 	}
@@ -87,16 +87,19 @@ public class NPCSpawner : MonoBehaviour {
 		int selector = Random.Range (0, landmarks.Length);
 		Vector3 pos =  Vector3.Scale (player.transform.forward, new Vector3 (150, 150, 150));
 		Vector3 rand = Vector3.Scale(player.transform.forward, new Vector3 (Random.Range (150, 351), 0, Random.Range (150, 351)));
-		Vector3 result = pos + rand;
+		Vector3 result = player.transform.position + pos + rand;
 		result.y = -55;
 		Vector2 resultXZ = new Vector2 (result.x, result.z);
 		foreach (Vector2 v in landmarkLocs) {
-			if (Vector2.Distance (resultXZ, v) < landmarkDistance)
+			if (Vector2.Distance (resultXZ, v) < landmarkDistance) {
 				spawn = false;
+			}
 		}
 		if (spawn) {
-			GameObject.Instantiate (landmarks [selector], result, Quaternion.identity);
+			GameObject temp = GameObject.Instantiate (landmarks [selector], result, Quaternion.identity);
 			landmarkLocs.Add (resultXZ);
+			float randSize = Random.Range (0.5f, 1.5f);
+			temp.transform.localScale *= randSize;
 		}
 	}
 }

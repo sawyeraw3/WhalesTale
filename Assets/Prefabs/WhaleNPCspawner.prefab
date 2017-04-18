@@ -55,7 +55,7 @@ MonoBehaviour:
   whaleNPC: {fileID: 1691092931497170, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2, type: 2}
   fishHead: {fileID: 1276464381941364, guid: 2e59a56231ce62045814ac2d89668e43, type: 2}
   whaleChance: 0.75
-  landmarkDistance: 500
+  landmarkDistance: 300
   boat: {fileID: 1637165580178752, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
   boatSpawnDelay: 15
   whaleSpawnDelay: 25

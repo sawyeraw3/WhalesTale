@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 110
-  destroyDistance: 350
+  destroyDistance: 600
 --- !u!135 &135644372701869830
 SphereCollider:
   m_ObjectHideFlags: 1
