@@ -23,7 +23,7 @@ public class GameFog : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (camera.transform.position.y > waterLevel || player.transform.position.y > waterLevel) {
+		if (camera.transform.position.y > waterLevel) {
 			//RenderSettings.fog = true;
 			//RenderSettings.fogMode = FogMode.ExponentialSquared;
 			RenderSettings.fogColor = abovewaterColor;
