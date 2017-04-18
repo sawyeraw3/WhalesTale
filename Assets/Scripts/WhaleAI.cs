@@ -28,12 +28,13 @@ public class WhaleAI : MonoBehaviour {
 		minDisFromWhale = 5 + (script.podCount * 5f);//replace with number of whales in pod
 		setBuffer(script.podCount);
 		currPos = script.podCount;
-		//StartCoroutine (newPos());
+		StartCoroutine (newPos());
 	}
 
 
 	void FixedUpdate() {
-
+		if (!buffer)
+			nextBuffer ();
 		if (Vector3.Distance (this.transform.position, buffer.position) > 3) {
 			moveSpeed = 15f;
 			transform.rotation = Quaternion.Slerp (transform.rotation, 
@@ -66,7 +67,8 @@ public class WhaleAI : MonoBehaviour {
 			//nextBuffer ();
 			Vector3 newPos = buffer.position;
 			newPos.z = Random.Range (-1, -15);
-			buffer.localPosition = newPos;
+			//buffer.localPosition = newPos;
+			nextBuffer ();
 		}
 
 	}
@@ -92,7 +94,7 @@ public class WhaleAI : MonoBehaviour {
 	void newRandWait(){
 		Random.InitState(System.DateTime.Now.Millisecond);
 		//min and max wait time for new position
-		randWait = Random.Range (5f, 10f);
+		randWait = Random.Range (10f, 20f);
 	}
 		
 }
