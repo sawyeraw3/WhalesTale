@@ -4282,7 +4282,7 @@ Prefab:
     - target: {fileID: 114067109430320806, guid: e598f0bd09aa22745aed9f8a5d2ddd96,
         type: 2}
       propertyPath: landmarks.Array.size
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4964629360839510, guid: e598f0bd09aa22745aed9f8a5d2ddd96, type: 2}
       propertyPath: m_LocalPosition.x
@@ -4372,6 +4372,12 @@ Prefab:
       propertyPath: landmarks.Array.data[0]
       value: 
       objectReference: {fileID: 1324336179189000, guid: 9ec121d66dca2d64aa30adc364c84ba7,
+        type: 2}
+    - target: {fileID: 114067109430320806, guid: e598f0bd09aa22745aed9f8a5d2ddd96,
+        type: 2}
+      propertyPath: landmarks.Array.data[8]
+      value: 
+      objectReference: {fileID: 1825924760331352, guid: c03a9fc2fedc6d147bb6b8666a465572,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e598f0bd09aa22745aed9f8a5d2ddd96, type: 2}
