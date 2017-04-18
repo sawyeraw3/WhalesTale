@@ -4079,6 +4079,43 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1343273603 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1632302161597192, guid: e598f0bd09aa22745aed9f8a5d2ddd96,
+    type: 2}
+  m_PrefabInternal: {fileID: 1975822508}
+--- !u!114 &1343273604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1343273603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd18bd13976c1f44b06fa4c0e9b1fc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1807340447}
+  whaleNPC: {fileID: 1691092931497170, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2, type: 2}
+  fishHead: {fileID: 1276464381941364, guid: 2e59a56231ce62045814ac2d89668e43, type: 2}
+  whaleChance: 0.75
+  landmarkDistance: 300
+  boat: {fileID: 1637165580178752, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
+  boatSpawnDelay: 15
+  whaleSpawnDelay: 25
+  fishSpawnDelay: 5
+  landmarks:
+  - {fileID: 1324336179189000, guid: 9ec121d66dca2d64aa30adc364c84ba7, type: 2}
+  - {fileID: 1803640528263042, guid: f72714d486d688c488f585529a25732c, type: 2}
+  - {fileID: 1272748838684106, guid: c9c848767681e8941a5b08d44fa7a765, type: 2}
+  - {fileID: 1099824624132308, guid: 38f273b528c12234aa504b14563c34f0, type: 2}
+  - {fileID: 1393866054709240, guid: 76b11d32182cae440b4fdaea2242999d, type: 2}
+  - {fileID: 1198137266187160, guid: dfd7d9b92a783ee47b8e600fa1186452, type: 2}
+  - {fileID: 1031095423476096, guid: fb16c05701a73e74cad641ef2f3e4b6f, type: 2}
+  - {fileID: 1911597014127764, guid: 4e7d10906c9a213489c8f5f12dac33c9, type: 2}
+  - {fileID: 1825924760331352, guid: c03a9fc2fedc6d147bb6b8666a465572, type: 2}
+  - {fileID: 1983741312312592, guid: 0b3d9f91edf889c41ac4c7743dabf6e4, type: 2}
+  spawnLM: 0
 --- !u!1 &1405840090
 GameObject:
   m_ObjectHideFlags: 0
@@ -4282,7 +4319,7 @@ Prefab:
     - target: {fileID: 114067109430320806, guid: e598f0bd09aa22745aed9f8a5d2ddd96,
         type: 2}
       propertyPath: landmarks.Array.size
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4964629360839510, guid: e598f0bd09aa22745aed9f8a5d2ddd96, type: 2}
       propertyPath: m_LocalPosition.x
@@ -4371,7 +4408,7 @@ Prefab:
         type: 2}
       propertyPath: landmarks.Array.data[0]
       value: 
-      objectReference: {fileID: 1324336179189000, guid: 9ec121d66dca2d64aa30adc364c84ba7,
+      objectReference: {fileID: 1983741312312592, guid: 0b3d9f91edf889c41ac4c7743dabf6e4,
         type: 2}
     - target: {fileID: 114067109430320806, guid: e598f0bd09aa22745aed9f8a5d2ddd96,
         type: 2}
@@ -4383,8 +4420,9 @@ Prefab:
         type: 2}
       propertyPath: landmarks.Array.data[9]
       value: 
-      objectReference: {fileID: 1446121068382318, guid: fb40b3418e881a24faec4862dc8a2afb,
+      objectReference: {fileID: 1983741312312592, guid: 0b3d9f91edf889c41ac4c7743dabf6e4,
         type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114067109430320806, guid: e598f0bd09aa22745aed9f8a5d2ddd96, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e598f0bd09aa22745aed9f8a5d2ddd96, type: 2}
   m_IsPrefabParent: 0
