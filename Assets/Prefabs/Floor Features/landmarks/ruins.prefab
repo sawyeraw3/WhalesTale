@@ -4480,8 +4480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 110
-  destroyDistance: 350
-  destroy: 0
+  destroyDistance: 1000
 --- !u!198 &198337432060696944
 ParticleSystem:
   m_ObjectHideFlags: 1
