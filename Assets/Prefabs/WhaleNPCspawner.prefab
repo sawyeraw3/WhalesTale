@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4964629360839510}
-  - component: {fileID: 114067109430320806}
+  - component: {fileID: 114490563082820042}
   m_Layer: 0
   m_Name: WhaleNPCspawner
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114067109430320806
+--- !u!114 &114490563082820042
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -67,4 +67,8 @@ MonoBehaviour:
   - {fileID: 1099824624132308, guid: 38f273b528c12234aa504b14563c34f0, type: 2}
   - {fileID: 1393866054709240, guid: 76b11d32182cae440b4fdaea2242999d, type: 2}
   - {fileID: 1198137266187160, guid: dfd7d9b92a783ee47b8e600fa1186452, type: 2}
+  - {fileID: 1031095423476096, guid: fb16c05701a73e74cad641ef2f3e4b6f, type: 2}
+  - {fileID: 1911597014127764, guid: 4e7d10906c9a213489c8f5f12dac33c9, type: 2}
+  - {fileID: 1825924760331352, guid: c03a9fc2fedc6d147bb6b8666a465572, type: 2}
+  - {fileID: 1983741312312592, guid: 0b3d9f91edf889c41ac4c7743dabf6e4, type: 2}
   spawnLM: 0

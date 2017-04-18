@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4809784995727334}
   - component: {fileID: 114698553235620382}
   - component: {fileID: 114186169495494098}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock Arc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 23090628828475712}
   - component: {fileID: 64376475882712738}
   - component: {fileID: 114657627847001360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4667834560103518}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1031095423476096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.9354534, y: -39.287144, z: 288.84702}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4667834560103518}
@@ -353,7 +353,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
+  m_Convex: 1
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300006, guid: de0742e0cdb0e7143903e696dd6fb817, type: 3}
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 80
-  destroyDistance: 1000
+  destroyDistance: 700
 --- !u!114 &114655938969382962
 MonoBehaviour:
   m_ObjectHideFlags: 1

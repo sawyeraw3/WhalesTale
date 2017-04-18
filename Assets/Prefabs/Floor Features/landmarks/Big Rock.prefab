@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 110
-  destroyDistance: 1000
+  destroyDistance: 700
 --- !u!114 &114610688721313834
 MonoBehaviour:
   m_ObjectHideFlags: 1
