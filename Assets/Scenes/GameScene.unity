@@ -452,6 +452,7 @@ MonoBehaviour:
   - {fileID: 1069131552259258, guid: f52f78a937f686342a37abd6c6196143, type: 2}
   - {fileID: 1661177754024994, guid: 024246a9cc83c9c45a759fb78ff5a0b1, type: 2}
   - {fileID: 1038125418930794, guid: 5c291467f2993744a9c450d42d1e3221, type: 2}
+  - {fileID: 1581971126486254, guid: ab2faadfee1b19a40b24bacbd9b3d8cf, type: 2}
 --- !u!4 &480082875
 Transform:
   m_ObjectHideFlags: 0
@@ -3968,7 +3969,7 @@ Prefab:
     - target: {fileID: 114892651972208994, guid: e3b1da4f16fe9744683632eed81eb8b9,
         type: 2}
       propertyPath: debugging
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3b1da4f16fe9744683632eed81eb8b9, type: 2}
@@ -3982,7 +3983,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4643929736287234, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.6
       objectReference: {fileID: 0}
     - target: {fileID: 4643929736287234, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3990,7 +3991,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4643929736287234, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -84.7
       objectReference: {fileID: 0}
     - target: {fileID: 4643929736287234, guid: 9d3a0effb5510aa45858d6a91ea77b71, type: 2}
       propertyPath: m_LocalRotation.x
