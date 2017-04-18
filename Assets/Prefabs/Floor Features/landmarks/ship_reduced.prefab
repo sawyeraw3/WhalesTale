@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4784875282367646}
   - component: {fileID: 114342928302629406}
   - component: {fileID: 114863018119366942}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ship_reduced
   m_TagString: Untagged
   m_Icon: {fileID: 0}

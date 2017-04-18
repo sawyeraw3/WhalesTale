@@ -261,8 +261,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff37b33e78173db40b1abcf15082bb17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterLevel: 2
+  waterLevel: 0
   camera: {fileID: 1903010904}
+  player: {fileID: 1807340447}
   underwaterSkybox: {fileID: 2100000, guid: 3ea6aa04fe199b44bb3e6a598e36c081, type: 2}
   abovewaterSkybox: {fileID: 2100000, guid: be106872a0d121e4cbfed24f65e3c18b, type: 2}
 --- !u!4 &316533540
@@ -3961,21 +3962,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 95154523257084526, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2,
-        type: 2}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 98e47e78ed4765747819d2aa6d22565f, type: 2}
-    - target: {fileID: 95154523257084526, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2,
-        type: 2}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: ac4702f084eacbb4792b59ca340018a9, type: 3}
-    - target: {fileID: 95154523257084526, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2,
-        type: 2}
-      propertyPath: m_CullingMode
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e17ba56b41ac624ebed4e7b9f8e2ec2, type: 2}
   m_IsPrefabParent: 0
@@ -4026,7 +4012,7 @@ Prefab:
     - target: {fileID: 114892651972208994, guid: e3b1da4f16fe9744683632eed81eb8b9,
         type: 2}
       propertyPath: debugging
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3b1da4f16fe9744683632eed81eb8b9, type: 2}

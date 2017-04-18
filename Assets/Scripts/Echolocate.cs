@@ -29,10 +29,7 @@ public class Echolocate : MonoBehaviour {
 		float dist = Vector3.Distance (this.transform.position, c.transform.position);
 		if (dist > 40) {
 			GameObject temp = Instantiate (indicator);
-			temp.transform.position = transform.TransformPoint(c.transform.position);
-			if(c.transform.parent)
-				temp.transform.position = c.transform.parent.position;
-			
+			temp.transform.position = c.transform.position;
 		}
 	}
 }

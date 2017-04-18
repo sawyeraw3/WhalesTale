@@ -9,6 +9,7 @@ public class GameFog : MonoBehaviour {
 	private FogMode mode;
 	private Color abovewaterColor;
 	public GameObject camera;
+	public GameObject player;
 	private Color underwaterColor;
 	public Material underwaterSkybox;
 	public Material abovewaterSkybox;
@@ -22,17 +23,18 @@ public class GameFog : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (camera.transform.position.y < waterLevel) {
+		if (camera.transform.position.y > waterLevel || player.transform.position.y > waterLevel) {
 			//RenderSettings.fog = true;
 			//RenderSettings.fogMode = FogMode.ExponentialSquared;
-			RenderSettings.fogDensity = 0.02f;
-			RenderSettings.fogColor = underwaterColor;
-			RenderSettings.skybox = underwaterSkybox;
-		
-		} else {
 			RenderSettings.fogColor = abovewaterColor;
 			RenderSettings.fogDensity = 0.01f;
 			RenderSettings.skybox = abovewaterSkybox;
+		
+		} else {
+
+			RenderSettings.fogDensity = 0.02f;
+			RenderSettings.fogColor = underwaterColor;
+			RenderSettings.skybox = underwaterSkybox;
 		}
 	}
 }
