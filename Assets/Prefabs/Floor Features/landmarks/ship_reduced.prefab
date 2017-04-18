@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 95774746153620092}
   - component: {fileID: 64220868126232612}
   - component: {fileID: 54120345933617990}
+  - component: {fileID: 114706290503084142}
   m_Layer: 8
   m_Name: ship_reduced
   m_TagString: Untagged
@@ -174,6 +175,20 @@ MonoBehaviour:
   isRock: 1
   normalize: 0
   moveToBottom: 1
+--- !u!114 &114706290503084142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1433836301726186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03b62f5714ab4249aea9e526d6c73d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: cf527e7afab37694d861d0bf69d2e676, type: 2}
+  - {fileID: 2100000, guid: 1a3909404b44c214e82fdc2c76a68d30, type: 2}
 --- !u!114 &114863018119366942
 MonoBehaviour:
   m_ObjectHideFlags: 1
