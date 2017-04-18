@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 64671002216902378}
   - component: {fileID: 114288160505546684}
   - component: {fileID: 114495089207772070}
+  - component: {fileID: 114717572607852944}
   m_Layer: 8
   m_Name: shipwreck_1
   m_TagString: Untagged
@@ -158,3 +159,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 110
   destroyDistance: 1000
+--- !u!114 &114717572607852944
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198137266187160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03b62f5714ab4249aea9e526d6c73d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: cf527e7afab37694d861d0bf69d2e676, type: 2}
+  - {fileID: 2100000, guid: 1a3909404b44c214e82fdc2c76a68d30, type: 2}
