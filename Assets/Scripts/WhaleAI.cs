@@ -66,11 +66,12 @@ public class WhaleAI : MonoBehaviour {
 	}
 
 	void setBuffer() {
-		Random.seed = System.DateTime.Now.Millisecond;
+		
+		/*Random.seed = System.DateTime.Now.Millisecond;
 		Vector3 toScale = new Vector3(minDisFromWhale,minDisFromWhale, -minDisFromWhale);	
 		buffer = Random.insideUnitSphere; 
 		buffer.z = Mathf.Abs (buffer.z);
-		Vector3.Scale (buffer, toScale);
+		Vector3.Scale (buffer, toScale); */
 	}
 
 	void newRandWait(){

@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f57e4fb583cdc1f4b87d0dd4553e264d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 110
+  distance: 80
   destroyDistance: 1000
 --- !u!198 &198294529976973522
 ParticleSystem:
