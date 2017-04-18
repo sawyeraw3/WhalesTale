@@ -4222,6 +4222,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114490563082820042, guid: e598f0bd09aa22745aed9f8a5d2ddd96,
+        type: 2}
+      propertyPath: landmarks.Array.size
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4964629360839510, guid: e598f0bd09aa22745aed9f8a5d2ddd96, type: 2}
       propertyPath: m_LocalPosition.x
       value: 346.68777
@@ -4263,6 +4268,66 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1807340447}
+    - target: {fileID: 114490563082820042, guid: e598f0bd09aa22745aed9f8a5d2ddd96,
+        type: 2}
+      propertyPath: landmarks.Array.data[1]
+      value: 
+      objectReference: {fileID: 1803640528263042, guid: f72714d486d688c488f585529a25732c,
+        type: 2}
+    - target: {fileID: 114490563082820042, guid: e598f0bd09aa22745aed9f8a5d2ddd96,
+        type: 2}
+      propertyPath: landmarks.Array.data[2]
+      value: 
+      objectReference: {fileID: 1272748838684106, guid: c9c848767681e8941a5b08d44fa7a765,
+        type: 2}
+    - target: {fileID: 114490563082820042, guid: e598f0bd09aa22745aed9f8a5d2ddd96,
+        type: 2}
+      propertyPath: landmarks.Array.data[3]
+      value: 
+      objectReference: {fileID: 1099824624132308, guid: 38f273b528c12234aa504b14563c34f0,
+        type: 2}
+    - target: {fileID: 114490563082820042, guid: e598f0bd09aa22745aed9f8a5d2ddd96,
+        type: 2}
+      propertyPath: landmarks.Array.data[4]
+      value: 
+      objectReference: {fileID: 1393866054709240, guid: 76b11d32182cae440b4fdaea2242999d,
+        type: 2}
+    - target: {fileID: 114490563082820042, guid: e598f0bd09aa22745aed9f8a5d2ddd96,
+        type: 2}
+      propertyPath: landmarks.Array.data[5]
+      value: 
+      objectReference: {fileID: 1198137266187160, guid: dfd7d9b92a783ee47b8e600fa1186452,
+        type: 2}
+    - target: {fileID: 114490563082820042, guid: e598f0bd09aa22745aed9f8a5d2ddd96,
+        type: 2}
+      propertyPath: landmarks.Array.data[6]
+      value: 
+      objectReference: {fileID: 1031095423476096, guid: fb16c05701a73e74cad641ef2f3e4b6f,
+        type: 2}
+    - target: {fileID: 114490563082820042, guid: e598f0bd09aa22745aed9f8a5d2ddd96,
+        type: 2}
+      propertyPath: landmarks.Array.data[7]
+      value: 
+      objectReference: {fileID: 1911597014127764, guid: 4e7d10906c9a213489c8f5f12dac33c9,
+        type: 2}
+    - target: {fileID: 114490563082820042, guid: e598f0bd09aa22745aed9f8a5d2ddd96,
+        type: 2}
+      propertyPath: landmarks.Array.data[8]
+      value: 
+      objectReference: {fileID: 1825924760331352, guid: c03a9fc2fedc6d147bb6b8666a465572,
+        type: 2}
+    - target: {fileID: 114490563082820042, guid: e598f0bd09aa22745aed9f8a5d2ddd96,
+        type: 2}
+      propertyPath: landmarks.Array.data[9]
+      value: 
+      objectReference: {fileID: 1983741312312592, guid: 0b3d9f91edf889c41ac4c7743dabf6e4,
+        type: 2}
+    - target: {fileID: 114490563082820042, guid: e598f0bd09aa22745aed9f8a5d2ddd96,
+        type: 2}
+      propertyPath: landmarks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1324336179189000, guid: 9ec121d66dca2d64aa30adc364c84ba7,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e598f0bd09aa22745aed9f8a5d2ddd96, type: 2}
   m_IsPrefabParent: 0
