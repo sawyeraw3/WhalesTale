@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterLevel: 0
-  camera: {fileID: 1903010904}
+  camera: {fileID: 1737180453}
   player: {fileID: 1807340447}
   underwaterSkybox: {fileID: 2100000, guid: 3ea6aa04fe199b44bb3e6a598e36c081, type: 2}
   abovewaterSkybox: {fileID: 2100000, guid: be106872a0d121e4cbfed24f65e3c18b, type: 2}
@@ -4102,6 +4102,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ca80f4596fa44b87912a0592346d260, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1737180453 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1409394172206018, guid: e3b1da4f16fe9744683632eed81eb8b9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1391871140}
 --- !u!1 &1807340447 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1032273909988412, guid: e3b1da4f16fe9744683632eed81eb8b9,
@@ -4210,11 +4215,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d1b7b28698d6e4ea25554f91207464, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1903010904 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1325531375332034, guid: e3b1da4f16fe9744683632eed81eb8b9,
-    type: 2}
-  m_PrefabInternal: {fileID: 1391871140}
 --- !u!1001 &1975822508
 Prefab:
   m_ObjectHideFlags: 0
