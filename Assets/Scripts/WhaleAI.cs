@@ -9,33 +9,35 @@ public class WhaleAI : MonoBehaviour {
 	public float moveSpeed;
 	public float randWait;
 	public float minDisFromWhale = 10f;
-	Vector3 buffer;
+	public Transform buffer;
+	private int currPos;
+	GameObject[] positions;
 
 	// Use this for initialization
 	void Start () {
+		positions = GameObject.FindGameObjectsWithTag ("PodPos");
+
 		GameObject p = GameObject.FindGameObjectWithTag("Player");
 		player = p.transform;
 		GameObject podNum = GameObject.Find ("GameManager");
 		WhalesInPod script = podNum.GetComponent<WhalesInPod> ();
 
 
-		Random.seed = System.DateTime.Now.Millisecond;
+		Random.InitState(System.DateTime.Now.Millisecond);
 		//newRandWait();
 		minDisFromWhale = 5 + (script.podCount * 5f);//replace with number of whales in pod
-		setBuffer();
-		StartCoroutine (newPos());
-	}
-	
-	// Update is called once per frame
-	void LateUpdate () {
-		
+		setBuffer(script.podCount);
+		currPos = script.podCount;
+		//StartCoroutine (newPos());
 	}
 
+
 	void FixedUpdate() {
-		if (Vector3.Distance (this.transform.position, player.position + buffer) > 10) {
+
+		if (Vector3.Distance (this.transform.position, buffer.position) > 3) {
 			moveSpeed = 15f;
 			transform.rotation = Quaternion.Slerp (transform.rotation, 
-				Quaternion.LookRotation (player.position + buffer - transform.position), 
+				Quaternion.LookRotation (buffer.position - transform.position), 
 				rotSpeed * Time.fixedDeltaTime);
 		}
 		else {
@@ -50,8 +52,9 @@ public class WhaleAI : MonoBehaviour {
 		}
 		GameObject[] whales = GameObject.FindGameObjectsWithTag ("Whale");
 		foreach (GameObject w in whales) {
-			if (Vector3.Distance (player.position + buffer, w.transform.position) < 5f) {
-				setBuffer ();
+			if (buffer == w.GetComponent<WhaleAI>().buffer && !this.gameObject.Equals(w)) {
+				//w.GetComponent<WhaleAI> ().nextBuffer ();
+				nextBuffer();
 			}
 		}
 	}
@@ -60,24 +63,36 @@ public class WhaleAI : MonoBehaviour {
 		while (true) {
 			newRandWait ();
 			yield return new WaitForSeconds (randWait);
-			setBuffer ();
+			//nextBuffer ();
+			Vector3 newPos = buffer.position;
+			newPos.z = Random.Range (-1, -15);
+			buffer.localPosition = newPos;
 		}
 
 	}
 
-	void setBuffer() {
-		
-		/*Random.seed = System.DateTime.Now.Millisecond;
-		Vector3 toScale = new Vector3(minDisFromWhale,minDisFromWhale, -minDisFromWhale);	
+	void setBuffer(int buffNum) {
+		//Random.seed = System.DateTime.Now.Millisecond;
+		//int buffNum = Random.Range (0, positions.Length);
+		buffer = positions[buffNum].transform;
+		Debug.Log (buffer.position);
+		/*Vector3 toScale = new Vector3(minDisFromWhale,minDisFromWhale, -minDisFromWhale);	
 		buffer = Random.insideUnitSphere; 
 		buffer.z = Mathf.Abs (buffer.z);
-		Vector3.Scale (buffer, toScale); */
+		Vector3.Scale (buffer, toScale);*/ 
+	}
+
+	public void nextBuffer() {
+		currPos += 1;
+		if (currPos >= positions.Length)
+			currPos = 0;
+		buffer = positions [currPos].transform;
 	}
 
 	void newRandWait(){
-		Random.seed = System.DateTime.Now.Millisecond;
+		Random.InitState(System.DateTime.Now.Millisecond);
 		//min and max wait time for new position
-		randWait = Random.Range (8f, 14f);
+		randWait = Random.Range (5f, 10f);
 	}
 		
 }

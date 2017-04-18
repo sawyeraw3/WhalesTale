@@ -41,9 +41,6 @@ public class WhaleProximity : MonoBehaviour {
 		if (roam) {
 
 			transform.Translate (Vector3.forward * moveSpeed * Time.fixedDeltaTime);
-
-
-
 			if (Vector3.Distance (transform.position, player.transform.position) < followRange) {
 				roam = false;
 			}

@@ -114,10 +114,12 @@ public class FishHeadSpawn : MonoBehaviour {
 				child.RotateAround (child.position, Vector3.up, Time.deltaTime * fishRotSpeed);
 				Transform look = child.FindChild ("LookAt");
 				look.localPosition = fishObj.transform.localPosition + dir * headMoveSpeed;
-				fishObj.transform.LookAt (look);
+				fishObj.transform.rotation = Quaternion.Slerp (fishObj.transform.rotation, Quaternion.LookRotation (look.position - fishObj.transform.position), fishRotSpeed * Time.deltaTime);
+				//fishObj.transform.LookAt (look);
 			} else if (returning) {
 				Transform look = child.FindChild ("LookAt");
-				fishObj.transform.LookAt (look);
+				//fishObj.transform.LookAt (look);
+				fishObj.transform.rotation = Quaternion.Slerp (fishObj.transform.rotation, Quaternion.LookRotation (look.position - fishObj.transform.position), fishRotSpeed * Time.deltaTime);
 				fishObj.transform.position = Vector3.MoveTowards (fishObj.transform.position, look.position, headMoveSpeed / (shark ? 4f : 5f));
 				if (Vector3.Distance (fishObj.transform.position, this.transform.position) < 3)
 					returning = false;
@@ -125,14 +127,16 @@ public class FishHeadSpawn : MonoBehaviour {
 			else { //schooling
 				Transform look = child.FindChild ("LookAt");
 				look.localPosition = fishObj.transform.localPosition + dir * headMoveSpeed;
-				fishObj.transform.LookAt (look);
+				fishObj.transform.rotation = Quaternion.Slerp (fishObj.transform.rotation, Quaternion.LookRotation (look.position - fishObj.transform.position), fishRotSpeed * Time.deltaTime);
+				//fishObj.transform.LookAt (look);
 			}
 
 			if (flee) {
 				Transform look = child.FindChild ("LookAt");
 				look.localPosition = new Vector3(fishObj.transform.localPosition.x * 2f, fishObj.transform.localPosition.y, fishObj.transform.localPosition.z * 2f);
-				fishObj.transform.LookAt (look);
-				fishObj.transform.position = Vector3.MoveTowards (fishObj.transform.position, look.position, headMoveSpeed / (shark ? 4f : 5f));
+				fishObj.transform.rotation = Quaternion.Slerp (fishObj.transform.rotation, Quaternion.LookRotation (look.position - fishObj.transform.position), fishRotSpeed * Time.deltaTime);
+				//fishObj.transform.LookAt (look);
+				fishObj.transform.position = Vector3.MoveTowards (fishObj.transform.position, look.position, headMoveSpeed / (shark ? 6f : 8f));
 			}
 		}
 
@@ -174,7 +178,8 @@ public class FishHeadSpawn : MonoBehaviour {
 				GameObject fishObj = child.FindChild ("fishModel").gameObject;
 				Transform look = child.FindChild ("LookAt");
 				look.localPosition = Random.insideUnitCircle * Random.Range (4, 8);
-				fishObj.transform.LookAt (look);
+				fishObj.transform.rotation = Quaternion.Slerp (fishObj.transform.rotation, Quaternion.LookRotation (look.position - fishObj.transform.position), fishRotSpeed * Time.deltaTime);
+				//fishObj.transform.LookAt (look);
 				returning = true;
 			}
 			//StartCoroutine (waitAndRestart ());

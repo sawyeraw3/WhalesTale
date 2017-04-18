@@ -9,6 +9,7 @@ TagManager:
   - fishParent
   - ping
   - floor
+  - PodPos
   layers:
   - Default
   - TransparentFX
