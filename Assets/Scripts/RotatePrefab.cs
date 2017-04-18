@@ -29,18 +29,20 @@ public class RotatePrefab : MonoBehaviour {
 				if (hit.collider.tag == "floor") {
 					this.transform.position = hit.point;
 					moved = true;
+					transform.RotateAround(transform.position, transform.up, Random.Range (0, 360));
 					this.GetComponentInChildren<Renderer> ().enabled = true;
 				}
 			}
-			transform.RotateAround(transform.position, transform.up, Random.Range (0, 360));
 		}
 	}
 
 
 	void rotate(){
 		Random.seed = System.DateTime.Now.Millisecond;
-		if(isRock)
+		if (isRock) {
 			transform.localRotation = Random.rotation;
+			this.GetComponentInChildren<Renderer> ().enabled = true;
+		}
 		if (normalize) {
 			Vector3 startPos = transform.position;
 			startPos.y += 50;
@@ -53,8 +55,7 @@ public class RotatePrefab : MonoBehaviour {
 				}
 			}
 			transform.RotateAround(transform.position, transform.up, Random.Range (0, 360));
-
+			this.GetComponentInChildren<Renderer> ().enabled = true;
 		}
-		this.GetComponentInChildren<Renderer> ().enabled = true;
 	}
 }
