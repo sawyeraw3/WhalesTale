@@ -19,6 +19,7 @@ public class RotatePrefab : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		if (moveToBottom && !moved) {
+			this.GetComponentInChildren<Renderer> ().enabled = false;
 			Vector3 startPos = transform.position;
 			startPos.y += 50;
 			LayerMask myLayerMask = 1 << 9;
@@ -28,8 +29,10 @@ public class RotatePrefab : MonoBehaviour {
 				if (hit.collider.tag == "floor") {
 					this.transform.position = hit.point;
 					moved = true;
+					this.GetComponentInChildren<Renderer> ().enabled = true;
 				}
 			}
+			transform.RotateAround(transform.position, transform.up, Random.Range (0, 360));
 		}
 	}
 
@@ -49,6 +52,7 @@ public class RotatePrefab : MonoBehaviour {
 					this.transform.rotation = Quaternion.FromToRotation (transform.up, hit.normal) * transform.rotation;
 				}
 			}
+			transform.RotateAround(transform.position, transform.up, Random.Range (0, 360));
 
 		}
 		this.GetComponentInChildren<Renderer> ().enabled = true;

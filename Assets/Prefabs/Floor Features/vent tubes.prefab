@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4586964171010942}
   - component: {fileID: 64082534484511454}
+  - component: {fileID: 114420065650052802}
   m_Layer: 0
   m_Name: vent tubes
   m_TagString: Untagged
@@ -141,3 +142,17 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 1cb780c184729d14488f25ccaecc376b, type: 2}
   - {fileID: 2100000, guid: 1a3909404b44c214e82fdc2c76a68d30, type: 2}
   - {fileID: 2100000, guid: 0c21f1533ca38304fb4d46a1753324aa, type: 2}
+--- !u!114 &114420065650052802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1133249798822416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc42b345aaa979747965579e30bb0d6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRock: 0
+  normalize: 1
+  moveToBottom: 0

@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class WhalesInPod : MonoBehaviour {
 
 	public int podCount;
 	private GameObject followPoint;	
-	private Transform playerPos;
+	private GameObject player;
 	private Animator camAnim;
 	private GameObject gameCamera;
 
@@ -15,7 +17,7 @@ public class WhalesInPod : MonoBehaviour {
 	void Start () {
 		podCount = 0;
 		followPoint = GameObject.Find ("Focus");
-		playerPos = GameObject.FindGameObjectWithTag ("Player").transform;
+		player = GameObject.FindGameObjectWithTag ("Player");
 		gameCamera = GameObject.Find ("FreeLookCameraRig");
 		camAnim = gameCamera.GetComponent<Animator> ();
 
@@ -24,7 +26,7 @@ public class WhalesInPod : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (playerPos.position.y > 0)
+		if (player.transform.position.y > 0)
 			followPoint.transform.localPosition = Vector3.zero;
 		else {
 			switch (podCount) {
@@ -60,5 +62,10 @@ public class WhalesInPod : MonoBehaviour {
 				break;
 			}
 		}
+	}
+
+	void EndGame() {
+		player.GetComponent<WhaleControl> ().endGame = true;
+
 	}
 }
