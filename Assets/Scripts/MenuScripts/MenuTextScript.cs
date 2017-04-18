@@ -28,7 +28,7 @@ public class MenuTextScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown (0) || GvrController.ClickButtonUp) {
-			StopCoroutine (WaitContinueText ());
+			StopCoroutine ("WaitContinueText");
 			clickCount++;
 			continueTextOn = false;
 			if(clickCount < 2)
@@ -75,11 +75,7 @@ public class MenuTextScript : MonoBehaviour {
 	}
 
 	IEnumerator LoadNewScene() {
-
-		// This line waits for 3 seconds before executing the next line in the coroutine.
-		// This line is only necessary for this demo. The scenes are so simple that they load too fast to read the "Loading..." text.
-		yield return new WaitForSeconds(3);
-
+		yield return new WaitForSeconds(2);
 		// Start an asynchronous operation to load the scene that was passed to the LoadNewScene coroutine.
 		AsyncOperation async = SceneManager.LoadSceneAsync(1); //while the asynchronous operation to load the new scene is not yet complete, continue waiting until it's done.
 		while (!async.isDone) {

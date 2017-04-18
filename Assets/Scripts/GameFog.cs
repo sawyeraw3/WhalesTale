@@ -8,7 +8,7 @@ public class GameFog : MonoBehaviour {
 	public float waterLevel;
 	private FogMode mode;
 	private Color abovewaterColor;
-	public GameObject player;
+	public GameObject camera;
 	private Color underwaterColor;
 	public Material underwaterSkybox;
 	public Material abovewaterSkybox;
@@ -22,7 +22,7 @@ public class GameFog : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (player.transform.position.y < waterLevel) {
+		if (camera.transform.position.y < waterLevel) {
 			//RenderSettings.fog = true;
 			//RenderSettings.fogMode = FogMode.ExponentialSquared;
 			RenderSettings.fogDensity = 0.02f;

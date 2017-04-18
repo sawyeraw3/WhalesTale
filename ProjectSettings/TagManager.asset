@@ -10,6 +10,7 @@ TagManager:
   - ping
   - floor
   - PodPos
+  - Boat
   layers:
   - Default
   - TransparentFX

@@ -122,6 +122,7 @@ PlayerSettings:
   preloadedAssets:
   - {fileID: 102900000, guid: 739770304ae02504cbd20ab756db4406, type: 3}
   - {fileID: 102900000, guid: c61d0629ac0392b46a7bffebf714f3af, type: 3}
+  - {fileID: 1976986207098424, guid: cfab61d00a8e43e44a6b888c6751c007, type: 2}
   metroInputSource: 0
   m_HolographicPauseOnTrackingLoss: 1
   xboxOneDisableKinectGpuReservation: 0

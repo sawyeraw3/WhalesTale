@@ -13,6 +13,7 @@ public class ActivateWhale : MonoBehaviour {
 	void Start () {
 		gameCamera = GameObject.Find ("FreeLookCameraRig");
 		camAnim = gameCamera.GetComponent<Animator> ();
+		camAnim.SetTrigger ("Startgame");
 		player = GameObject.Find ("whale");
 		if (debugging) {
 			Activate ();
@@ -29,8 +30,9 @@ public class ActivateWhale : MonoBehaviour {
 
 	void Activate() {
 		camAnim.enabled = false;
-		gameCamera.GetComponent<FreeLookCam> ().enabled = true;
-		gameCamera.GetComponent<ProtectCameraFromWallClip> ().enabled = true;
+		gameCamera.GetComponentInChildren<FreeLookCam> ().enabled = true;
+		gameCamera.GetComponentInChildren<ProtectCameraFromWallClip> ().enabled = true;
 		player.GetComponent<WhaleControl> ().enabled = true;
+		this.enabled = false;
 	}
 }

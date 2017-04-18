@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityStandardAssets.Cameras;
+using UnityEngine.SceneManagement;
 
 public class WhalesInPod : MonoBehaviour {
 
@@ -11,6 +13,8 @@ public class WhalesInPod : MonoBehaviour {
 	private GameObject player;
 	private Animator camAnim;
 	private GameObject gameCamera;
+	bool ending = false;
+	bool cameraRising = false;
 
 
 	// Use this for initialization
@@ -20,12 +24,13 @@ public class WhalesInPod : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag ("Player");
 		gameCamera = GameObject.Find ("FreeLookCameraRig");
 		camAnim = gameCamera.GetComponent<Animator> ();
-
-
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		if (cameraRising && gameCamera.transform.position.y < 8.5f) {
+			gameCamera.transform.Translate (Vector3.up * Time.deltaTime * 5);
+		}
 		if (player.transform.position.y > 0)
 			followPoint.transform.localPosition = Vector3.zero;
 		else {
@@ -54,18 +59,40 @@ public class WhalesInPod : MonoBehaviour {
 			case 7: 
 				followPoint.transform.localPosition = new Vector3 (0, 0, -0.35f);
 				break;
-			case 8: 
-				followPoint.transform.localPosition = new Vector3 (0, 0, -0.4f);
-				break;
 			default: 
-				followPoint.transform.localPosition = new Vector3 (0, 0, -0.5f);
+				EndGame ();
 				break;
 			}
 		}
 	}
 
 	void EndGame() {
-		player.GetComponent<WhaleControl> ().endGame = true;
+		if (!ending) {
+			GameObject.Find ("OceanFloor").GetComponent<GenerateInfinite> ().enabled = false;
+			GameObject.Find ("Ocean").GetComponent<OceanFollowPlayer> ().enabled = false;
+			foreach (GameObject g in GameObject.FindGameObjectsWithTag("Boat"))
+				Destroy (g);
+			player.GetComponent<WhaleControl> ().endGame = true;
+			gameCamera.GetComponentInChildren<FreeLookCam> ().enabled = false;
+			ending = true;
+			StartCoroutine (MoveCamera ());
+			StartCoroutine (LoadMenu ());
+		}
+	}
+
+	IEnumerator MoveCamera() {
+		yield return new WaitForSeconds (3);
+		cameraRising = true;
+	}
+
+	IEnumerator LoadMenu() {
+
+		yield return new WaitForSeconds(20);
+		// Start an asynchronous operation to load the scene that was passed to the LoadNewScene coroutine.
+		AsyncOperation async = SceneManager.LoadSceneAsync(0); //while the asynchronous operation to load the new scene is not yet complete, continue waiting until it's done.
+		while (!async.isDone) {
+			yield return null;
+		}
 
 	}
 }

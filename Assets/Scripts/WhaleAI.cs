@@ -35,7 +35,7 @@ public class WhaleAI : MonoBehaviour {
 	void FixedUpdate() {
 		if (!buffer)
 			nextBuffer ();
-		if (Vector3.Distance (this.transform.position, buffer.position) > 3) {
+		if (Vector3.Distance (this.transform.position, buffer.position) > 5) {
 			moveSpeed = 15f;
 			transform.rotation = Quaternion.Slerp (transform.rotation, 
 				Quaternion.LookRotation (buffer.position - transform.position), 
@@ -77,7 +77,6 @@ public class WhaleAI : MonoBehaviour {
 		//Random.seed = System.DateTime.Now.Millisecond;
 		//int buffNum = Random.Range (0, positions.Length);
 		buffer = positions[buffNum].transform;
-		Debug.Log (buffer.position);
 		/*Vector3 toScale = new Vector3(minDisFromWhale,minDisFromWhale, -minDisFromWhale);	
 		buffer = Random.insideUnitSphere; 
 		buffer.z = Mathf.Abs (buffer.z);
