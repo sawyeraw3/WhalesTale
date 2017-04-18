@@ -94,7 +94,7 @@ public class WhaleAI : MonoBehaviour {
 	void newRandWait(){
 		Random.InitState(System.DateTime.Now.Millisecond);
 		//min and max wait time for new position
-		randWait = Random.Range (10f, 20f);
+		randWait = Random.Range (20f, 30f);
 	}
 		
 }
