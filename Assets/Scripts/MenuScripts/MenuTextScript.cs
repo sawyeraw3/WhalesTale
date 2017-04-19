@@ -27,7 +27,7 @@ public class MenuTextScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown (0) || GvrController.ClickButtonUp) {
+		if (Input.GetMouseButtonDown (0) || GvrController.ClickButtonUp && !loadScene) {
 			StopCoroutine ("WaitContinueText");
 			clickCount++;
 			continueTextOn = false;
@@ -60,7 +60,7 @@ public class MenuTextScript : MonoBehaviour {
 		}
 
 		if (loadScene == true) {
-
+			continueTextOn = false;
 			// ...then pulse the transparency of the loading text to let the player know that the computer is still working.
 			loadText.color = new Color(loadText.color.r, loadText.color.g, loadText.color.b, Mathf.PingPong(Time.time - startTime, 1));
 
