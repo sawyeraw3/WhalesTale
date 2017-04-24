@@ -44,13 +44,13 @@ public class WhalesInPod : MonoBehaviour {
 				followPoint.transform.localPosition = new Vector3 (0, 0, -0.1f);
 				break;
 			case 2: 
-				followPoint.transform.localPosition = new Vector3 (0, 0, -0.2f);
+				followPoint.transform.localPosition = new Vector3 (0, 0, -0.15f);
 				break;
 			case 3: 
-				followPoint.transform.localPosition = new Vector3 (0, 0, -0.3f);
+				followPoint.transform.localPosition = new Vector3 (0, 0, -0.2f);
 				break;
 			case 4: 
-				followPoint.transform.localPosition = new Vector3 (0, 0, -0.4f);
+				followPoint.transform.localPosition = new Vector3 (0, 0, -0.25f);
 				break;
 			default: 
 				EndGame ();
