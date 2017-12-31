@@ -11,7 +11,7 @@ public class Music : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		sound = GetComponent<AudioSource> ();
-		i = 0;
+		i = Random.Range(0,2);
 	}
 	
 	// Update is called once per frame

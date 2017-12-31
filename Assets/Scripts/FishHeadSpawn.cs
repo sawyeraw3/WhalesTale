@@ -62,8 +62,8 @@ public class FishHeadSpawn : MonoBehaviour {
 			fish.transform.localPosition = Vector3.zero;
 			fish.transform.localEulerAngles = Vector3.zero;
 
-			GameObject fishObj = fish.transform.FindChild("fishModel").gameObject;
-			Transform look = fish.transform.FindChild ("LookAt");
+			GameObject fishObj = fish.transform.Find("fishModel").gameObject;
+			Transform look = fish.transform.Find ("LookAt");
 			fishObj.transform.localPosition = spread;
 			
 			look.transform.localPosition = spread + Vector3.forward;
@@ -109,15 +109,15 @@ public class FishHeadSpawn : MonoBehaviour {
 	void FixedUpdate () {
 		bool returned = true;
 		foreach (Transform child in transform) {
-			GameObject fishObj = child.FindChild ("fishModel").gameObject;
+			GameObject fishObj = child.Find ("fishModel").gameObject;
 			if (rotatingOrSchooling) { //rotating
 				child.RotateAround (child.position, Vector3.up, Time.deltaTime * fishRotSpeed);
-				Transform look = child.FindChild ("LookAt");
+				Transform look = child.Find ("LookAt");
 				look.localPosition = fishObj.transform.localPosition + dir * headMoveSpeed;
 				fishObj.transform.rotation = Quaternion.Slerp (fishObj.transform.rotation, Quaternion.LookRotation (look.position - fishObj.transform.position), fishRotSpeed * Time.deltaTime);
 				//fishObj.transform.LookAt (look);
 			} else if (returning) {
-				Transform look = child.FindChild ("LookAt");
+				Transform look = child.Find ("LookAt");
 				//fishObj.transform.LookAt (look);
 				fishObj.transform.rotation = Quaternion.Slerp (fishObj.transform.rotation, Quaternion.LookRotation (look.position - fishObj.transform.position), fishRotSpeed * Time.deltaTime);
 				fishObj.transform.position = Vector3.MoveTowards (fishObj.transform.position, look.position, headMoveSpeed / (shark ? 4f : 5f));
@@ -125,14 +125,14 @@ public class FishHeadSpawn : MonoBehaviour {
 					returning = false;
 			}
 			else { //schooling
-				Transform look = child.FindChild ("LookAt");
+				Transform look = child.Find ("LookAt");
 				look.localPosition = fishObj.transform.localPosition + dir * headMoveSpeed;
 				fishObj.transform.rotation = Quaternion.Slerp (fishObj.transform.rotation, Quaternion.LookRotation (look.position - fishObj.transform.position), fishRotSpeed * Time.deltaTime);
 				//fishObj.transform.LookAt (look);
 			}
 
 			if (flee) {
-				Transform look = child.FindChild ("LookAt");
+				Transform look = child.Find ("LookAt");
 				look.localPosition = new Vector3(fishObj.transform.localPosition.x * 2f, fishObj.transform.localPosition.y, fishObj.transform.localPosition.z * 2f);
 				fishObj.transform.rotation = Quaternion.Slerp (fishObj.transform.rotation, Quaternion.LookRotation (look.position - fishObj.transform.position), fishRotSpeed * Time.deltaTime);
 				//fishObj.transform.LookAt (look);
@@ -175,8 +175,8 @@ public class FishHeadSpawn : MonoBehaviour {
 		if (other.name == "whale") {
 			flee = false;
 			foreach (Transform child in transform) {
-				GameObject fishObj = child.FindChild ("fishModel").gameObject;
-				Transform look = child.FindChild ("LookAt");
+				GameObject fishObj = child.Find ("fishModel").gameObject;
+				Transform look = child.Find ("LookAt");
 				look.localPosition = Random.insideUnitCircle * Random.Range (4, 8);
 				fishObj.transform.rotation = Quaternion.Slerp (fishObj.transform.rotation, Quaternion.LookRotation (look.position - fishObj.transform.position), fishRotSpeed * Time.deltaTime);
 				//fishObj.transform.LookAt (look);
